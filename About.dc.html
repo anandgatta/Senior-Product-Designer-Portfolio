@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html{overflow-x:clip}
+  body{margin:0;overflow-x:clip;max-width:100%;background:#f3f1ec;color:#15140f;font-family:Manrope,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  *{box-sizing:border-box}
+  a{color:#15140f;text-decoration:none}
+  a:hover{color:#6b6250}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+</style>
+</helmet>
+
+<div data-nav="" style="position:fixed;top:14px;left:0;right:0;z-index:80;display:flex;justify-content:center;padding:0 clamp(12px,3vw,28px);pointer-events:none">
+  <div style="pointer-events:auto;width:100%;max-width:980px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 10px 10px 22px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(18,18,17,.55);backdrop-filter:blur(16px) saturate(140%);box-shadow:0 12px 40px rgba(0,0,0,.28)">
+    <a href="Portfolio.dc.html" style="font:700 17px/1 Manrope,sans-serif;letter-spacing:-.014em;color:#f5f3ee">AnandGatta</a>
+    <nav data-navdesktop="" style="display:flex;align-items:center;gap:clamp(10px,1.6vw,24px);font:500 13.5px/1 Manrope,sans-serif">
+      <a href="Works.dc.html" data-navlink="">Work</a>
+      <a href="About.dc.html" data-navlink="">About</a>
+      <a href="uploads/Anand_Gatta_Resume.pdf" download="Anand_Gatta_Resume.pdf" data-navlink="">Resume</a>
+      <a href="#contact" style="display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:999px;background:#f5f3ee;color:#15140f;font:500 13.5px/1 Manrope,sans-serif" style-hover="background:#ffffff">
+        <span style="width:6px;height:6px;border-radius:50%;background:#e2733f;animation:blink 2.4s ease-in-out infinite"></span>Contact
+      </a>
+    </nav>
+    <button type="button" data-navtoggle="" aria-label="Open menu" aria-expanded="false">
+      <span data-bar=""></span>
+      <span data-bar=""></span>
+    </button>
+  </div>
+
+  <div data-navsheet="">
+    <a href="Works.dc.html" data-sheetlink="">Work</a>
+    <a href="About.dc.html" data-sheetlink="">About</a>
+    <a href="uploads/Anand_Gatta_Resume.pdf" download="Anand_Gatta_Resume.pdf" data-sheetlink="">Resume</a>
+    <a href="Portfolio.dc.html#experience" data-sheetlink="">Experience</a>
+    <a href="#contact" data-sheetcta="">Contact</a>
+  </div>
+</div>
+
+<section id="top" style="position:relative;background:#1c1c1b;overflow:hidden">
+  <div style="position:absolute;inset:0;z-index:0;background:linear-gradient(180deg,#3a3a39 0%,#4e4e4c 34%,#2c2c2a 74%,#1c1c1b 100%)"></div>
+  <div style="position:absolute;inset:0;z-index:1;background:radial-gradient(70% 55% at 24% 10%,rgba(255,255,255,.12),rgba(255,255,255,0) 62%)"></div>
+
+  <div style="position:relative;z-index:2;max-width:1240px;width:100%;margin:0 auto;padding:clamp(108px,12vw,158px) clamp(20px,4vw,56px) clamp(44px,6vw,80px)">
+    <div data-hero-el="" style="display:inline-flex;align-items:center;gap:9px;padding:8px 14px;border:1px solid rgba(255,255,255,.18);border-radius:999px;font:400 11px/1 'IBM Plex Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:rgba(245,243,238,.72)">
+      <span style="width:6px;height:6px;border-radius:50%;background:#e2733f;animation:blink 2.4s ease-in-out infinite"></span>Available for work
+    </div>
+    <h1 data-hero-el="" style="margin:clamp(20px,2.6vw,30px) 0 0;font:500 clamp(34px,5.4vw,68px)/1.02 'Flecha',Georgia,serif;letter-spacing:-.018em;color:#f7f5f0">About me</h1>
+  </div>
+</section>
+
+<div style="max-width:1240px;margin:0 auto;padding:0 clamp(16px,4vw,56px)">
+
+  <section style="padding:clamp(40px,6vw,80px) 0 0">
+    <div data-label="" data-reveal="" style="margin-bottom:clamp(22px,3vw,34px)">01 — Introduction</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:clamp(26px,4vw,64px);align-items:start">
+      <div data-reveal="" style="display:flex;flex-direction:column;gap:22px">
+        <img src="uploads/Hero image.png" alt="Anand Kumar G" style="display:block;width:100%;max-width:340px;aspect-ratio:9/10;object-fit:cover;object-position:50% 18%;border-radius:18px">
+        <div style="display:flex;gap:10px">
+          <a href="https://www.linkedin.com/in/anand-gatta" target="_blank" rel="noopener" data-social="" aria-label="LinkedIn">in</a>
+          <a href="https://dribbble.com/Anandgatta" target="_blank" rel="noopener" data-social="" aria-label="Dribbble">Dr</a>
+          <a href="https://www.behance.net/Gatta" target="_blank" rel="noopener" data-social="" aria-label="Behance">Be</a>
+        </div>
+      </div>
+
+      <div data-reveal="" style="grid-column:span 1;min-width:min(100%,420px)">
+        <a href="mailto:anandkumargatta@yahoo.com" style="font:500 clamp(19px,2vw,27px)/1.25 'Flecha',Georgia,serif;letter-spacing:-.012em;color:#15140f;border-bottom:1px solid rgba(21,20,15,.25);padding-bottom:3px">anandkumargatta@yahoo.com</a>
+        <p data-aboutp="" style="margin-top:26px">I'm Anand, a Product Designer focused on turning complex problems into simple, intuitive digital experiences.</p>
+        <a href="tel:8978504360" style="display:inline-flex;align-items:center;gap:10px;margin-top:24px;padding:15px 24px;border-radius:999px;background:#15140f;color:#f5f3ee;font:500 14.5px/1 Manrope,sans-serif;white-space:nowrap" style-hover="background:#2e2b21">Book a call <span style="font-family:'IBM Plex Mono',monospace">→</span></a>
+
+        <div style="display:flex;flex-direction:column;gap:16px;margin-top:clamp(28px,3.4vw,40px);padding-top:clamp(24px,3vw,34px);border-top:1px solid rgba(21,20,15,.12)">
+          <p data-aboutp="">My journey started in visual design and 3D, where I learned to think deeply about composition, interaction, and how ideas come to life. Over time, that evolved into UX/UI and product design, working across B2B, B2C, enterprise, healthcare, fintech, eCommerce, and SaaS products.</p>
+          <p data-aboutp="">Today, I work as a Senior Product Designer, turning complex requirements into clear user experiences, scalable design systems, and production-ready interfaces. I enjoy the messy middle—understanding the problem, researching user needs, mapping journeys, simplifying complexity, and collaborating with engineering and product teams to ship meaningful solutions.</p>
+          <p data-aboutp="">More recently, I've been exploring AI-powered product experiences, rapid prototyping, design-to-code workflows, and using AI as part of the design process—not just as a feature, but as a way to rethink how products are designed and built.</p>
+        </div>
+        <p style="margin:26px 0 0;font:500 clamp(18px,1.8vw,24px)/1.35 'Flecha',Georgia,serif;letter-spacing:-.012em;color:#15140f">Let's create something amazing together!</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:clamp(46px,7vw,100px) 0 0">
+    <div data-label="" data-reveal="">02 — Toolkit</div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:clamp(22px,3vw,34px)" data-reveal="">
+      <span data-chip="">Figma</span>
+      <span data-chip="">ProtoPie</span>
+      <span data-chip="">User Research</span>
+      <span data-chip="">Design Systems</span>
+      <span data-chip="">Miro / FigJam</span>
+      <span data-chip="">HTML / CSS</span>
+      <span data-chip="">React</span>
+      <span data-chip="">AI Tools</span>
+      <span data-chip="">Prototyping</span>
+      <span data-chip="">Accessibility</span>
+    </div>
+  </section>
+
+  <section id="contact" style="padding:clamp(46px,7vw,100px) 0 0">
+    <div data-label="" data-reveal="">03 — Contact</div>
+    <h2 data-reveal="" style="margin:16px 0 0;font:500 clamp(28px,4vw,52px)/1.05 'Flecha',Georgia,serif;letter-spacing:-.014em;max-width:20ch">Let's get in touch</h2>
+
+    <form data-form="" data-reveal="" action="mailto:anandkumargatta@yahoo.com" method="post" enctype="text/plain">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:clamp(14px,2vw,22px)">
+        <label data-field=""><span data-flabel="">Your name</span><input data-input="" type="text" name="name" placeholder="Anand Kumar" required=""></label>
+        <label data-field=""><span data-flabel="">Email</span><input data-input="" type="email" name="email" placeholder="you@company.com" required=""></label>
+      </div>
+      <label data-field="" style="margin-top:clamp(14px,2vw,22px)"><span data-flabel="">Message</span><textarea data-input="" name="message" rows="5" placeholder="Tell me about the product, the team, and the timeline."></textarea></label>
+      <button data-submit="" type="submit">Send Message <span style="font-family:'IBM Plex Mono',monospace">→</span></button>
+    </form>
+  </section>
+</div>
+
+<section style="position:relative;width:100vw;margin-inline:calc(50% - 50vw);margin-top:clamp(46px,7vw,100px);border-top:1px solid rgba(21,20,15,.09);border-bottom:1px solid rgba(21,20,15,.09);background-color:#e7e2d6">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(44px,6vw,84px) clamp(20px,4vw,56px)">
+    <div data-label="" data-reveal="">04 — How I work</div>
+    <h2 data-reveal="" style="margin:16px 0 0;font:500 clamp(28px,4vw,52px)/1.05 'Flecha',Georgia,serif;letter-spacing:-.014em;max-width:18ch">Four phases, no surprises.</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));gap:clamp(14px,2vw,22px);margin-top:clamp(26px,3.6vw,46px)">
+      <div data-step="" data-reveal="">
+        <div data-stepnum="">01/</div>
+        <div data-steptitle="">Understand</div>
+        <p data-stepbody="">I break down business goals, user needs, and product constraints to define the right problem.</p>
+      </div>
+      <div data-step="" data-reveal="">
+        <div data-stepnum="">02/</div>
+        <div data-steptitle="">Explore</div>
+        <p data-stepbody="">I map flows, explore interaction patterns, and turn requirements into clear UX directions.</p>
+      </div>
+      <div data-step="" data-reveal="">
+        <div data-stepnum="">03/</div>
+        <div data-steptitle="">Design</div>
+        <p data-stepbody="">I create high-fidelity interfaces, scalable UI systems, and prototypes that communicate the experience.</p>
+      </div>
+      <div data-step="" data-reveal="">
+        <div data-stepnum="">04/</div>
+        <div data-steptitle="">Validate &amp; iterate</div>
+        <p data-stepbody="">I test ideas, incorporate feedback, and work with engineering to refine the final product.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="max-width:1240px;margin:0 auto;padding:0 clamp(16px,4vw,56px)">
+  <footer style="position:relative;width:100vw;margin-inline:calc(50% - 50vw);margin-top:0;border-radius:clamp(18px,2vw,30px) clamp(18px,2vw,30px) 0 0;overflow:hidden;background-color:#F0EDE3">
+    <div style="max-width:1240px;margin:0 auto;padding:clamp(46px,7vw,96px) clamp(20px,4vw,56px) 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:clamp(30px,4vw,56px)">
+      <div style="grid-column:span 1;min-width:min(100%,360px)">
+        <p style="margin:0;max-width:26ch;font:500 clamp(19px,1.9vw,26px)/1.35 'Flecha',Georgia,serif;color:#26241f;text-wrap:pretty">Designing products people can use with confidence—for 13 years and counting.</p>
+        <a href="mailto:anandkumargatta@yahoo.com" style="display:inline-flex;align-items:center;gap:9px;margin-top:26px;padding:14px 22px;border-radius:999px;background:#ffffff;color:#15140f;font:500 14.5px/1 Manrope,sans-serif;box-shadow:0 2px 10px rgba(0,0,0,.07)" style-hover="background:#15140f;color:#f5f3ee">Start a project <span style="font-family:'IBM Plex Mono',monospace">→</span></a>
+      </div>
+
+      <div>
+        <div style="font:500 16px/1.2 'Flecha',Georgia,serif;color:#26241f">Explore</div>
+        <div style="margin-top:22px;display:flex;flex-direction:column;gap:14px;font:400 14.5px/1.3 Manrope,sans-serif">
+          <a href="Works.dc.html" data-flink="">Selected work</a>
+          <a href="About.dc.html" data-flink="">About</a>
+          <a href="Portfolio.dc.html#process" data-flink="">How I work</a>
+          <a href="Portfolio.dc.html#experience" data-flink="">Experience</a>
+          <a href="Portfolio.dc.html#expertise" data-flink="">Core expertise</a>
+        </div>
+      </div>
+
+      <div>
+        <div style="font:500 16px/1.2 'Flecha',Georgia,serif;color:#26241f">Need design?</div>
+        <div style="margin-top:22px;display:flex;flex-direction:column;gap:14px;font:400 14.5px/1.3 Manrope,sans-serif">
+          <a href="uploads/Anand_Gatta_Resume.pdf" download="Anand_Gatta_Resume.pdf" data-flink="">Résumé (PDF)</a>
+          <a href="Works.dc.html" data-flink="">Case studies</a>
+          <a href="Portfolio.dc.html#expertise" data-flink="">Design systems</a>
+        </div>
+      </div>
+
+      <div>
+        <div style="font:500 16px/1.2 'Flecha',Georgia,serif;color:#26241f">Say hello</div>
+        <div style="margin-top:22px;display:flex;flex-direction:column;gap:14px;font:400 14.5px/1.3 Manrope,sans-serif">
+          <a href="https://www.linkedin.com/in/anand-gatta" target="_blank" rel="noopener" data-flink="">LinkedIn</a>
+          <a href="mailto:anandkumargatta@yahoo.com" data-flink="">Email</a>
+          <a href="https://dribbble.com/Anandgatta" target="_blank" rel="noopener" data-flink="">Dribbble</a>
+          <a href="https://www.behance.net/Gatta" target="_blank" rel="noopener" data-flink="">Behance</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="max-width:1240px;margin:0 auto;padding:clamp(30px,5vw,64px) clamp(20px,4vw,56px) 0;overflow:hidden">
+      <div aria-hidden="true" style="font:700 min(9.6vw,150px)/0.92 Manrope,sans-serif;letter-spacing:.02em;color:#26241f;margin-bottom:-.05em;white-space:nowrap;width:100%;text-align:center">AnandGatta</div>
+    </div>
+    <div style="border-top:1px solid rgba(21,20,15,.12)">
+      <div style="max-width:1240px;margin:0 auto;padding:18px clamp(20px,4vw,56px);display:flex;flex-wrap:wrap;gap:12px 26px;justify-content:space-between;align-items:center;font:400 12.5px/1 Manrope,sans-serif;color:#57534a">
+        <div>Anand Kumar G ©<span data-year="">2026</span></div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px 26px;align-items:center">
+          <a href="#contact" data-flink="">Privacy</a>
+          <a href="#contact" data-flink="">Terms</a>
+          <span>Hyderabad</span>
+          <span data-clock="" style="font-family:'IBM Plex Mono',monospace">--:--:--</span>
+          <a href="#top" data-flink="">Back to top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;scrollReveal&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const root = this.el || document;
+    const q = (s) => Array.from(root.querySelectorAll(s));
+
+    q('[data-label]').forEach(el => {
+      el.style.cssText = "font:400 11.5px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#6b6250";
+    });
+    q('[data-herolabel]').forEach(el => {
+      el.style.cssText = "font:400 11px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,243,238,.6)";
+    });
+    q('[data-heroval]').forEach(el => {
+      el.style.cssText = "margin-top:9px;font:400 14.5px/1.45 Manrope,sans-serif;color:#f0ede6";
+    });
+    q('[data-aboutp]').forEach(el => {
+      el.style.margin = el.style.marginTop ? el.style.marginTop + ' 0 0' : '0';
+      el.style.font = "400 clamp(15px,1.2vw,17.5px)/1.65 Manrope,sans-serif";
+      el.style.color = '#403c31';
+      el.style.textWrap = 'pretty';
+      el.style.maxWidth = '62ch';
+    });
+    q('[data-social]').forEach(el => {
+      el.style.cssText = "display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;border:1px solid rgba(21,20,15,.18);font:500 13px/1 Manrope,sans-serif;color:#403c31;transition:background .3s ease,color .3s ease";
+      el.addEventListener('mouseenter', () => { el.style.background = '#15140f'; el.style.color = '#f5f3ee'; });
+      el.addEventListener('mouseleave', () => { el.style.background = 'transparent'; el.style.color = '#403c31'; });
+    });
+    q('[data-form]').forEach(el => {
+      el.style.cssText = "margin-top:clamp(26px,3.4vw,44px);max-width:760px";
+    });
+    q('[data-field]').forEach(el => {
+      el.style.cssText = "display:flex;flex-direction:column;gap:9px" + (el.style.marginTop ? ';margin-top:' + el.style.marginTop : '');
+    });
+    q('[data-flabel]').forEach(el => {
+      el.style.cssText = "font:400 11px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#6b6250";
+    });
+    q('[data-input]').forEach(el => {
+      el.style.cssText = "width:100%;padding:14px 16px;border:1px solid rgba(21,20,15,.18);border-radius:12px;background:rgba(255,255,255,.5);font:400 15px/1.5 Manrope,sans-serif;color:#15140f;outline:none;resize:vertical;transition:border-color .25s ease,background .25s ease";
+      el.addEventListener('focus', () => { el.style.borderColor = '#e2733f'; el.style.background = '#fff'; });
+      el.addEventListener('blur', () => { el.style.borderColor = 'rgba(21,20,15,.18)'; el.style.background = 'rgba(255,255,255,.5)'; });
+    });
+    q('[data-submit]').forEach(el => {
+      el.style.cssText = "display:inline-flex;align-items:center;gap:10px;margin-top:clamp(18px,2.4vw,26px);padding:15px 26px;border:0;border-radius:999px;background:#15140f;color:#f5f3ee;font:500 14.5px/1 Manrope,sans-serif;cursor:pointer;white-space:nowrap;transition:background .3s ease";
+      el.addEventListener('mouseenter', () => { el.style.background = '#2e2b21'; });
+      el.addEventListener('mouseleave', () => { el.style.background = '#15140f'; });
+    });
+    q('[data-step]').forEach(el => {
+      el.style.cssText = "padding:clamp(22px,2.6vw,32px);border-radius:16px;background:#f2eee4;transition:background .35s ease";
+      el.addEventListener('mouseenter', () => { el.style.background = '#fbf9f4'; });
+      el.addEventListener('mouseleave', () => { el.style.background = '#f2eee4'; });
+    });
+    q('[data-stepnum]').forEach(el => {
+      el.style.cssText = "font:400 12px/1 'IBM Plex Mono',monospace;letter-spacing:.08em;color:#e2733f";
+    });
+    q('[data-steptitle]').forEach(el => {
+      el.style.cssText = "margin-top:clamp(16px,2vw,26px);font:500 clamp(19px,1.9vw,25px)/1.2 'Flecha',Georgia,serif;letter-spacing:-.012em";
+    });
+    q('[data-stepbody]').forEach(el => {
+      el.style.cssText = "margin:11px 0 0;font:400 14.5px/1.6 Manrope,sans-serif;color:#403c31;text-wrap:pretty";
+    });
+    q('[data-chapters]').forEach(el => {
+      el.style.cssText = "margin-top:clamp(22px,3vw,36px);border-top:1px solid rgba(21,20,15,.12)";
+    });
+    q('[data-chapter]').forEach(el => {
+      el.style.cssText = "display:grid;grid-template-columns:56px minmax(0,1fr);gap:clamp(14px,2vw,28px);align-items:start;padding:clamp(24px,3vw,40px) 0;border-bottom:1px solid rgba(21,20,15,.12);transition:padding-left .35s ease";
+      el.addEventListener('mouseenter', () => { el.style.paddingLeft = '10px'; });
+      el.addEventListener('mouseleave', () => { el.style.paddingLeft = '0px'; });
+    });
+    q('[data-chapnum]').forEach(el => {
+      el.style.cssText = "font:500 clamp(28px,3.2vw,42px)/1 'Flecha',Georgia,serif;letter-spacing:-.02em;color:rgba(21,20,15,.2)";
+    });
+    q('[data-chaptitle]').forEach(el => {
+      el.style.cssText = "font:500 clamp(19px,2vw,27px)/1.2 'Flecha',Georgia,serif;letter-spacing:-.012em";
+    });
+    q('[data-chapbody]').forEach(el => {
+      el.style.cssText = "margin:12px 0 0;max-width:66ch;font:400 clamp(14.5px,1.1vw,16.5px)/1.65 Manrope,sans-serif;color:#403c31;text-wrap:pretty";
+    });
+    q('[data-chip]').forEach(el => {
+      el.style.cssText = "padding:9px 14px;border:1px solid rgba(21,20,15,.16);border-radius:999px;font:400 12.5px/1 'IBM Plex Mono',monospace;color:#403c31;transition:background .3s ease";
+      el.addEventListener('mouseenter', () => { el.style.background = 'rgba(21,20,15,.05)'; });
+      el.addEventListener('mouseleave', () => { el.style.background = 'transparent'; });
+    });
+    q('[data-flink]').forEach(el => {
+      el.style.color = '#57534a';
+      el.style.transition = 'color .25s ease';
+      el.addEventListener('mouseenter', () => { el.style.color = '#15140f'; });
+      el.addEventListener('mouseleave', () => { el.style.color = '#57534a'; });
+    });
+    q('[data-navlink]').forEach(el => {
+      el.style.cssText = "padding:6px 10px;color:rgba(245,243,238,.72);transition:color .25s ease";
+      el.addEventListener('mouseenter', () => { el.style.color = '#f5f3ee'; });
+      el.addEventListener('mouseleave', () => { el.style.color = 'rgba(245,243,238,.72)'; });
+    });
+
+    // mobile menu — identical behaviour to the other pages
+    const toggle = root.querySelector('[data-navtoggle]');
+    const sheet = root.querySelector('[data-navsheet]');
+    const navDesktop = root.querySelector('[data-navdesktop]');
+    if (toggle && sheet) {
+      toggle.style.cssText = "pointer-events:auto;width:44px;height:44px;flex:none;border-radius:50%;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);cursor:pointer;display:none;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:0";
+      toggle.querySelectorAll('[data-bar]').forEach(b => {
+        b.style.cssText = "display:block;width:17px;height:1.5px;background:#f5f3ee;border-radius:2px;transition:transform .3s ease";
+      });
+      sheet.style.cssText = "pointer-events:auto;position:absolute;top:calc(100% + 8px);left:clamp(12px,3vw,28px);right:clamp(12px,3vw,28px);display:none;flex-direction:column;gap:2px;padding:14px;border-radius:22px;border:1px solid rgba(255,255,255,.14);background:rgba(16,16,15,.92);backdrop-filter:blur(18px);box-shadow:0 20px 50px rgba(0,0,0,.4);opacity:0;transform:translateY(-8px);transition:opacity .3s ease,transform .3s ease";
+      sheet.querySelectorAll('[data-sheetlink]').forEach(a => {
+        a.style.cssText = "padding:14px 12px;border-radius:12px;color:rgba(245,243,238,.8);font:500 16px/1 Manrope,sans-serif";
+      });
+      const cta = sheet.querySelector('[data-sheetcta]');
+      if (cta) cta.style.cssText = "margin-top:8px;padding:15px 12px;border-radius:14px;background:#f5f3ee;color:#15140f;font:500 16px/1 Manrope,sans-serif;text-align:center";
+
+      let open = false;
+      const setOpen = (v) => {
+        open = v;
+        const bars = toggle.querySelectorAll('[data-bar]');
+        toggle.setAttribute('aria-expanded', String(v));
+        toggle.setAttribute('aria-label', v ? 'Close menu' : 'Open menu');
+        if (bars[0]) bars[0].style.transform = v ? 'translateY(3.25px) rotate(45deg)' : 'none';
+        if (bars[1]) bars[1].style.transform = v ? 'translateY(-3.25px) rotate(-45deg)' : 'none';
+        if (v) {
+          sheet.style.display = 'flex';
+          requestAnimationFrame(() => { sheet.style.opacity = '1'; sheet.style.transform = 'none'; });
+        } else {
+          sheet.style.opacity = '0';
+          sheet.style.transform = 'translateY(-8px)';
+          setTimeout(() => { if (!open) sheet.style.display = 'none'; }, 280);
+        }
+      };
+      toggle.addEventListener('click', () => setOpen(!open));
+      sheet.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setOpen(false)));
+      const fitNav = () => {
+        const mobile = window.innerWidth < 760;
+        toggle.style.display = mobile ? 'flex' : 'none';
+        if (navDesktop) navDesktop.style.display = mobile ? 'none' : 'flex';
+        if (!mobile && open) setOpen(false);
+      };
+      fitNav();
+      window.addEventListener('resize', fitNav);
+      this._fitNav = fitNav;
+    }
+
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduced) {
+      q('[data-hero-el]').forEach((el, i) => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(24px)';
+        el.style.transition = 'opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1)';
+        setTimeout(() => { el.style.opacity = '1'; el.style.transform = 'none'; }, 100 + i * 130);
+      });
+    }
+
+    if ((this.props.scrollReveal ?? true) && !reduced && 'IntersectionObserver' in window) {
+      const targets = q('[data-reveal]');
+      targets.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1)';
+      });
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e, i) => {
+          if (!e.isIntersecting) return;
+          const el = e.target;
+          setTimeout(() => { el.style.opacity = '1'; el.style.transform = 'none'; }, i * 70);
+          io.unobserve(el);
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+      targets.forEach(el => io.observe(el));
+      this._io = io;
+    }
+
+    const clock = root.querySelector('[data-clock]');
+    const year = root.querySelector('[data-year]');
+    if (year) year.textContent = String(new Date().getFullYear());
+    if (clock) {
+      const tick = () => {
+        clock.textContent = new Date().toLocaleTimeString('en-GB', {
+          timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second: '2-digit'
+        }) + ' IST';
+      };
+      tick();
+      this._t = setInterval(tick, 1000);
+    }
+  }
+
+  componentWillUnmount() {
+    if (this._io) this._io.disconnect();
+    if (this._t) clearInterval(this._t);
+    if (this._fitNav) window.removeEventListener('resize', this._fitNav);
+  }
+
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

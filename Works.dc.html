@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html{overflow-x:clip}
+  body{margin:0;overflow-x:clip;max-width:100%;background:#f3f1ec;color:#15140f;font-family:Manrope,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  *{box-sizing:border-box}
+  a{color:#15140f;text-decoration:none}
+  a:hover{color:#6b6250}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+</style>
+</helmet>
+
+<div data-nav="" style="position:fixed;top:14px;left:0;right:0;z-index:80;display:flex;justify-content:center;padding:0 clamp(12px,3vw,28px);pointer-events:none">
+  <div style="pointer-events:auto;width:100%;max-width:980px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 10px 10px 22px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(18,18,17,.55);backdrop-filter:blur(16px) saturate(140%);box-shadow:0 12px 40px rgba(0,0,0,.28)">
+    <a href="Portfolio.dc.html" style="font:700 17px/1 Manrope,sans-serif;letter-spacing:-.014em;color:#f5f3ee">AnandGatta</a>
+    <nav data-navdesktop="" style="display:flex;align-items:center;gap:clamp(10px,1.6vw,24px);font:500 13.5px/1 Manrope,sans-serif">
+      <a href="Works.dc.html" data-navlink="">Work</a>
+      <a href="About.dc.html" data-navlink="">About</a>
+      <a href="uploads/Anand_Gatta_Resume.pdf" download="Anand_Gatta_Resume.pdf" data-navlink="">Resume</a>
+      <a href="About.dc.html#contact" style="display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:999px;background:#f5f3ee;color:#15140f;font:500 13.5px/1 Manrope,sans-serif" style-hover="background:#ffffff">
+        <span style="width:6px;height:6px;border-radius:50%;background:#e2733f;animation:blink 2.4s ease-in-out infinite"></span>Contact
+      </a>
+    </nav>
+    <button type="button" data-navtoggle="" aria-label="Open menu" aria-expanded="false">
+      <span data-bar=""></span>
+      <span data-bar=""></span>
+    </button>
+  </div>
+
+  <div data-navsheet="">
+    <a href="Works.dc.html" data-sheetlink="">Work</a>
+    <a href="About.dc.html" data-sheetlink="">About</a>
+    <a href="uploads/Anand_Gatta_Resume.pdf" download="Anand_Gatta_Resume.pdf" data-sheetlink="">Resume</a>
+    <a href="Portfolio.dc.html#experience" data-sheetlink="">Experience</a>
+    <a href="About.dc.html#contact" data-sheetcta="">Contact</a>
+  </div>
+</div>
+
+<section id="top" style="position:relative;background:#1c1c1b;overflow:hidden">
+  <div style="position:absolute;inset:0;z-index:0;background:linear-gradient(180deg,#3a3a39 0%,#4e4e4c 34%,#2c2c2a 74%,#1c1c1b 100%)"></div>
+  <div style="position:absolute;inset:0;z-index:1;background:radial-gradient(70% 55% at 24% 10%,rgba(255,255,255,.12),rgba(255,255,255,0) 62%)"></div>
+
+  <div style="position:relative;z-index:2;max-width:1240px;width:100%;margin:0 auto;padding:clamp(108px,12vw,158px) clamp(20px,4vw,56px) clamp(44px,6vw,80px)">
+    <div data-hero-el="" style="font:400 11.5px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#e2733f">Selected work</div>
+    <h1 data-hero-el="" style="margin:clamp(20px,2.6vw,32px) 0 0;max-width:24ch;font:500 clamp(31px,4.8vw,62px)/1.04 'Flecha',Georgia,serif;letter-spacing:-.018em;color:#f7f5f0;text-wrap:balance">Building digital products, systems, and experiences.</h1>
+    <p data-hero-el="" style="margin:clamp(20px,2.4vw,28px) 0 0;max-width:58ch;font:400 clamp(14.5px,1.15vw,17px)/1.6 Manrope,sans-serif;color:rgba(245,243,238,.72);text-wrap:pretty">Since 2013 I've worked with founders, startups and enterprises across SaaS, AI, fintech, healthcare and eCommerce—designing products that ship and scale.</p>
+  </div>
+</section>
+
+<div style="max-width:1240px;margin:0 auto;padding:0 clamp(16px,4vw,56px)">
+
+  <section style="padding:clamp(40px,6vw,84px) 0 0">
+    <div data-label="" data-reveal="">01 — Case studies</div>
+
+    <div data-cases="">
+      <a href="Portfolio.dc.html#work" data-case="" data-reveal="">
+        <div data-thumb=""><img src="uploads/Case study 3.png" alt="Life Sciences Design System"></div>
+        <div data-caseinfo="">
+          <div data-casenum="">01</div>
+          <div data-casetitle="">Life Sciences Design System</div>
+          <div data-casemeta="">Design systems · Enterprise SaaS</div>
+          <p data-casebody="">A component library and token system for a regulated life-sciences platform, built so multiple product teams could ship consistent, accessible interfaces without redesigning the basics each time.</p>
+          <span data-caselink="">Case study coming soon</span>
+        </div>
+      </a>
+
+      <a href="Paratransit Case Study.dc.html" data-case="" data-reveal="">
+        <div data-thumb=""><img src="uploads/Case study 1.png" alt="Paratransit Rider Booking App"></div>
+        <div data-caseinfo="">
+          <div data-casenum="">02</div>
+          <div data-casetitle="">Paratransit Rider Booking App</div>
+          <div data-casemeta="">UI/UX · Mobile redesign</div>
+          <p data-casebody="">Riders were taking over three minutes to book a routine trip and dropping off at the final step. The redesign cut the flow from eight steps to three, added map confirmation, and made fares visible before commitment.</p>
+          <span data-caselink="" data-live="1">Read the case study <span style="font-family:'IBM Plex Mono',monospace">→</span></span>
+        </div>
+      </a>
+
+      <a href="Portfolio.dc.html#work" data-case="" data-reveal="">
+        <div data-thumb=""><img src="uploads/Case study 2.png" alt="GrabOn coupons and deals marketplace"></div>
+        <div data-caseinfo="">
+          <div data-casenum="">03</div>
+          <div data-casetitle="">GrabOn Coupons Marketplace</div>
+          <div data-casemeta="">Product design · eCommerce</div>
+          <p data-casebody="">A high-traffic coupons and deals marketplace—category browsing, store pages and offer discovery designed for users who arrive with intent and leave within a minute.</p>
+          <span data-caselink="">Case study coming soon</span>
+        </div>
+      </a>
+
+      <a href="Portfolio.dc.html#work" data-case="" data-reveal="">
+        <div data-thumb=""><img src="uploads/Case study 4.png" alt="Healthcare Portal"></div>
+        <div data-caseinfo="">
+          <div data-casenum="">04</div>
+          <div data-casetitle="">Healthcare Portal</div>
+          <div data-casemeta="">UX research · Enterprise SaaS</div>
+          <p data-casebody="">Research-led redesign of a clinical workflow tool, mapping how care teams actually move through a patient record before rebuilding the navigation and data density around it.</p>
+          <span data-caselink="">Case study coming soon</span>
+        </div>
+      </a>
+    </div>
+  </section>
+</div>
+
+<section style="position:relative;width:100vw;margin-inline:calc(50% - 50vw);margin-top:clamp(46px,7vw,100px);border-top:1px solid rgba(21,20,15,.09);border-bottom:1px solid rgba(21,20,15,.09);background-color:#e7e2d6">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(44px,6vw,84px) clamp(20px,4vw,56px)">
+    <div style="display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:18px" data-reveal="">
+      <div>
+        <div data-label="">02 — Other work</div>
+        <h2 data-h2="">Explorations, side projects and earlier work.</h2>
+      </div>
+      <a href="About.dc.html#contact" style="font:500 14px/1 Manrope,sans-serif;border-bottom:1px solid rgba(21,20,15,.3);padding-bottom:4px;white-space:nowrap">Ask me about these →</a>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:clamp(14px,2vw,24px);margin-top:clamp(26px,3.6vw,46px)">
+      <div data-other="" data-reveal="">
+        <div data-otherthumb=""><span>thumbnail — 1200×900</span></div>
+        <div data-othertitle="">Add a title</div>
+        <div data-othermeta="">Category · Year</div>
+      </div>
+      <div data-other="" data-reveal="">
+        <div data-otherthumb=""><span>thumbnail — 1200×900</span></div>
+        <div data-othertitle="">Add a title</div>
+        <div data-othermeta="">Category · Year</div>
+      </div>
+      <div data-other="" data-reveal="">
+        <div data-otherthumb=""><span>thumbnail — 1200×900</span></div>
+        <div data-othertitle="">Add a title</div>
+        <div data-othermeta="">Category · Year</div>
+      </div>
+      <div data-other="" data-reveal="">
+        <div data-otherthumb=""><span>thumbnail — 1200×900</span></div>
+        <div data-othertitle="">Add a title</div>
+        <div data-othermeta="">Category · Year</div>
+      </div>
+      <div data-other="" data-reveal="">
+        <div data-otherthumb=""><span>thumbnail — 1200×900</span></div>
+        <div data-othertitle="">Add a title</div>
+        <div data-othermeta="">Category · Year</div>
+      </div>
+      <div data-other="" data-reveal="">
+        <div data-otherthumb=""><span>thumbnail — 1200×900</span></div>
+        <div data-othertitle="">Add a title</div>
+        <div data-othermeta="">Category · Year</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="max-width:1240px;margin:0 auto;padding:0 clamp(16px,4vw,56px)">
+  <section id="contact" style="padding:clamp(52px,8vw,110px) 0 clamp(28px,4vw,52px)">
+    <div data-label="" data-reveal="">03 — Contact</div>
+    <h2 data-reveal="" style="margin:16px 0 0;max-width:20ch;font:500 clamp(26px,3.6vw,48px)/1.06 'Flecha',Georgia,serif;letter-spacing:-.014em;text-wrap:pretty">Let's design a product people can use with confidence.</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(22px,4vw,56px);align-items:end;margin-top:clamp(24px,3.4vw,42px)">
+      <p data-reveal="" style="margin:0;max-width:46ch;font:400 clamp(14.5px,1.15vw,17px)/1.65 Manrope,sans-serif;color:#403c31;text-wrap:pretty">For product design, design systems, prototypes, and AI-powered design workflows.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px" data-reveal="">
+        <a href="mailto:anandkumargatta@yahoo.com" style="display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;background:#15140f;color:#f5f3ee;font:500 14.5px/1 Manrope,sans-serif;white-space:nowrap" style-hover="background:#2e2b21">Email me <span style="font-family:'IBM Plex Mono',monospace">→</span></a>
+        <a href="About.dc.html" style="display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;border:1px solid rgba(21,20,15,.2);font:500 14.5px/1 Manrope,sans-serif;white-space:nowrap" style-hover="background:rgba(21,20,15,.05)">More about me</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="position:relative;width:100vw;margin-inline:calc(50% - 50vw);margin-top:clamp(40px,6vw,80px);border-radius:clamp(18px,2vw,30px) clamp(18px,2vw,30px) 0 0;overflow:hidden;background-color:#F0EDE3">
+    <div style="max-width:1240px;margin:0 auto;padding:clamp(46px,7vw,96px) clamp(20px,4vw,56px) 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:clamp(30px,4vw,56px)">
+      <div style="grid-column:span 1;min-width:min(100%,360px)">
+        <p style="margin:0;max-width:26ch;font:500 clamp(19px,1.9vw,26px)/1.35 'Flecha',Georgia,serif;color:#26241f;text-wrap:pretty">Designing products people can use with confidence—for 13 years and counting.</p>
+        <a href="mailto:anandkumargatta@yahoo.com" style="display:inline-flex;align-items:center;gap:9px;margin-top:26px;padding:14px 22px;border-radius:999px;background:#ffffff;color:#15140f;font:500 14.5px/1 Manrope,sans-serif;box-shadow:0 2px 10px rgba(0,0,0,.07)" style-hover="background:#15140f;color:#f5f3ee">Start a project <span style="font-family:'IBM Plex Mono',monospace">→</span></a>
+      </div>
+
+      <div>
+        <div style="font:500 16px/1.2 'Flecha',Georgia,serif;color:#26241f">Explore</div>
+        <div style="margin-top:22px;display:flex;flex-direction:column;gap:14px;font:400 14.5px/1.3 Manrope,sans-serif">
+          <a href="Works.dc.html" data-flink="">Selected work</a>
+          <a href="About.dc.html" data-flink="">About</a>
+          <a href="Portfolio.dc.html#process" data-flink="">How I work</a>
+          <a href="Portfolio.dc.html#experience" data-flink="">Experience</a>
+          <a href="Portfolio.dc.html#expertise" data-flink="">Core expertise</a>
+        </div>
+      </div>
+
+      <div>
+        <div style="font:500 16px/1.2 'Flecha',Georgia,serif;color:#26241f">Need design?</div>
+        <div style="margin-top:22px;display:flex;flex-direction:column;gap:14px;font:400 14.5px/1.3 Manrope,sans-serif">
+          <a href="uploads/Anand_Gatta_Resume.pdf" download="Anand_Gatta_Resume.pdf" data-flink="">Résumé (PDF)</a>
+          <a href="Works.dc.html" data-flink="">Case studies</a>
+          <a href="Portfolio.dc.html#expertise" data-flink="">Design systems</a>
+        </div>
+      </div>
+
+      <div>
+        <div style="font:500 16px/1.2 'Flecha',Georgia,serif;color:#26241f">Say hello</div>
+        <div style="margin-top:22px;display:flex;flex-direction:column;gap:14px;font:400 14.5px/1.3 Manrope,sans-serif">
+          <a href="https://www.linkedin.com/in/anand-gatta" target="_blank" rel="noopener" data-flink="">LinkedIn</a>
+          <a href="mailto:anandkumargatta@yahoo.com" data-flink="">Email</a>
+          <a href="https://dribbble.com/Anandgatta" target="_blank" rel="noopener" data-flink="">Dribbble</a>
+          <a href="https://www.behance.net/Gatta" target="_blank" rel="noopener" data-flink="">Behance</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="max-width:1240px;margin:0 auto;padding:clamp(30px,5vw,64px) clamp(20px,4vw,56px) 0;overflow:hidden">
+      <div aria-hidden="true" style="font:700 min(9.6vw,150px)/0.92 Manrope,sans-serif;letter-spacing:.02em;color:#26241f;margin-bottom:-.05em;white-space:nowrap;width:100%;text-align:center">AnandGatta</div>
+    </div>
+    <div style="border-top:1px solid rgba(21,20,15,.12)">
+      <div style="max-width:1240px;margin:0 auto;padding:18px clamp(20px,4vw,56px);display:flex;flex-wrap:wrap;gap:12px 26px;justify-content:space-between;align-items:center;font:400 12.5px/1 Manrope,sans-serif;color:#57534a">
+        <div>Anand Kumar G ©<span data-year="">2026</span></div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px 26px;align-items:center">
+          <a href="About.dc.html#contact" data-flink="">Privacy</a>
+          <a href="About.dc.html#contact" data-flink="">Terms</a>
+          <span>Hyderabad</span>
+          <span data-clock="" style="font-family:'IBM Plex Mono',monospace">--:--:--</span>
+          <a href="#top" data-flink="">Back to top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;scrollReveal&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const root = this.el || document;
+    const q = (s) => Array.from(root.querySelectorAll(s));
+
+    q('[data-label]').forEach(el => {
+      el.style.cssText = "font:400 11.5px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#6b6250";
+    });
+    q('[data-h2]').forEach(el => {
+      el.style.cssText = "margin:16px 0 0;max-width:24ch;font:500 clamp(24px,3.2vw,42px)/1.08 'Flecha',Georgia,serif;letter-spacing:-.014em;text-wrap:pretty";
+    });
+    q('[data-cases]').forEach(el => {
+      el.style.cssText = "display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(24px,3.4vw,48px);margin-top:clamp(24px,3vw,40px)";
+    });
+    q('[data-case]').forEach(el => {
+      el.style.cssText = "display:flex;flex-direction:column";
+      const thumb = el.querySelector('[data-thumb]');
+      const link = el.querySelector('[data-caselink]');
+      el.addEventListener('mouseenter', () => {
+        if (thumb) thumb.style.transform = 'scale(1.02)';
+        if (link && link.dataset.live) link.style.color = '#15140f';
+      });
+      el.addEventListener('mouseleave', () => {
+        if (thumb) thumb.style.transform = 'scale(1)';
+        if (link && link.dataset.live) link.style.color = '#c2652f';
+      });
+    });
+    q('[data-thumb]').forEach(el => {
+      el.style.cssText = "border-radius:16px;overflow:hidden;background:#ddd9d0;transition:transform .7s cubic-bezier(.2,.7,.2,1)";
+      const img = el.querySelector('img');
+      if (img) img.style.cssText = "display:block;width:100%;height:auto";
+    });
+    q('[data-casenum]').forEach(el => {
+      el.style.cssText = "font:400 11px/1 'IBM Plex Mono',monospace;letter-spacing:.08em;color:#6b6250";
+    });
+    q('[data-caseinfo]').forEach(el => {
+      el.style.cssText = "padding-top:18px";
+    });
+    q('[data-casetitle]').forEach(el => {
+      el.style.cssText = "margin-top:11px;font:500 clamp(20px,2vw,27px)/1.18 'Flecha',Georgia,serif;letter-spacing:-.014em";
+    });
+    q('[data-casemeta]').forEach(el => {
+      el.style.cssText = "margin-top:9px;font:400 13.5px/1.3 Manrope,sans-serif;color:#6b6250";
+    });
+    q('[data-casebody]').forEach(el => {
+      el.style.cssText = "margin:18px 0 0;max-width:52ch;font:400 clamp(14.5px,1.1vw,16px)/1.65 Manrope,sans-serif;color:#403c31;text-wrap:pretty";
+    });
+    q('[data-caselink]').forEach(el => {
+      const live = !!el.dataset.live;
+      el.style.cssText = "display:inline-flex;align-items:center;gap:8px;margin-top:20px;font:500 14px/1 Manrope,sans-serif;transition:color .25s ease;color:" + (live ? '#c2652f' : '#8a8270');
+    });
+    q('[data-other]').forEach(el => {
+      el.style.cssText = "display:flex;flex-direction:column";
+    });
+    q('[data-otherthumb]').forEach(el => {
+      el.style.cssText = "aspect-ratio:4/3;border-radius:14px;background-color:#dcd6c8;background-image:repeating-linear-gradient(135deg,rgba(21,20,15,.055) 0 2px,transparent 2px 11px);border:1px solid rgba(21,20,15,.09);display:flex;align-items:flex-end;padding:13px";
+      const cap = el.querySelector('span');
+      if (cap) cap.style.cssText = "font:400 10.5px/1.3 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:#6b6250;background:rgba(246,245,241,.8);border:1px solid rgba(21,20,15,.08);padding:6px 9px;border-radius:7px";
+    });
+    q('[data-othertitle]').forEach(el => {
+      el.style.cssText = "margin-top:15px;font:500 clamp(16px,1.4vw,19px)/1.25 'Flecha',Georgia,serif;letter-spacing:-.01em;color:#8a8270";
+    });
+    q('[data-othermeta]').forEach(el => {
+      el.style.cssText = "margin-top:7px;font:400 13px/1.3 Manrope,sans-serif;color:#8a8270";
+    });
+    q('[data-flink]').forEach(el => {
+      el.style.color = '#57534a';
+      el.style.transition = 'color .25s ease';
+      el.addEventListener('mouseenter', () => { el.style.color = '#15140f'; });
+      el.addEventListener('mouseleave', () => { el.style.color = '#57534a'; });
+    });
+    q('[data-navlink]').forEach(el => {
+      el.style.cssText = "padding:6px 10px;color:rgba(245,243,238,.72);transition:color .25s ease";
+      el.addEventListener('mouseenter', () => { el.style.color = '#f5f3ee'; });
+      el.addEventListener('mouseleave', () => { el.style.color = 'rgba(245,243,238,.72)'; });
+    });
+
+    // mobile menu — identical behaviour to the other pages
+    const toggle = root.querySelector('[data-navtoggle]');
+    const sheet = root.querySelector('[data-navsheet]');
+    const navDesktop = root.querySelector('[data-navdesktop]');
+    if (toggle && sheet) {
+      toggle.style.cssText = "pointer-events:auto;width:44px;height:44px;flex:none;border-radius:50%;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);cursor:pointer;display:none;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:0";
+      toggle.querySelectorAll('[data-bar]').forEach(b => {
+        b.style.cssText = "display:block;width:17px;height:1.5px;background:#f5f3ee;border-radius:2px;transition:transform .3s ease";
+      });
+      sheet.style.cssText = "pointer-events:auto;position:absolute;top:calc(100% + 8px);left:clamp(12px,3vw,28px);right:clamp(12px,3vw,28px);display:none;flex-direction:column;gap:2px;padding:14px;border-radius:22px;border:1px solid rgba(255,255,255,.14);background:rgba(16,16,15,.92);backdrop-filter:blur(18px);box-shadow:0 20px 50px rgba(0,0,0,.4);opacity:0;transform:translateY(-8px);transition:opacity .3s ease,transform .3s ease";
+      sheet.querySelectorAll('[data-sheetlink]').forEach(a => {
+        a.style.cssText = "padding:14px 12px;border-radius:12px;color:rgba(245,243,238,.8);font:500 16px/1 Manrope,sans-serif";
+      });
+      const cta = sheet.querySelector('[data-sheetcta]');
+      if (cta) cta.style.cssText = "margin-top:8px;padding:15px 12px;border-radius:14px;background:#f5f3ee;color:#15140f;font:500 16px/1 Manrope,sans-serif;text-align:center";
+
+      let open = false;
+      const setOpen = (v) => {
+        open = v;
+        const bars = toggle.querySelectorAll('[data-bar]');
+        toggle.setAttribute('aria-expanded', String(v));
+        toggle.setAttribute('aria-label', v ? 'Close menu' : 'Open menu');
+        if (bars[0]) bars[0].style.transform = v ? 'translateY(3.25px) rotate(45deg)' : 'none';
+        if (bars[1]) bars[1].style.transform = v ? 'translateY(-3.25px) rotate(-45deg)' : 'none';
+        if (v) {
+          sheet.style.display = 'flex';
+          requestAnimationFrame(() => { sheet.style.opacity = '1'; sheet.style.transform = 'none'; });
+        } else {
+          sheet.style.opacity = '0';
+          sheet.style.transform = 'translateY(-8px)';
+          setTimeout(() => { if (!open) sheet.style.display = 'none'; }, 280);
+        }
+      };
+      toggle.addEventListener('click', () => setOpen(!open));
+      sheet.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setOpen(false)));
+      const fitNav = () => {
+        const mobile = window.innerWidth < 760;
+        toggle.style.display = mobile ? 'flex' : 'none';
+        if (navDesktop) navDesktop.style.display = mobile ? 'none' : 'flex';
+        if (!mobile && open) setOpen(false);
+      };
+      fitNav();
+      window.addEventListener('resize', fitNav);
+      this._fitNav = fitNav;
+    }
+
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduced) {
+      q('[data-hero-el]').forEach((el, i) => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(24px)';
+        el.style.transition = 'opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1)';
+        setTimeout(() => { el.style.opacity = '1'; el.style.transform = 'none'; }, 100 + i * 130);
+      });
+    }
+
+    if ((this.props.scrollReveal ?? true) && !reduced && 'IntersectionObserver' in window) {
+      const targets = q('[data-reveal]');
+      targets.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1)';
+      });
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e, i) => {
+          if (!e.isIntersecting) return;
+          const el = e.target;
+          setTimeout(() => { el.style.opacity = '1'; el.style.transform = 'none'; }, i * 70);
+          io.unobserve(el);
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+      targets.forEach(el => io.observe(el));
+      this._io = io;
+    }
+
+    const clock = root.querySelector('[data-clock]');
+    const year = root.querySelector('[data-year]');
+    if (year) year.textContent = String(new Date().getFullYear());
+    if (clock) {
+      const tick = () => {
+        clock.textContent = new Date().toLocaleTimeString('en-GB', {
+          timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second: '2-digit'
+        }) + ' IST';
+      };
+      tick();
+      this._t = setInterval(tick, 1000);
+    }
+  }
+
+  componentWillUnmount() {
+    if (this._io) this._io.disconnect();
+    if (this._t) clearInterval(this._t);
+    if (this._fitNav) window.removeEventListener('resize', this._fitNav);
+  }
+
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
