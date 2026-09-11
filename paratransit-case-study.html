@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html{overflow-x:clip}
+  body{margin:0;overflow-x:clip;max-width:100%;background:#f3f1ec;color:#15140f;font-family:Manrope,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  *{box-sizing:border-box}
+  a{color:#15140f;text-decoration:none}
+  a:hover{color:#6b6250}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+</style>
+<link rel="icon" type="image/png" href="uploads/pasted-1788780134229-0.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6W1VD5LBDS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6W1VD5LBDS');
+</script>
+</helmet>
+
+<div data-nav="" style="position:fixed;top:14px;left:0;right:0;z-index:80;display:flex;justify-content:center;padding:0 clamp(12px,3vw,28px);pointer-events:none">
+  <div style="pointer-events:auto;width:100%;max-width:980px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 10px 10px 22px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(18,18,17,.55);backdrop-filter:blur(16px) saturate(140%);box-shadow:0 12px 40px rgba(0,0,0,.28)">
+    <a href="index.html" style="font:700 17px/1 Manrope,sans-serif;letter-spacing:-.014em;color:#f5f3ee">AnandGatta</a>
+    <nav data-navdesktop="" style="display:flex;align-items:center;gap:clamp(10px,1.6vw,24px);font:500 13.5px/1 Manrope,sans-serif">
+      <a href="Works.dc.html" data-navlink="">Work</a>
+      <a href="About.dc.html" data-navlink="">About</a>
+      <a href="uploads/Anand_Gatta_Resume.pdf" download="Anand_Gatta_Resume.pdf" data-navlink="">Resume</a>
+      <a href="About.dc.html#contact" style="display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:999px;background:#f5f3ee;color:#15140f;font:500 13.5px/1 Manrope,sans-serif" style-hover="background:#ffffff">
+        <span style="width:6px;height:6px;border-radius:50%;background:#e2733f;animation:blink 2.4s ease-in-out infinite"></span>Contact
+      </a>
+    </nav>
+    <button type="button" data-navtoggle="" aria-label="Open menu" aria-expanded="false">
+      <span data-bar=""></span>
+      <span data-bar=""></span>
+    </button>
+  </div>
+
+  <div data-navsheet="">
+    <a href="Works.dc.html" data-sheetlink="">Work</a>
+    <a href="About.dc.html" data-sheetlink="">About</a>
+    <a href="uploads/Anand_Gatta_Resume.pdf" download="Anand_Gatta_Resume.pdf" data-sheetlink="">Resume</a>
+    <a href="index.html#experience" data-sheetlink="">Experience</a>
+    <a href="About.dc.html#contact" data-sheetcta="">Contact</a>
+  </div>
+</div>
+
+<button type="button" data-tocpill="" aria-label="Jump to section" aria-expanded="false">
+  <span data-pillbar=""><span data-pillfill=""></span></span>
+  <span data-pilltext="">Contents</span>
+  <span data-pillcaret="">︿</span>
+</button>
+
+<aside data-toc="" aria-label="Case study sections">
+  <div data-tocinner="">
+    <div data-tocgroup="">
+      <div data-tocheading="">Overview</div>
+      <a href="#top" data-tocitem="" data-target="top"><span data-tocdash=""></span><span data-toctext="">Introduction</span></a>
+      <a href="#sec-designs" data-tocitem="" data-target="sec-designs"><span data-tocdash=""></span><span data-toctext="">Old &amp; new design</span></a>
+      <a href="#sec-challenge" data-tocitem="" data-target="sec-challenge"><span data-tocdash=""></span><span data-toctext="">The challenge</span></a>
+      <a href="#sec-problem" data-tocitem="" data-target="sec-problem"><span data-tocdash=""></span><span data-toctext="">The problem</span></a>
+    </div>
+    <div data-tocgroup="">
+      <div data-tocheading="">Research</div>
+      <a href="#sec-process" data-tocitem="" data-target="sec-process"><span data-tocdash=""></span><span data-toctext="">Methodology</span></a>
+      <a href="#sec-research" data-tocitem="" data-target="sec-research"><span data-tocdash=""></span><span data-toctext="">User research</span></a>
+      <a href="#sec-audit" data-tocitem="" data-target="sec-audit"><span data-tocdash=""></span><span data-toctext="">Heuristic audit</span></a>
+      <a href="#sec-screens" data-tocitem="" data-target="sec-screens"><span data-tocdash=""></span><span data-toctext="">Screen by screen</span></a>
+      <a href="#sec-personas" data-tocitem="" data-target="sec-personas"><span data-tocdash=""></span><span data-toctext="">Personas</span></a>
+    </div>
+    <div data-tocgroup="">
+      <div data-tocheading="">Design</div>
+      <a href="#sec-ia" data-tocitem="" data-target="sec-ia"><span data-tocdash=""></span><span data-toctext="">8 steps to 3</span></a>
+      <a href="#sec-final" data-tocitem="" data-target="sec-final"><span data-tocdash=""></span><span data-toctext="">Final design &amp; UI</span></a>
+    </div>
+    <div data-tocgroup="">
+      <div data-tocheading="">Outcome</div>
+      <a href="#sec-impact" data-tocitem="" data-target="sec-impact"><span data-tocdash=""></span><span data-toctext="">Expected impact</span></a>
+      <a href="#sec-learnings" data-tocitem="" data-target="sec-learnings"><span data-tocdash=""></span><span data-toctext="">Key learnings</span></a>
+      <a href="About.dc.html#contact" data-tocitem="" data-target="contact"><span data-tocdash=""></span><span data-toctext="">Contact</span></a>
+    </div>
+  </div>
+</aside>
+
+<section id="top" style="position:relative;background:#120d0a;overflow:hidden">
+  <div style="position:absolute;inset:0;background:radial-gradient(110% 80% at 70% 0%,rgba(255,236,222,.11) 0%,rgba(255,255,255,0) 62%),linear-gradient(180deg,#1c1512 0%,#100b09 100%)"></div>
+  <div style="position:relative;max-width:980px;margin:0 auto;padding:clamp(104px,12vw,150px) clamp(20px,4vw,56px) clamp(44px,6vw,74px)">
+    <a href="javascript:void(0)" data-backbtn="" aria-label="Back">
+      <span aria-hidden="true">←</span> Back
+    </a>
+    <div data-hero-el="" style="font:400 11.5px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#e2733f">Paratransit · Mobile app</div>
+    <h1 data-hero-el="" style="margin:clamp(18px,2.2vw,26px) 0 0;max-width:26ch;font:500 clamp(27px,3.6vw,46px)/1.08 'Flecha',Georgia,serif;letter-spacing:-.018em;color:#f7f5f0;text-wrap:balance">Rider App Booking Flow, Redesigning the Booking Experience for Paratransit Users</h1>
+
+    <div data-hero-el="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:clamp(16px,2.4vw,32px);margin-top:clamp(26px,3.6vw,44px);padding-top:clamp(20px,2.4vw,28px);border-top:1px solid rgba(255,255,255,.14)">
+      <div>
+        <div style="font:400 11px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,243,238,.6)">Services</div>
+        <div style="margin-top:9px;font:400 14.5px/1.45 Manrope,sans-serif;color:#f0ede6">Product design · Mobile UX</div>
+      </div>
+      <div>
+        <div style="font:400 11px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,243,238,.6)">Role</div>
+        <div style="margin-top:9px;font:400 14.5px/1.45 Manrope,sans-serif;color:#f0ede6">Product Designer</div>
+      </div>
+      <div>
+        <div style="font:400 11px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,243,238,.6)">Timeline</div>
+        <div style="margin-top:9px;font:400 14.5px/1.45 Manrope,sans-serif;color:#f0ede6">2026 · 8 weeks</div>
+      </div>
+      <div>
+        <div style="font:400 11px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,243,238,.6)">Platform</div>
+        <div style="margin-top:9px;font:400 14.5px/1.45 Manrope,sans-serif;color:#f0ede6">iOS Mobile</div>
+      </div>
+    </div>
+
+    <div data-hero-el="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(18px,2.6vw,40px);margin-top:clamp(24px,3vw,38px)">
+      <p style="margin:0;font:400 clamp(14.5px,1.05vw,16.5px)/1.6 Manrope,sans-serif;color:rgba(245,243,238,.78);text-wrap:pretty">A rider-first booking experience for paratransit users, reduced to the decisions that matter, with clearer maps, accessible controls, and confident confirmations.</p>
+      <p style="margin:0;font:400 clamp(14.5px,1.05vw,16.5px)/1.6 Manrope,sans-serif;color:rgba(245,243,238,.6);text-wrap:pretty">The redesign turns a high-friction routine into an inclusive, predictable journey for people who depend on reliable transport.</p>
+    </div>
+  </div>
+</section>
+
+<div style="max-width:980px;margin:0 auto;padding:0 clamp(16px,4vw,56px)">
+
+  <section id="sec-designs" style="padding:clamp(40px,5.5vw,76px) 0 0">
+    <div data-label="" data-reveal="">Old design &amp; new design</div>
+    <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(18px,2.6vw,34px);margin-top:clamp(20px,3vw,32px)">
+      <figure data-reveal="" style="margin:0">
+        <img src="uploads/pic-one.png" alt="Old design, legacy paratransit booking screens" style="display:block;width:100%;height:auto;border-radius:14px;border:1px solid rgba(21,20,15,.1)">
+      </figure>
+      <figure data-reveal="" style="margin:0">
+        <img src="uploads/pic-2.png" alt="New design, redesigned booking flow" style="display:block;width:100%;height:auto;border-radius:14px;border:1px solid rgba(21,20,15,.1)">
+      </figure>
+    </div>
+
+    <div data-label="" data-reveal="" style="margin-top:clamp(30px,4vw,52px)">Walkthrough</div>
+    <video data-casevideo="" data-reveal="" src="uploads/Casestudy.mp4" muted="" loop="" playsinline="" preload="metadata" controls="" style="display:block;width:100%;height:auto;margin-top:clamp(16px,2.4vw,26px);border-radius:14px;border:1px solid rgba(21,20,15,.1);background:#ddd9d0"></video>
+  </section>
+
+  <section id="sec-challenge" style="padding:clamp(40px,5.5vw,76px) 0 0">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(24px,4vw,64px)">
+      <div data-reveal="">
+        <div data-label="">01 / The challenge</div>
+        <h2 data-h2="" style="max-width:20ch">The most critical flow had grown bloated.</h2>
+      </div>
+      <div data-reveal="" style="display:flex;flex-direction:column;gap:16px;align-self:end">
+        <p data-body="">The booking experience is the single most critical flow in our rider application. Over successive feature additions, it had grown bloated and confusing. Passionate daily users found themselves facing unnecessary cognitive friction when executing routine trips.</p>
+        <p data-body="">This redesign recovers clean, rapid utility while respecting the visual instincts of seasoned riders.</p>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));gap:1px;background:rgba(21,20,15,.12);border:1px solid rgba(21,20,15,.12);border-radius:16px;overflow:hidden;margin-top:clamp(30px,4vw,56px)" data-reveal="">
+      <div data-cell="">
+        <div data-mini="">Role</div>
+        <div data-cellval="">Product Designer</div>
+      </div>
+      <div data-cell="">
+        <div data-mini="">Duration</div>
+        <div data-cellval="">8 weeks</div>
+      </div>
+      <div data-cell="">
+        <div data-mini="">Focus</div>
+        <div data-cellval="">Booking, Accessibility, Information Architecture</div>
+      </div>
+      <div data-cell="">
+        <div data-mini="">Platform</div>
+        <div data-cellval="">iOS Mobile</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section id="sec-problem" style="position:relative;width:100vw;margin-inline:calc(50% - 50vw);background:linear-gradient(180deg,#3b312a 0%,#241c17 100%);margin-top:clamp(40px,5.5vw,76px)">
+  <div style="max-width:980px;margin:0 auto;padding:clamp(40px,5.5vw,76px) clamp(20px,4vw,56px)">
+    <div data-reveal="" style="font:400 11.5px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,243,238,.5)">02 / The problem</div>
+    <blockquote data-reveal="" style="margin:clamp(22px,3vw,36px) 0 0;max-width:34ch;font:500 clamp(24px,3.4vw,46px)/1.18 'Flecha',Georgia,serif;letter-spacing:-.014em;color:#f7f5f0;text-wrap:pretty">“A routine trip booking that should take under 45 seconds was taking riders over three minutes, leading to an 18% drop-off rate at the final step.”</blockquote>
+    <p data-reveal="" style="margin:clamp(26px,4vw,44px) 0 0;max-width:62ch;font:400 clamp(15px,1.2vw,17.5px)/1.65 Manrope,sans-serif;color:rgba(245,243,238,.66);text-wrap:pretty">Frequent screen redraws, rigid sequencing, and poorly integrated maps combined to break confidence just as users were preparing to commit to their trips. The interface was asking for excessive cognitive investments where fluid, automatic system feedback was expected.</p>
+  </div>
+</section>
+
+<section id="sec-process" style="position:relative;width:100vw;margin-inline:calc(50% - 50vw);background:#e7e2d6;border-bottom:1px solid rgba(21,20,15,.09)">
+  <div style="max-width:980px;margin:0 auto;padding:clamp(40px,5.5vw,76px) clamp(20px,4vw,56px)">
+    <div data-label="" data-reveal="">03 / Strategic methodology</div>
+    <h2 data-h2="" data-reveal="" style="max-width:18ch">The design process</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));gap:1px;background:rgba(21,20,15,.14);border:1px solid rgba(21,20,15,.14);border-radius:16px;overflow:hidden;margin-top:clamp(28px,4vw,52px)">
+      <div data-phase="" data-reveal="">
+        <span data-num="">01</span>
+        <div data-phasetitle="">Discover</div>
+        <p data-body="" style="margin:12px 0 0">User research, Hotjar heatmaps, and competitive benchmarking.</p>
+      </div>
+      <div data-phase="" data-reveal="">
+        <span data-num="">02</span>
+        <div data-phasetitle="">Define</div>
+        <p data-body="" style="margin:12px 0 0">Synthesizing friction points, defining key metrics, and path scoping.</p>
+      </div>
+      <div data-phase="" data-reveal="">
+        <span data-num="">03</span>
+        <div data-phasetitle="">Design</div>
+        <p data-body="" style="margin:12px 0 0">Rapid wireframing, high-density system design, and flow testing.</p>
+      </div>
+      <div data-phase="" data-reveal="">
+        <span data-num="">04</span>
+        <div data-phasetitle="">Deliver</div>
+        <p data-body="" style="margin:12px 0 0">Developer handoff specs, design quality assurance, and Maze testing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="max-width:980px;margin:0 auto;padding:0 clamp(16px,4vw,56px)">
+  <section id="sec-research" style="padding:clamp(40px,5.5vw,76px) 0 0">
+    <div data-label="" data-reveal="">04 / User research</div>
+    <h2 data-h2="" data-reveal="" style="max-width:18ch">Research &amp; insights</h2>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(16px,2.4vw,28px);margin-top:clamp(28px,4vw,52px)">
+      <div data-stat="" data-reveal="">
+        <div data-statnum="">72%</div>
+        <div data-stattitle="">Decision fatigue</div>
+        <p data-body="" style="margin:10px 0 0">Riders were confronted with secondary choices before confirming primary trip routes.</p>
+      </div>
+      <div data-stat="" data-reveal="">
+        <div data-statnum="">6.2%</div>
+        <div data-stattitle="">Transportation barriers</div>
+        <p data-body="" style="margin:10px 0 0">of U.S. adults reported lacking reliable transportation that prevented them from getting to medical appointments or essential activities in the past year.</p>
+      </div>
+    </div>
+
+    <p data-reveal="" style="margin:clamp(32px,4vw,56px) 0 0;max-width:30ch;font:500 clamp(20px,2.4vw,32px)/1.3 'Flecha',Georgia,serif;letter-spacing:-.012em;text-wrap:pretty">It was not just a UX problem. The app had a 2.1★ rating and users were calling a 2-hour phone queue instead.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(20px,3vw,48px);margin-top:clamp(24px,3vw,40px)">
+      <p data-body="" data-reveal="">Before redesigning anything, I needed to understand whether the failures were isolated screen issues or something structural. The answer came from three independent sources and all three said the same thing.</p>
+      <p data-body="" data-reveal="">I started with a simple assumption: if this is a paratransit rider booking a ride to dialysis three times a week, every extra step is a potential no-show. That context shaped every research decision.</p>
+    </div>
+
+    <div data-marketgrid="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:clamp(14px,2vw,20px);margin-top:clamp(30px,4vw,56px)">
+      <div data-cell="" data-reveal="">
+        <div data-mini="">NEMT market 2025</div>
+        <div data-bignum="">$11.8B</div>
+        <div data-note="">Growing 8.8% annually</div>
+      </div>
+      <div data-cell="" data-reveal="">
+        <div data-mini="">Missed appointments</div>
+        <div data-bignum="">3.6M</div>
+        <div data-note="">Americans per year, no transport</div>
+      </div>
+      <div data-cell="" data-reveal="">
+        <div data-mini="">Medicaid ride-days</div>
+        <div data-bignum="">60M+</div>
+        <div data-note="">Federally mandated annually</div>
+      </div>
+    </div>
+
+    <p data-body="" data-reveal="" style="margin-top:clamp(24px,3vw,40px);max-width:70ch">Paratransit isn't a niche product. It's a federally mandated service. The users are booking rides to chemotherapy, dialysis, and surgery. A confusing booking flow isn't a minor UX inconvenience, it's a public health problem.</p>
+  </section>
+
+  <section style="padding:clamp(40px,6vw,80px) 0 0">
+    <h3 data-h3="" data-reveal="">I started with App Store reviews</h3>
+    <p data-body="" data-reveal="" style="margin-top:14px;max-width:66ch">The same complaints appeared repeatedly, address search failures, map crashes, and the booking flow being too complex for elderly users. 2.1★ from 66 reviews.</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,245px),1fr));gap:clamp(14px,2vw,22px);margin-top:clamp(22px,3vw,34px);align-items:start">
+      <div data-review="" data-reveal="">
+        <div data-stars="">★☆☆☆☆</div>
+        <p data-quote="">"It will not recognise the address of destination... the map pulls up for a split second and goes blank. When you only have limited time to put the appointment in, this is extremely frustrating."</p>
+        <div data-source="">App Store · March 2024</div>
+      </div>
+      <div data-review="" data-reveal="">
+        <div data-stars="">★★☆☆☆</div>
+        <p data-quote="">"Poorly thought out for the most part especially for older people. They need to add a real time real person chat function."</p>
+        <div data-source="">App Store · June 2021</div>
+      </div>
+      <div data-review="" data-reveal="">
+        <div data-stars="">★☆☆☆☆</div>
+        <p data-quote="">"I can call and wait on average 2 hours to talk with someone to book it. But you honestly expect people to have that much time during their day?"</p>
+        <div data-source="">App Store · March 2024</div>
+      </div>
+    </div>
+
+    <h3 data-h3="" data-reveal="" style="margin-top:clamp(38px,5vw,72px)">Then I looked at the version history</h3>
+    <p data-body="" data-reveal="" style="margin-top:14px;max-width:66ch">VoiceOver fixes, touch target patches, map crash resolutions, all added post-launch across versions 4.3.1–4.3.3 in response to complaints.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(16px,2.4vw,28px);margin-top:clamp(24px,3vw,40px)">
+      <div data-callout="" data-reveal="">
+        <div data-mini="">Key insight</div>
+        <p style="margin:14px 0 0;font:500 clamp(18px,1.8vw,24px)/1.35 'Flecha',Georgia,serif;letter-spacing:-.012em;text-wrap:pretty">“The same issues were patched 3–4 times across multiple releases without solving the underlying structural problem.”</p>
+      </div>
+      <div data-callout="" data-reveal="">
+        <div data-mini="">Root cause</div>
+        <p style="margin:14px 0 0;font:500 clamp(18px,1.8vw,24px)/1.35 'Flecha',Georgia,serif;letter-spacing:-.012em;text-wrap:pretty">This wasn't a maintenance problem. It was a design philosophy problem.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<section id="sec-audit" style="position:relative;width:100vw;margin-inline:calc(50% - 50vw);background:#eceae4;margin-top:clamp(40px,5.5vw,76px);border-top:1px solid rgba(21,20,15,.09);border-bottom:1px solid rgba(21,20,15,.09)">
+  <div style="max-width:980px;margin:0 auto;padding:clamp(40px,5.5vw,76px) clamp(20px,4vw,56px)">
+    <div data-label="" data-reveal="">05 / Heuristic audit</div>
+    <h2 data-h2="" data-reveal="" style="max-width:20ch">10 failures across 4 screens</h2>
+    <p data-body="" data-reveal="" style="margin-top:20px;max-width:70ch">Most violated heuristic: <strong style="font-weight:600">visibility of system status</strong>, violated 6 times across 3 screens. Users consistently couldn't tell if their booking was registering, where their ride was, or what they were about to confirm.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(14px,2vw,22px);margin-top:clamp(28px,4vw,48px)">
+      <div data-find="" data-sev="critical" data-reveal="">
+        <div data-sevtag="">Critical · Finding 01</div>
+        <div data-findtitle="">Booking flow is 2× more complex than market standard</div>
+        <p data-body="" style="margin:10px 0 0">8 steps to book one ride. Single-field screens for mobility aid and trip purpose fragment the flow unnecessarily. Each extra step is a drop-off point.</p>
+      </div>
+      <div data-find="" data-sev="critical" data-reveal="">
+        <div data-sevtag="">Critical · Finding 02</div>
+        <div data-findtitle="">The map provides zero booking confidence</div>
+        <p data-body="" style="margin:10px 0 0">Both addresses entered, map shows only a GPS dot. No pickup pin, no drop-off pin, no route line. Direct cause of re-bookings and phone fallback.</p>
+      </div>
+      <div data-find="" data-sev="critical" data-reveal="">
+        <div data-sevtag="">Critical · Finding 03</div>
+        <div data-findtitle="">The final screen before booking is the most broken screen</div>
+        <p data-body="" style="margin:10px 0 0">Fare buried in a floating badge. Drop-off address truncated. Purpose field cut off above the CTA.</p>
+      </div>
+      <div data-find="" data-sev="major" data-reveal="">
+        <div data-sevtag="">Major · Finding 04</div>
+        <div data-findtitle="">Pickup window language creates anxiety on day of travel</div>
+        <p data-body="" style="margin:10px 0 0">“10:06 AM–10:38 AM” shown with no explanation. For elderly users heading to medical appointments, this ambiguity directly causes no-shows.</p>
+      </div>
+      <div data-find="" data-sev="positive" data-reveal="">
+        <div data-sevtag="">Positive · Finding 05</div>
+        <div data-findtitle="">Three patterns worth preserving</div>
+        <p data-body="" style="margin:10px 0 0">Heart/clock icon system for saved vs. recent addresses. Return trip prompt after booking. Bottom tab navigation. These were designed well, kept in the redesign.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="max-width:980px;margin:0 auto;padding:0 clamp(16px,4vw,56px)">
+  <section id="sec-screens" style="padding:clamp(40px,5.5vw,76px) 0 0">
+    <div data-label="" data-reveal="">06 / Screen by screen</div>
+    <h2 data-h2="" data-reveal="" style="max-width:22ch">10 critical &amp; major failures, annotated</h2>
+
+    <div data-screengrid="">
+    <div data-screen="" data-reveal="">
+      <figure style="margin:0;max-width:281px"><img src="uploads/old-address-selection.png" alt="Legacy address selection screen with stored and recently used addresses" style="display:block;width:100%;height:auto;border-radius:14px"></figure>
+      <div>
+        <h3 data-h3="">Address selection</h3>
+        <div data-annos="">
+          <div data-anno=""><span data-anum="">1</span><div><div data-atag="" data-sev="critical">Critical</div><div data-atitle="">Pickup and drop-off on separate screens</div><p data-body="" style="margin:8px 0 0">Forces the user to navigate to a second screen just to enter the second address, doubling the steps for one logical task.</p></div></div>
+          <div data-anno=""><span data-anum="">2</span><div><div data-atag="" data-sev="major">Major</div><div data-atitle="">Back navigation says “Details”, confusing</div><p data-body="" style="margin:8px 0 0">The back label “Details” doesn't tell the user where they came from or where they'll go back to.</p></div></div>
+          <div data-anno=""><span data-anum="">3</span><div><div data-atag="" data-sev="positive">Positive, keep</div><div data-atitle="">Heart / clock icons for saved vs. recent addresses</div><p data-body="" style="margin:8px 0 0">Excellent recognition pattern, users can identify saved destinations without reading labels.</p></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div data-screen="" data-reveal="">
+      <figure style="margin:0;max-width:297px"><img src="uploads/old-itinerary-map.png" alt="Legacy itinerary screen, map shows only a GPS dot" style="display:block;width:100%;height:auto;border-radius:14px"></figure>
+      <div>
+        <h3 data-h3="">Itinerary + map screen</h3>
+        <div data-annos="">
+          <div data-anno=""><span data-anum="">1</span><div><div data-atag="" data-sev="critical">Critical</div><div data-atitle="">“Arrive by” is ambiguous jargon</div><p data-body="" style="margin:8px 0 0">Users don't know if this is their requested arrival time or a guaranteed window. Creates booking errors for medical appointments.</p></div></div>
+          <div data-anno=""><span data-anum="">2</span><div><div data-atag="" data-sev="critical">Critical</div><div data-atitle="">Drop-off address truncated to “Chawdr…”</div><p data-body="" style="margin:8px 0 0">User cannot verify their destination is correct. For medical appointments this directly causes booking errors and no-shows.</p></div></div>
+          <div data-anno=""><span data-anum="">3</span><div><div data-atag="" data-sev="critical">Critical</div><div data-atitle="">Map shows only a GPS dot, no route, no pins</div><p data-body="" style="margin:8px 0 0">Both addresses entered but no visual confirmation. User cannot verify their journey is registered correctly.</p></div></div>
+          <div data-anno=""><span data-anum="">4</span><div><div data-atag="" data-sev="major">Major</div><div data-atitle="">Date / time split into 3 tiny tap targets</div><p data-body="" style="margin:8px 0 0">“Arrive by”, “Jul 8”, “7:40 PM”, three adjacent buttons, each under 44pt. Impossible for Dorothy with reduced motor precision.</p></div></div>
+          <div data-anno=""><span data-anum="">5</span><div><div data-atag="" data-sev="major">Major</div><div data-atitle="">X button clears address with no undo</div><p data-body="" style="margin:8px 0 0">Tapping × instantly clears a typed address with no confirmation and no way to recover it. Catastrophic for low-literacy users.</p></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div data-screen="" data-reveal="">
+      <figure style="margin:0;max-width:302px"><img src="uploads/old-new-trip-summary.png" alt="Legacy New Trip summary with fare in a floating badge" style="display:block;width:100%;height:auto;border-radius:14px"></figure>
+      <div>
+        <h3 data-h3="">New Trip summary screen</h3>
+        <div data-annos="">
+          <div data-anno=""><span data-anum="">1</span><div><div data-atag="" data-sev="critical">Critical</div><div data-atitle="">Fare floats outside the reading order</div><p data-body="" style="margin:8px 0 0">$2.00 sits in the top-right corner outside the natural reading order. Fixed-income users commit to a booking without knowingly seeing the cost.</p></div></div>
+          <div data-anno=""><span data-anum="">2</span><div><div data-atag="" data-sev="critical">Critical</div><div data-atitle="">Section chevrons ambiguous, edit or expand?</div><p data-body="" style="margin:8px 0 0">“›” next to Itinerary, Specifics, Payment, Price, each chevron could mean expand to see more OR tap to edit. Users can't tell.</p></div></div>
+          <div data-anno=""><span data-anum="">3</span><div><div data-atag="" data-sev="major">Major</div><div data-atitle="">Purpose field “Shopping” cut off above Book Trip</div><p data-body="" style="margin:8px 0 0">Critical information truncated directly above the confirmation CTA. User is committing to a booking with incomplete information visible.</p></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div data-screen="" data-reveal="">
+      <figure style="margin:0;max-width:302px"><img src="uploads/old-trip-destinations.png" alt="Legacy trip destinations screen, ride location not yet available" style="display:block;width:100%;height:auto;border-radius:14px"></figure>
+      <div>
+        <h3 data-h3="">Trip destinations</h3>
+        <div data-annos="">
+          <div data-anno=""><span data-anum="">1</span><div><div data-atag="" data-sev="critical">Critical</div><div data-atitle="">Ride location “not available”, no guidance</div><p data-body="" style="margin:8px 0 0">On the day of a medical appointment, the most critical screen shows “not available” with no ETA, no fallback, no explanation.</p></div></div>
+          <div data-anno=""><span data-anum="">2</span><div><div data-atag="" data-sev="critical">Critical</div><div data-atitle="">Live tracking buried as a small text link</div><p data-body="" style="margin:8px 0 0">“Map view”, the most valuable feature on travel day is a tiny underlined text link at the bottom. Dorothy may never find it.</p></div></div>
+          <div data-anno=""><span data-anum="">3</span><div><div data-atag="" data-sev="major">Major</div><div data-atitle="">“10:06 AM–10:38 AM” shown with no explanation</div><p data-body="" style="margin:8px 0 0">A raw time window with no context. Users don't know if they need to be ready at 7:10 or if the driver might be late by 7:17.</p></div></div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+</div>
+
+<section id="sec-personas" style="position:relative;width:100vw;margin-inline:calc(50% - 50vw);background:linear-gradient(180deg,#3b312a 0%,#241c17 100%);margin-top:clamp(40px,5.5vw,76px)">
+  <div style="max-width:980px;margin:0 auto;padding:clamp(40px,5.5vw,76px) clamp(20px,4vw,56px)">
+    <div data-reveal="" style="font:400 11.5px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,243,238,.5)">07 / Audience mapping</div>
+    <h2 data-reveal="" style="margin:16px 0 0;max-width:16ch;font:500 clamp(26px,3.8vw,50px)/1.06 'Flecha',Georgia,serif;letter-spacing:-.014em;color:#f7f5f0">User personas</h2>
+    <p data-reveal="" style="margin:20px 0 0;max-width:66ch;font:400 clamp(15px,1.2vw,17.5px)/1.65 Manrope,sans-serif;color:rgba(245,243,238,.66);text-wrap:pretty">Every micro-decision in this redesign was filtered through two people, a 72-year-old dialysis patient and a 45-year-old wheelchair user. Not edge cases. The primary users.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(16px,2.4vw,28px);margin-top:clamp(30px,4vw,52px)">
+      <div data-persona="" data-reveal="">
+        <div style="display:flex;gap:16px;align-items:center">
+          <div data-avatar=""><span data-initial="">D</span></div>
+          <div>
+            <div style="font:500 clamp(21px,2.2vw,28px)/1.1 'Flecha',Georgia,serif;color:#f7f5f0;letter-spacing:-.012em">Dorothy</div>
+            <div style="margin-top:7px;font:400 12.5px/1.3 'IBM Plex Mono',monospace;color:rgba(245,243,238,.5)">Age 72 · Seattle, WA · Paratransit rider</div>
+          </div>
+        </div>
+        <p style="margin:22px 0 0;font:500 clamp(16px,1.5vw,20px)/1.45 'Flecha',Georgia,serif;color:#e9e5dc;text-wrap:pretty">“I just want to know my ride is coming. The app confuses me so I just call, but the wait is so long.”</p>
+        <div data-plists="">
+          <div>
+            <div data-pmini="">Frustrations</div>
+            <ul data-plist="">
+              <li>Confused by the 8-step booking flow</li>
+              <li>Small touch targets are difficult to tap accurately</li>
+              <li>Can't visually verify her route on the map</li>
+              <li>Jargon labels that aren't clear</li>
+              <li>2+ hour phone wait times</li>
+            </ul>
+          </div>
+          <div>
+            <div data-pmini="">Goals</div>
+            <ul data-plist="">
+              <li>Book rides to weekly dialysis appointments reliably</li>
+              <li>Understand exactly when the ride will arrive</li>
+              <li>Know the fare cost upfront before booking</li>
+              <li>Confirm pickup and drop-off locations visually</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div data-persona="" data-reveal="">
+        <div style="display:flex;gap:16px;align-items:center">
+          <div data-avatar=""><span data-initial="">M</span></div>
+          <div>
+            <div style="font:500 clamp(21px,2.2vw,28px)/1.1 'Flecha',Georgia,serif;color:#f7f5f0;letter-spacing:-.012em">Marcus</div>
+            <div style="margin-top:7px;font:400 12.5px/1.3 'IBM Plex Mono',monospace;color:rgba(245,243,238,.5)">Age 45 · Seattle, WA · Wheelchair user</div>
+          </div>
+        </div>
+        <p style="margin:22px 0 0;font:500 clamp(16px,1.5vw,20px)/1.45 'Flecha',Georgia,serif;color:#e9e5dc;text-wrap:pretty">“Why do I have to go through 8 screens just to book one ride? I do this every week.”</p>
+        <div data-plists="">
+          <div>
+            <div data-pmini="">Frustrations</div>
+            <ul data-plist="">
+              <li>8 separate screens just to book one ride</li>
+              <li>Mobility aid selection required every single time</li>
+              <li>Small X buttons difficult to tap with switch access</li>
+              <li>No booking summary to review before confirming</li>
+              <li>Repetitive data entry that should be saved</li>
+            </ul>
+          </div>
+          <div>
+            <div data-pmini="">Goals</div>
+            <ul data-plist="">
+              <li>Book accessible rides accommodating his wheelchair quickly</li>
+              <li>App remembers his mobility aid requirements automatically</li>
+              <li>Review complete booking details before confirming</li>
+              <li>Complete bookings with fewer steps</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sec-ia" style="position:relative;width:100vw;margin-inline:calc(50% - 50vw);background:#e7e2d6;border-bottom:1px solid rgba(21,20,15,.09)">
+  <div style="max-width:980px;margin:0 auto;padding:clamp(40px,5.5vw,76px) clamp(20px,4vw,56px)">
+    <div data-label="" data-reveal="">08 / Structural design</div>
+    <h2 data-h2="" data-reveal="" style="max-width:22ch">From 8 steps to 3, and why each one was collapsed</h2>
+    <p data-body="" data-reveal="" style="margin-top:20px;max-width:70ch">The original flow fragmented one decision, “I want to go from A to B at this time”, into eight separate screens. Each screen became a drop-off point. The redesign consolidates everything into three intentional steps.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:clamp(14px,2vw,22px);margin-top:clamp(28px,4vw,48px)">
+      <div data-ia="" data-reveal="">
+        <span data-num="">01</span>
+        <div data-was="">Was: steps 1 + 2</div>
+        <div data-phasetitle="" style="margin-top:12px">Set pickup + drop-off with map confirmation</div>
+        <p data-body="" style="margin:12px 0 0">Both address fields on one screen. Map updates in real time as addresses are entered, showing route line and both pins immediately. Saved addresses (heart/clock icons) preserved from the original.</p>
+      </div>
+      <div data-ia="" data-reveal="">
+        <span data-num="">02</span>
+        <div data-was="">Was: steps 3 + 4 + 5 + 6</div>
+        <div data-phasetitle="" style="margin-top:12px">Trip details, date, time, mobility aid, fare</div>
+        <p data-body="" style="margin:12px 0 0">All trip parameters on one screen in reading order. Fare visible before commitment. Mobility aid pre-filled from Marcus's profile. Plain language pickup window replaces jargon.</p>
+      </div>
+      <div data-ia="" data-reveal="">
+        <span data-num="">03</span>
+        <div data-was="">Was: steps 7 + 8</div>
+        <div data-phasetitle="" style="margin-top:12px">Confirm and book</div>
+        <p data-body="" style="margin:12px 0 0">Full summary, untruncated addresses, plain pickup time range, itemised fare breakdown, wallet balance with “Covered” confirmation. One CTA. No ambiguity.</p>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(16px,2.4vw,30px);margin-top:clamp(24px,3vw,40px)">
+      <figure data-reveal="" style="margin:0">
+        <img src="uploads/ia-old-flow.png" alt="Existing flow, 8 steps to book" style="display:block;width:100%;height:auto;border-radius:14px;border:1px solid rgba(21,20,15,.1)">
+      </figure>
+      <figure data-reveal="" style="margin:0">
+        <img src="uploads/ia-new-flow.png" alt="Redesigned flow, 3 steps to book" style="display:block;width:100%;height:auto;border-radius:14px;border:1px solid rgba(21,20,15,.1)">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<div style="max-width:980px;margin:0 auto;padding:0 clamp(16px,4vw,56px)">
+  <section id="sec-final" style="padding:clamp(40px,5.5vw,76px) 0 0">
+    <div data-label="" data-reveal="">09 / High-fidelity artifacts</div>
+    <h2 data-h2="" data-reveal="" style="max-width:18ch">Final design &amp; UI</h2>
+    <p data-body="" data-reveal="" style="margin-top:20px;max-width:70ch">The polished UI features crisp geometric line work, robust touch targets, and a system font stack designed for rapid contextual reading during transit.</p>
+
+    <h3 data-h3="" data-reveal="" style="margin-top:clamp(38px,5vw,68px)">Every finding has a visible solution</h3>
+
+    <div data-ba="" data-reveal="">
+      <div data-bacol="">
+        <div data-batag="" data-kind="before">Before</div>
+        <div data-batitle="">Map shows a GPS dot. No route. No pins.</div>
+        <p data-body="" style="margin:10px 0 0">Both addresses entered, the map renders nothing useful. Users cannot verify their journey visually. Direct cause of re-bookings and phone fallback confirmed in App Store reviews.</p>
+        <figure style="margin:0;max-width:300px"><img src="uploads/old-itinerary-map.png" alt="Before, map renders only a GPS dot" style="display:block;width:100%;height:auto;border-radius:14px"></figure>
+      </div>
+      <div data-bacol="">
+        <div data-batag="" data-kind="after">After</div>
+        <div data-batitle="">Route line + pickup pin + drop-off pin from first entry</div>
+        <p data-body="" style="margin:10px 0 0">As soon as both addresses are entered, the map renders a route with both pins. Dorothy can see her journey to the dialysis centre before she confirms anything.</p>
+        <figure style="margin:0;max-width:300px"><img src="uploads/new-confirm-route.png" alt="After, Confirm route with route line and both pins" style="display:block;width:100%;height:auto;border-radius:14px"></figure>
+      </div>
+    </div>
+
+    <div data-ba="" data-reveal="">
+      <div data-bacol="">
+        <div data-batag="" data-kind="before">Before</div>
+        <div data-batitle="">Fare hidden in a floating badge</div>
+        <p data-body="" style="margin:10px 0 0">$2.00 appears in a floating badge outside the reading flow on the last screen. For users on fixed incomes, this is a fundamental trust failure.</p>
+        <figure style="margin:0;max-width:300px"><img src="uploads/old-new-trip-summary.png" alt="Before, fare hidden in a floating badge" style="display:block;width:100%;height:auto;border-radius:14px"></figure>
+      </div>
+      <div data-bacol="">
+        <div data-batag="" data-kind="after">After</div>
+        <div data-batitle="">Itemised fare breakdown. Total before confirmation. Wallet status.</div>
+        <p data-body="" style="margin:10px 0 0">Base fare, distance charge, waiting charge (conditional), taxes, and total, all visible in the reading flow. Wallet balance shown separately with “Covered” confirmation.</p>
+        <figure style="margin:0;max-width:300px"><img src="uploads/new-fare-breakdown.png" alt="After, itemised fare breakdown with wallet balance" style="display:block;width:100%;height:auto;border-radius:14px"></figure>
+      </div>
+    </div>
+
+    <div data-ba="" data-reveal="">
+      <div data-bacol="">
+        <div data-batag="" data-kind="before">Before</div>
+        <div data-batitle="">“10:06 AM – 10:38 AM”, no explanation</div>
+        <p data-body="" style="margin:10px 0 0">A raw time window with no context. For elderly users heading to medical appointments, this ambiguity directly causes no-shows, the most expensive failure mode for agencies.</p>
+        <figure style="margin:0;max-width:300px"><img src="uploads/old-trip-destinations.png" alt="Before, raw pickup window with no explanation" style="display:block;width:100%;height:auto;border-radius:14px"></figure>
+      </div>
+      <div data-bacol="">
+        <div data-batag="" data-kind="after">After</div>
+        <div data-batitle="">“Your driver may arrive between 11:05 AM – 11:40 AM”</div>
+        <p data-body="" style="margin:10px 0 0">Plain time range derived from pickup time and negotiation window. Dorothy reads an actual clock time, no formula, no guessing, no arithmetic required.</p>
+        <figure style="margin:0;max-width:300px"><img src="uploads/new-confirm-details.png" alt="After, pickup time and negotiation window in plain language" style="display:block;width:100%;height:auto;border-radius:14px"></figure>
+      </div>
+    </div>
+
+    <div data-ba="" data-reveal="">
+      <div data-bacol="">
+        <div data-batag="" data-kind="before">Before</div>
+        <div data-batitle="">Live tracking buried as a small text link</div>
+        <p data-body="" style="margin:10px 0 0">Map view buried at the bottom of the trip card. The most valuable feature on travel day, knowing where your driver is, is the hardest thing to find.</p>
+        <figure style="margin:0;max-width:300px"><img src="uploads/old-trip-destinations.png" alt="Before, live tracking buried as a small Map view text link" style="display:block;width:100%;height:auto;border-radius:14px"></figure>
+      </div>
+      <div data-bacol="">
+        <div data-batag="" data-kind="after">After</div>
+        <div data-batitle="">Full-screen map. Driver info. Lock screen notification.</div>
+        <p data-body="" style="margin:10px 0 0">Live tracking is the primary day-of experience. Lock screen shows ETA without opening the app. Driver name, photo, vehicle, and arrival time all prominent.</p>
+        <figure style="margin:0"><img src="uploads/new-live-tracking.png" alt="After, full-screen tracking, driver details and lock screen ETA" style="display:block;width:100%;height:auto;border-radius:14px"></figure>
+      </div>
+    </div>
+
+    <h3 data-h3="" data-reveal="" style="margin-top:clamp(38px,5vw,68px)">Final screens</h3>
+    <figure data-reveal="" style="margin:clamp(20px,3vw,32px) 0 0">
+      <img src="uploads/final-screens-grid.png" alt="Final redesigned screens, booking, trip details, confirmation and tracking" style="display:block;width:100%;height:auto;border-radius:14px">
+    </figure>
+  </section>
+</div>
+
+<section id="sec-impact" style="position:relative;width:100vw;margin-inline:calc(50% - 50vw);background:#eceae4;margin-top:clamp(40px,5.5vw,76px);border-top:1px solid rgba(21,20,15,.09);border-bottom:1px solid rgba(21,20,15,.09)">
+  <div style="max-width:980px;margin:0 auto;padding:clamp(40px,5.5vw,76px) clamp(20px,4vw,56px)">
+    <div data-label="" data-reveal="">10 / Performance outcomes</div>
+    <h2 data-h2="" data-reveal="" style="max-width:18ch">Expected impact</h2>
+
+    <div style="margin-top:clamp(28px,4vw,48px);border-top:1px solid rgba(21,20,15,.14)">
+      <div data-stage="" data-reveal="">
+        <div data-stagenum="">Stage 01</div>
+        <div><div data-pmini2="">Legacy pain point</div><div data-stagepain="">8 booking steps</div></div>
+        <div><div data-pmini2="">Redesigned outcome</div><p data-body="" style="margin:8px 0 0">Reduced the booking journey from 8 steps to 3 guided decisions, making the process easier to understand and complete.</p></div>
+      </div>
+      <div data-stage="" data-reveal="">
+        <div data-stagenum="">Stage 02</div>
+        <div><div data-pmini2="">Legacy pain point</div><div data-stagepain="">Multiple form fields</div></div>
+        <div><div data-pmini2="">Redesigned outcome</div><p data-body="" style="margin:8px 0 0">Applied accessible interaction patterns, clearer visual hierarchy, and larger touch targets to better support riders with diverse mobility and cognitive needs.</p></div>
+      </div>
+      <div data-stage="" data-reveal="">
+        <div data-stagenum="">Stage 03</div>
+        <div><div data-pmini2="">Legacy pain point</div><div data-stagepain="">Separate location entry</div></div>
+        <div><div data-pmini2="">Redesigned outcome</div><p data-body="" style="margin:8px 0 0">Streamlined location selection with guided search, saved locations, and map-assisted interactions to minimize user effort.</p></div>
+      </div>
+      <div data-stage="" data-reveal="">
+        <div data-stagenum="">Stage 04</div>
+        <div><div data-pmini2="">Legacy pain point</div><div data-stagepain="">Complex navigation</div></div>
+        <div><div data-pmini2="">Redesigned outcome</div><p data-body="" style="margin:8px 0 0">Established reusable UI patterns and a modular booking flow that can support future features such as recurring trips, companion riders, and trip modifications.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="max-width:980px;margin:0 auto;padding:0 clamp(16px,4vw,56px)">
+  <section id="sec-learnings" style="padding:clamp(40px,5.5vw,76px) 0 0">
+    <div data-label="" data-reveal="">11 / Post-project reflections</div>
+    <h2 data-h2="" data-reveal="" style="max-width:18ch">Key learnings</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:clamp(14px,2vw,22px);margin-top:clamp(28px,4vw,48px)">
+      <div data-learn="" data-reveal="">
+        <span data-num="">01</span>
+        <div data-phasetitle="">Respect learned behaviors</div>
+        <p data-body="" style="margin:12px 0 0">Riders develop deep muscle memory. Drastic UI changes should be introduced incrementally to prevent initial drop-offs from sheer layout unfamiliarity.</p>
+      </div>
+      <div data-learn="" data-reveal="">
+        <span data-num="">02</span>
+        <div data-phasetitle="">Map real-world stress</div>
+        <p data-body="" style="margin:12px 0 0">A booking flow isn't used in a quiet office. It's used on a rainy platform while juggling bags. Designing for extreme environment states prevents fragile UI breakdowns.</p>
+      </div>
+      <div data-learn="" data-reveal="">
+        <span data-num="">03</span>
+        <div data-phasetitle="">Design for the system, not the screen</div>
+        <p data-body="" style="margin:12px 0 0">Changes to a core booking layout create cascades into driver dispatch, customer service, and receipts. Holistic designers manage downstream system side-effects.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="padding:clamp(56px,9vw,120px) 0 clamp(30px,5vw,56px)">
+    <div data-label="" data-reveal="">12 / Contact</div>
+    <h2 data-h2="" data-reveal="" style="max-width:20ch">Let's design a product people can use with confidence.</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(22px,4vw,56px);align-items:end;margin-top:clamp(26px,4vw,44px)">
+      <p data-body="" data-reveal="" style="max-width:46ch">For product design, design systems, prototypes, and AI-powered design workflows.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px" data-reveal="">
+        <a href="mailto:anandkumargatta@yahoo.com" style="display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;background:#15140f;color:#f5f3ee;font:500 14.5px/1 Manrope,sans-serif" style-hover="background:#2e2b21">Email me <span style="font-family:'IBM Plex Mono',monospace">→</span></a>
+        <a href="index.html#work" style="display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;border:1px solid rgba(21,20,15,.2);font:500 14.5px/1 Manrope,sans-serif" style-hover="background:rgba(21,20,15,.05)">See other work</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer style="position:relative;width:100vw;margin-inline:calc(50% - 50vw);margin-top:clamp(40px,6vw,80px);border-radius:clamp(18px,2vw,30px) clamp(18px,2vw,30px) 0 0;overflow:hidden;background-color:#F0EDE3">
+  <div data-norail="" style="max-width:1240px;margin:0 auto;padding:clamp(46px,7vw,96px) clamp(20px,4vw,56px) 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:clamp(30px,4vw,56px)">
+    <div style="grid-column:span 1;min-width:min(100%,360px)">
+      <p style="margin:0;max-width:26ch;font:500 clamp(19px,1.9vw,26px)/1.35 'Flecha',Georgia,serif;color:#26241f;text-wrap:pretty">Designing products people can use with confidence, for 13 years and counting.</p>
+      <a href="About.dc.html#contact" style="display:inline-flex;align-items:center;gap:9px;margin-top:26px;padding:14px 22px;border-radius:999px;background:#ffffff;color:#15140f;font:500 14.5px/1 Manrope,sans-serif;box-shadow:0 2px 10px rgba(0,0,0,.07)" style-hover="background:#15140f;color:#f5f3ee">Contact <span style="font-family:'IBM Plex Mono',monospace">→</span></a>
+    </div>
+
+    <div>
+      <div style="font:500 16px/1.2 'Flecha',Georgia,serif;color:#26241f">Explore</div>
+      <div style="margin-top:22px;display:flex;flex-direction:column;gap:14px;font:400 14.5px/1.3 Manrope,sans-serif">
+        <a href="Works.dc.html" data-flink="">Selected work</a>
+        <a href="About.dc.html" data-flink="">About</a>
+        <a href="index.html#process" data-flink="">How I work</a>
+        <a href="index.html#experience" data-flink="">Experience</a>
+        <a href="index.html#expertise" data-flink="">Core expertise</a>
+      </div>
+    </div>
+
+    <div>
+      <div style="font:500 16px/1.2 'Flecha',Georgia,serif;color:#26241f">Need design?</div>
+      <div style="margin-top:22px;display:flex;flex-direction:column;gap:14px;font:400 14.5px/1.3 Manrope,sans-serif">
+        <a href="uploads/Anand_Gatta_Resume.pdf" download="Anand_Gatta_Resume.pdf" data-flink="">Résumé (PDF)</a>
+        <a href="Works.dc.html" data-flink="">Case studies</a>
+        <a href="index.html#expertise" data-flink="">Design systems</a>
+      </div>
+    </div>
+
+    <div>
+      <div style="font:500 16px/1.2 'Flecha',Georgia,serif;color:#26241f">Say hello</div>
+      <div style="margin-top:22px;display:flex;flex-direction:column;gap:14px;font:400 14.5px/1.3 Manrope,sans-serif">
+        <a href="https://www.linkedin.com/in/anand-gatta" target="_blank" rel="noopener" data-flink="">LinkedIn</a>
+        <a href="mailto:anandkumargatta@yahoo.com" data-flink="">Email</a>
+        <a href="https://dribbble.com/Anandgatta" target="_blank" rel="noopener" data-flink="">Dribbble</a>
+        <a href="https://www.behance.net/Gatta" target="_blank" rel="noopener" data-flink="">Behance</a>
+      </div>
+    </div>
+  </div>
+
+  <div data-norail="" style="max-width:1240px;margin:0 auto;padding:clamp(30px,5vw,64px) clamp(20px,4vw,56px) 0;overflow:hidden">
+    <div aria-hidden="true" style="font:700 min(9.6vw,150px)/0.92 Manrope,sans-serif;letter-spacing:.02em;color:#26241f;margin-bottom:-.05em;white-space:nowrap;width:100%;text-align:center">AnandGatta</div>
+  </div>
+
+  <div style="border-top:1px solid rgba(21,20,15,.12)">
+    <div data-norail="" style="max-width:1240px;margin:0 auto;padding:18px clamp(20px,4vw,56px);display:flex;flex-wrap:wrap;gap:12px 26px;justify-content:space-between;align-items:center;font:400 12.5px/1 Manrope,sans-serif;color:#57534a">
+      <div>Anand Kumar G ©<span data-year="">2026</span></div>
+      <div style="display:flex;flex-wrap:wrap;gap:12px 26px;align-items:center">
+        <a href="About.dc.html#contact" data-flink="">Privacy</a>
+        <a href="About.dc.html#contact" data-flink="">Terms</a>
+        <span>Hyderabad</span>
+        <span data-clock="" style="font-family:'IBM Plex Mono',monospace">--:--:--</span>
+        <a href="#top" data-flink="">Back to top ↑</a>
+      </div>
+    </div>
+  </div>
+</footer></x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;scrollReveal&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;marqueeSeconds&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:20,&quot;min&quot;:10,&quot;max&quot;:80,&quot;step&quot;:2,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const root = this.el || document;
+    const q = (s) => Array.from(root.querySelectorAll(s));
+
+    const back = root.querySelector('[data-backbtn]');
+    if (back) {
+      back.style.cssText = "display:inline-flex;align-items:center;gap:8px;margin-bottom:clamp(18px,2.4vw,28px);padding:9px 16px 9px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:rgba(245,243,238,.82);font:500 13.5px/1 Manrope,sans-serif;transition:background .25s ease,color .25s ease";
+      back.addEventListener('mouseenter', () => { back.style.background = 'rgba(255,255,255,.12)'; back.style.color = '#f5f3ee'; });
+      back.addEventListener('mouseleave', () => { back.style.background = 'rgba(255,255,255,.05)'; back.style.color = 'rgba(245,243,238,.82)'; });
+      back.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (document.referrer && new URL(document.referrer).origin === location.origin) {
+          history.back();
+        } else {
+          location.href = 'Works.dc.html';
+        }
+      });
+    }
+
+    q('[data-label]').forEach(el => {
+      el.style.cssText = "font:400 11.5px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#6b6250";
+    });
+    q('[data-h2]').forEach(el => {
+      el.style.cssText = "margin:16px 0 0;font:500 clamp(26px,3.8vw,50px)/1.06 'Flecha',Georgia,serif;letter-spacing:-.014em;text-wrap:pretty" + (el.style.maxWidth ? ';max-width:' + el.style.maxWidth : '');
+    });
+    q('[data-h3]').forEach(el => {
+      el.style.cssText = "margin:0;font:500 clamp(20px,2.2vw,30px)/1.2 'Flecha',Georgia,serif;letter-spacing:-.012em" + (el.style.marginTop ? ';margin-top:' + el.style.marginTop : '');
+    });
+    q('[data-body]').forEach(el => {
+      el.style.font = "400 clamp(14.5px,1.15vw,17px)/1.65 Manrope,sans-serif";
+      el.style.color = '#403c31';
+      el.style.textWrap = 'pretty';
+    });
+    q('[data-mini]').forEach(el => {
+      el.style.cssText = "font:400 11px/1.3 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#6b6250";
+    });
+    q('[data-note]').forEach(el => {
+      el.style.cssText = "margin-top:8px;font:400 13px/1.4 Manrope,sans-serif;color:#6b6250";
+    });
+    q('[data-cell]').forEach(el => {
+      el.style.cssText = "background:#f3f1ec;padding:clamp(20px,2.4vw,30px)";
+    });
+    q('[data-marketgrid] [data-cell]').forEach(el => {
+      el.style.border = '1px solid rgba(21,20,15,.12)';
+      el.style.borderRadius = '16px';
+    });
+    q('[data-cellval]').forEach(el => {
+      el.style.cssText = "margin-top:12px;font:400 15.5px/1.45 Manrope,sans-serif;color:#15140f";
+    });
+    q('[data-bignum]').forEach(el => {
+      el.style.cssText = "margin-top:14px;font:500 clamp(28px,3.2vw,44px)/1 'Flecha',Georgia,serif;letter-spacing:-.014em";
+    });
+    q('[data-stat]').forEach(el => {
+      el.style.cssText = "padding:clamp(22px,2.6vw,32px);border:1px solid rgba(21,20,15,.12);border-radius:16px;background:rgba(255,255,255,.4)";
+    });
+    q('[data-statnum]').forEach(el => {
+      el.style.cssText = "font:500 clamp(38px,5vw,68px)/1 'Flecha',Georgia,serif;letter-spacing:-.02em";
+    });
+    q('[data-stattitle]').forEach(el => {
+      el.style.cssText = "margin-top:14px;font:500 17px/1.3 Manrope,sans-serif";
+    });
+    q('[data-review]').forEach(el => {
+      el.style.cssText = "padding:clamp(22px,2.6vw,32px);border-radius:16px;background:#f1efe8;border:1px solid rgba(21,20,15,.08)";
+    });
+    q('[data-stars]').forEach(el => {
+      el.style.cssText = "font:400 17px/1 Manrope,sans-serif;letter-spacing:.22em;color:#c2652f";
+    });
+    q('[data-quote]').forEach(el => {
+      el.style.cssText = "margin:20px 0 0;font:400 italic clamp(15px,1.25vw,17.5px)/1.55 Manrope,sans-serif;color:#2a2620;text-wrap:pretty";
+    });
+    q('[data-source]').forEach(el => {
+      el.style.cssText = "margin-top:20px;font:400 13.5px/1.3 Manrope,sans-serif;color:#6b6250";
+    });
+    q('[data-callout]').forEach(el => {
+      el.style.cssText = "padding:clamp(22px,2.6vw,32px);border-radius:16px;background:#e7e2d6";
+    });
+    q('[data-phase]').forEach(el => {
+      el.style.cssText = "background:#f0ece1;padding:clamp(22px,2.6vw,32px);transition:background .35s ease";
+      el.addEventListener('mouseenter', () => { el.style.background = '#f7f4ec'; });
+      el.addEventListener('mouseleave', () => { el.style.background = '#f0ece1'; });
+    });
+    q('[data-num]').forEach(el => {
+      el.style.cssText = "display:block;font:500 clamp(34px,4vw,56px)/1 'Flecha',Georgia,serif;color:rgba(21,20,15,.18);letter-spacing:-.02em";
+    });
+    q('[data-phasetitle]').forEach(el => {
+      el.style.cssText = "margin-top:clamp(16px,2vw,26px);font:500 clamp(19px,1.9vw,25px)/1.2 'Flecha',Georgia,serif;letter-spacing:-.012em";
+    });
+    q('[data-ph]').forEach(el => {
+      // cap placeholder scale: portrait/phone shots stay narrow, landscape stays short
+      const ar = (el.style.aspectRatio || '').replace(/\s+/g, '');
+      const parts = ar.split('/').map(Number);
+      const portrait = parts.length === 2 && parts[1] > parts[0];
+      if (portrait) {
+        const inScreen = el.closest('[data-screen]');
+        el.style.maxWidth = inScreen ? '330px' : (ar === '9/16' ? '210px' : '260px');
+        if (inScreen) el.style.minHeight = '440px';
+      } else {
+        el.style.maxHeight = '300px';
+        el.style.width = '100%';
+      }
+      el.style.backgroundColor = '#ddd9d0';
+      el.style.backgroundImage = 'repeating-linear-gradient(135deg,rgba(21,20,15,.055) 0 2px,transparent 2px 11px)';
+      el.style.border = '1px solid rgba(21,20,15,.09)';
+      el.style.borderRadius = '14px';
+      el.style.display = 'flex';
+      el.style.alignItems = 'flex-end';
+      el.style.padding = '14px';
+      el.style.overflow = 'hidden';
+      const cap = el.querySelector('span');
+      if (cap) cap.style.cssText = "font:400 10.5px/1.4 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:#6b6250;background:rgba(246,245,241,.82);border:1px solid rgba(21,20,15,.08);padding:7px 10px;border-radius:7px";
+    });
+    const sevColor = { critical: '#b4341f', major: '#8a6318', positive: '#2f6b3a' };
+    q('[data-find]').forEach(el => {
+      const sev = el.dataset.sev || 'major';
+      el.style.cssText = "padding:clamp(20px,2.4vw,28px);border-radius:16px;background:#f3f1ec;border:1px solid rgba(21,20,15,.1);border-top:3px solid " + sevColor[sev];
+    });
+    q('[data-sevtag]').forEach(el => {
+      const sev = el.closest('[data-sev]');
+      el.style.cssText = "font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:" + sevColor[(sev && sev.dataset.sev) || 'major'];
+    });
+    q('[data-findtitle]').forEach(el => {
+      el.style.cssText = "margin-top:14px;font:500 clamp(17px,1.6vw,21px)/1.28 'Flecha',Georgia,serif;letter-spacing:-.012em";
+    });
+    q('[data-screengrid]').forEach(el => {
+      el.style.cssText = "display:block";
+    });
+    q('[data-screen]').forEach(el => {
+      el.style.cssText = "display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(22px,3vw,48px);align-items:start;padding:clamp(30px,4vw,56px) 0;border-bottom:1px solid rgba(21,20,15,.12)";
+    });
+    q('[data-annos]').forEach(el => {
+      el.style.cssText = "display:flex;flex-direction:column;gap:22px;margin-top:24px";
+    });
+    q('[data-anno]').forEach(el => {
+      el.style.cssText = "display:grid;grid-template-columns:30px minmax(0,1fr);gap:14px;align-items:start";
+    });
+    q('[data-anum]').forEach(el => {
+      el.style.cssText = "display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;border:1px solid rgba(21,20,15,.25);font:500 12.5px/1 'IBM Plex Mono',monospace;color:#15140f";
+    });
+    q('[data-atag]').forEach(el => {
+      el.style.cssText = "font:500 10.5px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:" + (sevColor[el.dataset.sev] || '#6b6250');
+    });
+    q('[data-atitle]').forEach(el => {
+      el.style.cssText = "margin-top:9px;font:500 clamp(16px,1.4vw,19px)/1.3 'Flecha',Georgia,serif;letter-spacing:-.01em";
+    });
+    q('[data-persona]').forEach(el => {
+      el.style.cssText = "padding:clamp(22px,2.8vw,34px);border-radius:18px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04)";
+    });
+    q('[data-avatar]').forEach(el => {
+      el.style.cssText = "flex:none;width:64px;height:64px;border-radius:50%;background:linear-gradient(150deg,#e2733f 0%,#a8481f 100%);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 1px rgba(255,255,255,.14)";
+      const cap = el.querySelector('[data-initial]');
+      if (cap) cap.style.cssText = "font:500 26px/1 'Flecha',Georgia,serif;letter-spacing:-.01em;color:#fff";
+    });
+    q('[data-plists]').forEach(el => {
+      el.style.cssText = "display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:clamp(18px,2.4vw,32px);margin-top:26px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12)";
+    });
+    q('[data-pmini]').forEach(el => {
+      el.style.cssText = "font:400 11px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,243,238,.45)";
+    });
+    q('[data-plist]').forEach(el => {
+      el.style.cssText = "margin:14px 0 0;padding-left:16px;display:flex;flex-direction:column;gap:9px;font:400 14.5px/1.5 Manrope,sans-serif;color:rgba(245,243,238,.72)";
+    });
+    q('[data-ia],[data-learn]').forEach(el => {
+      el.style.cssText = "padding:clamp(22px,2.6vw,32px);border-radius:16px;background:rgba(255,255,255,.42);border:1px solid rgba(21,20,15,.1)";
+    });
+    q('[data-was]').forEach(el => {
+      el.style.cssText = "margin-top:16px;display:inline-block;padding:6px 11px;border-radius:999px;border:1px solid rgba(21,20,15,.18);font:400 11px/1 'IBM Plex Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:#6b6250";
+    });
+    q('[data-ba]').forEach(el => {
+      el.style.cssText = "display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(20px,3vw,40px);padding:clamp(28px,4vw,52px) 0;border-bottom:1px solid rgba(21,20,15,.12);align-items:start";
+    });
+    q('[data-batag]').forEach(el => {
+      const after = el.dataset.kind === 'after';
+      el.style.cssText = "display:inline-block;padding:6px 12px;border-radius:999px;font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;" + (after ? "background:#15140f;color:#f5f3ee" : "border:1px solid rgba(21,20,15,.22);color:#6b6250");
+    });
+    q('[data-batitle]').forEach(el => {
+      el.style.cssText = "margin-top:14px;font:500 clamp(18px,1.8vw,24px)/1.28 'Flecha',Georgia,serif;letter-spacing:-.012em";
+    });
+    q('[data-stage]').forEach(el => {
+      el.style.cssText = "display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:clamp(16px,2.4vw,36px);padding:clamp(24px,3vw,36px) 0;border-bottom:1px solid rgba(21,20,15,.14);align-items:start";
+    });
+    q('[data-stagenum]').forEach(el => {
+      el.style.cssText = "font:400 11.5px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#6b6250";
+    });
+    q('[data-pmini2]').forEach(el => {
+      el.style.cssText = "font:400 10.5px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:#6b6250";
+    });
+    q('[data-stagepain]').forEach(el => {
+      el.style.cssText = "margin-top:10px;font:500 clamp(17px,1.6vw,22px)/1.25 'Flecha',Georgia,serif;letter-spacing:-.012em";
+    });
+    q('[data-navlink]').forEach(el => {
+      el.style.cssText = "padding:6px 10px;color:rgba(245,243,238,.72);transition:color .25s ease";
+      el.addEventListener('mouseenter', () => { el.style.color = '#f5f3ee'; });
+      el.addEventListener('mouseleave', () => { el.style.color = 'rgba(245,243,238,.72)'; });
+    });
+    q('[data-flink]').forEach(el => {
+      el.style.color = '#57534a';
+      el.style.transition = 'color .25s ease';
+      el.addEventListener('mouseenter', () => { el.style.color = '#15140f'; });
+      el.addEventListener('mouseleave', () => { el.style.color = '#57534a'; });
+    });
+
+    // footer clock + year, same as home
+    const clock = root.querySelector('[data-clock]');
+    const year = root.querySelector('[data-year]');
+    if (year) year.textContent = String(new Date().getFullYear());
+    if (clock) {
+      const tick = () => {
+        clock.textContent = new Date().toLocaleTimeString('en-GB', {
+          timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second: '2-digit'
+        }) + ' IST';
+      };
+      tick();
+      this._t = setInterval(tick, 1000);
+    }
+
+    // ── left section rail: marker lines that expand to labels on hover, with scroll-spy
+    const toc = root.querySelector('[data-toc]');
+    if (toc) {
+      const inner = toc.querySelector('[data-tocinner]');
+      const items = Array.from(toc.querySelectorAll('[data-tocitem]'));
+      const headings = Array.from(toc.querySelectorAll('[data-tocheading]'));
+      toc.style.cssText = "position:fixed;left:clamp(12px,2vw,28px);top:50%;transform:translateY(-50%);z-index:70;display:none;max-height:82vh;overflow:hidden";
+      inner.style.cssText = "display:flex;flex-direction:column;gap:18px;padding:20px 22px;border-radius:20px;border:1px solid rgba(21,20,15,.1);background:rgba(250,248,243,.88);backdrop-filter:blur(14px) saturate(130%);box-shadow:0 18px 44px rgba(0,0,0,.14);transition:background .4s ease,border-color .4s ease";
+      toc.querySelectorAll('[data-tocgroup]').forEach(g => {
+        g.style.cssText = "display:flex;flex-direction:column;gap:1px";
+      });
+      headings.forEach(h => {
+        h.style.cssText = "font:400 9.5px/1 'IBM Plex Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:#8a8270;margin-bottom:9px;white-space:nowrap;transition:color .4s ease";
+      });
+
+      items.forEach(a => {
+        a.style.cssText = "display:flex;align-items:center;gap:11px;padding:4px 0;text-decoration:none";
+        const dash = a.querySelector('[data-tocdash]');
+        const text = a.querySelector('[data-toctext]');
+        dash.style.cssText = "display:block;flex:none;width:12px;height:1.5px;border-radius:2px;background:rgba(107,98,80,.4);transition:width .35s cubic-bezier(.2,.7,.2,1),background .3s ease";
+        text.style.cssText = "font:500 12.5px/1.25 Manrope,sans-serif;white-space:nowrap;transition:color .3s ease";
+      });
+
+      let activeIdx = 0;
+      const paint = () => {
+        const mob = window.innerWidth < 1400;
+        const onDark = mob || (items[activeIdx] && items[activeIdx].dataset.dark === '1');
+        const mobile = window.innerWidth < 1400;
+        inner.style.background = (onDark && !mobile) ? 'rgba(16,11,9,.8)' : (mobile ? 'rgba(18,13,10,.94)' : 'rgba(250,248,243,.88)');
+        inner.style.borderColor = onDark ? 'rgba(255,255,255,.12)' : 'rgba(21,20,15,.1)';
+        headings.forEach(h => { h.style.color = onDark ? 'rgba(245,243,238,.42)' : '#8a8270'; });
+        items.forEach((a, i) => {
+          const active = i === activeIdx;
+          const dash = a.querySelector('[data-tocdash]');
+          const text = a.querySelector('[data-toctext]');
+          dash.style.width = active ? '22px' : '12px';
+          dash.style.background = active ? '#e2733f' : (onDark ? 'rgba(245,243,238,.35)' : 'rgba(107,98,80,.4)');
+          text.style.color = active
+            ? (onDark ? '#f7f5f0' : '#15140f')
+            : (onDark ? 'rgba(245,243,238,.55)' : 'rgba(21,20,15,.5)');
+        });
+      };
+      items.forEach(a => {
+        a.addEventListener('mouseenter', () => {
+          const onDark = items[activeIdx] && items[activeIdx].dataset.dark === '1';
+          a.querySelector('[data-toctext]').style.color = onDark ? '#f7f5f0' : '#15140f';
+        });
+        a.addEventListener('mouseleave', paint);
+      });
+
+      // smooth jump without scrollIntoView
+      items.forEach(a => a.addEventListener('click', (e) => {
+        const target = root.querySelector('#' + a.dataset.target);
+        if (!target) return;
+        e.preventDefault();
+        const y = target.getBoundingClientRect().top + window.scrollY - 84;
+        window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+      }));
+
+      // mark which sections sit on a dark ground so the rail can invert
+      const darkIds = ['top', 'sec-problem', 'sec-personas'];
+      items.forEach(a => { if (darkIds.includes(a.dataset.target)) a.dataset.dark = '1'; });
+
+      const spy = () => {
+        const probe = window.innerHeight * 0.35;
+        let idx = 0;
+        items.forEach((a, i) => {
+          const el = root.querySelector('#' + a.dataset.target);
+          if (el && el.getBoundingClientRect().top <= probe) idx = i;
+        });
+        if (idx !== activeIdx) { activeIdx = idx; paint(); }
+        if (pillText && items[idx]) {
+          const t = items[idx].querySelector('[data-toctext]');
+          const g = items[idx].closest('[data-tocgroup]');
+          const head = g && g.querySelector('[data-tocheading]');
+          pillText.textContent = (head ? head.textContent + ' · ' : '') + (t ? t.textContent : '');
+        }
+        if (pillFill) {
+          const doc = document.documentElement.scrollHeight - window.innerHeight;
+          pillFill.style.width = Math.min(100, Math.max(0, (window.scrollY / (doc || 1)) * 100)) + '%';
+        }
+      };
+      // reserve the gutter instead of floating over the text
+      const wrappers = Array.from(root.querySelectorAll('div')).filter(
+        el => el.style && !el.hasAttribute('data-norail') &&
+              (el.style.maxWidth === '1240px' || el.style.maxWidth === '1600px')
+      );
+      // keep each wrapper's own inline padding shorthand so the base value
+      // stays viewport-correct; only ever ADD to it, never clear it
+      wrappers.forEach(el => {
+        el.dataset.basePadding = el.style.padding || '';
+      });
+      // ── mobile: same contents, as a bottom pill that opens a sheet
+      const pill = root.querySelector('[data-tocpill]');
+      const pillText = pill && pill.querySelector('[data-pilltext]');
+      const pillFill = pill && pill.querySelector('[data-pillfill]');
+      const pillCaret = pill && pill.querySelector('[data-pillcaret]');
+      let sheetOpen = false;
+      if (pill) {
+        pill.style.cssText = "position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:75;display:none;align-items:center;gap:11px;max-width:calc(100vw - 32px);padding:11px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(18,13,10,.9);backdrop-filter:blur(16px) saturate(140%);box-shadow:0 12px 34px rgba(0,0,0,.34);cursor:pointer;font-family:Manrope,sans-serif";
+        pill.querySelector('[data-pillbar]').style.cssText = "display:block;flex:none;width:26px;height:3px;border-radius:2px;background:rgba(245,243,238,.25);overflow:hidden";
+        pillFill.style.cssText = "display:block;width:0%;height:100%;border-radius:2px;background:#e2733f;transition:width .3s ease";
+        pillText.style.cssText = "font:500 13px/1.2 Manrope,sans-serif;color:#f5f3ee;white-space:nowrap;overflow:hidden;text-overflow:ellipsis";
+        pillCaret.style.cssText = "flex:none;font-size:11px;line-height:1;color:rgba(245,243,238,.6);transition:transform .3s ease";
+      }
+      const setSheet = (v) => {
+        sheetOpen = v;
+        if (pillCaret) pillCaret.style.transform = v ? 'rotate(180deg)' : 'none';
+        if (pill) pill.setAttribute('aria-expanded', String(v));
+        if (window.innerWidth >= 1400) return;
+        if (v) {
+          toc.style.display = 'block';
+          requestAnimationFrame(() => { inner.style.opacity = '1'; inner.style.transform = 'none'; });
+        } else {
+          inner.style.opacity = '0';
+          inner.style.transform = 'translateY(14px)';
+          setTimeout(() => { if (!sheetOpen && window.innerWidth < 1400) toc.style.display = 'none'; }, 260);
+        }
+      };
+      if (pill) pill.addEventListener('click', () => setSheet(!sheetOpen));
+      items.forEach(a => a.addEventListener('click', () => { if (window.innerWidth < 1400) setSheet(false); }));
+
+      const fitToc = () => {
+        const desktop = window.innerWidth >= 1400;
+        if (pill) pill.style.display = desktop ? 'none' : 'flex';
+        if (desktop) {
+          sheetOpen = false;
+          toc.style.cssText = "position:fixed;left:clamp(12px,2vw,28px);top:50%;transform:translateY(-50%);z-index:70;display:block;max-height:82vh;overflow:hidden";
+          inner.style.opacity = '1';
+          inner.style.transform = 'none';
+          inner.style.display = 'flex';
+          inner.style.flexDirection = 'column';
+          inner.style.gridTemplateColumns = '';
+          inner.style.gap = '18px';
+          inner.style.maxHeight = '';
+          inner.style.overflowY = '';
+        } else {
+          toc.style.cssText = "position:fixed;left:12px;right:12px;bottom:74px;z-index:74;display:" + (sheetOpen ? 'block' : 'none');
+          inner.style.opacity = sheetOpen ? '1' : '0';
+          inner.style.transform = sheetOpen ? 'none' : 'translateY(14px)';
+          inner.style.transition = 'opacity .3s ease, transform .3s cubic-bezier(.2,.7,.2,1), background .4s ease, border-color .4s ease';
+          inner.style.maxHeight = 'min(62vh, 520px)';
+          inner.style.overflowY = 'auto';
+          inner.style.display = 'grid';
+          inner.style.gridTemplateColumns = 'repeat(auto-fit,minmax(min(100%,150px),1fr))';
+          inner.style.gap = '20px';
+        }
+        // content keeps its authored, centred measure, the rail sits in the
+        // left margin, which only exists once the viewport is wide enough
+        wrappers.forEach(el => { el.style.padding = el.dataset.basePadding; });
+      };
+      fitToc();
+      spy();
+      paint();
+      window.addEventListener('scroll', spy, { passive: true });
+      window.addEventListener('resize', fitToc);
+      this._spy = spy;
+      this._fitToc = fitToc;
+    }
+
+    // walkthrough video: play while in view, resume where the user left off
+    const vid = root.querySelector('[data-casevideo]');
+    if (vid) {
+      const KEY = 'paratransit-walkthrough-time';
+      const saved = parseFloat(localStorage.getItem(KEY) || '0');
+      vid.addEventListener('loadedmetadata', () => {
+        if (saved > 0 && saved < vid.duration - 0.5) vid.currentTime = saved;
+      });
+      vid.addEventListener('timeupdate', () => {
+        if (!vid.paused) localStorage.setItem(KEY, String(vid.currentTime));
+      });
+      if ('IntersectionObserver' in window) {
+        const vo = new IntersectionObserver((es) => {
+          es.forEach(e => { if (e.isIntersecting) { vid.play().catch(() => {}); } else { vid.pause(); } });
+        }, { threshold: 0.4 });
+        vo.observe(vid);
+        this._vo = vo;
+      }
+    }
+
+    // mobile menu
+    const toggle = root.querySelector('[data-navtoggle]');
+    const sheet = root.querySelector('[data-navsheet]');
+    const navDesktop = root.querySelector('[data-navdesktop]');
+    if (toggle && sheet) {
+      toggle.style.cssText = "pointer-events:auto;width:44px;height:44px;flex:none;border-radius:50%;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);cursor:pointer;display:none;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:0";
+      toggle.querySelectorAll('[data-bar]').forEach(b => {
+        b.style.cssText = "display:block;width:17px;height:1.5px;background:#f5f3ee;border-radius:2px;transition:transform .3s ease";
+      });
+      sheet.style.cssText = "pointer-events:auto;position:absolute;top:calc(100% + 8px);left:clamp(12px,3vw,28px);right:clamp(12px,3vw,28px);display:none;flex-direction:column;gap:2px;padding:14px;border-radius:22px;border:1px solid rgba(255,255,255,.14);background:rgba(16,16,15,.92);backdrop-filter:blur(18px);box-shadow:0 20px 50px rgba(0,0,0,.4);opacity:0;transform:translateY(-8px);transition:opacity .3s ease,transform .3s ease";
+      sheet.querySelectorAll('[data-sheetlink]').forEach(a => {
+        a.style.cssText = "padding:14px 12px;border-radius:12px;color:rgba(245,243,238,.8);font:500 16px/1 Manrope,sans-serif";
+      });
+      const cta = sheet.querySelector('[data-sheetcta]');
+      if (cta) cta.style.cssText = "margin-top:8px;padding:15px 12px;border-radius:14px;background:#f5f3ee;color:#15140f;font:500 16px/1 Manrope,sans-serif;text-align:center";
+
+      let open = false;
+      const setOpen = (v) => {
+        open = v;
+        const bars = toggle.querySelectorAll('[data-bar]');
+        toggle.setAttribute('aria-expanded', String(v));
+        if (bars[0]) bars[0].style.transform = v ? 'translateY(3.25px) rotate(45deg)' : 'none';
+        if (bars[1]) bars[1].style.transform = v ? 'translateY(-3.25px) rotate(-45deg)' : 'none';
+        if (v) {
+          sheet.style.display = 'flex';
+          requestAnimationFrame(() => { sheet.style.opacity = '1'; sheet.style.transform = 'none'; });
+        } else {
+          sheet.style.opacity = '0';
+          sheet.style.transform = 'translateY(-8px)';
+          setTimeout(() => { if (!open) sheet.style.display = 'none'; }, 280);
+        }
+      };
+      toggle.addEventListener('click', () => setOpen(!open));
+      sheet.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setOpen(false)));
+      const fitNav = () => {
+        const mobile = window.innerWidth < 760;
+        toggle.style.display = mobile ? 'flex' : 'none';
+        if (navDesktop) navDesktop.style.display = mobile ? 'none' : 'flex';
+        if (!mobile && open) setOpen(false);
+      };
+      fitNav();
+      window.addEventListener('resize', fitNav);
+      this._fitNav = fitNav;
+    }
+
+    // hero entrance
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduced) {
+      q('[data-hero-el]').forEach((el, i) => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(24px)';
+        el.style.transition = 'opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1)';
+        setTimeout(() => { el.style.opacity = '1'; el.style.transform = 'none'; }, 100 + i * 120);
+      });
+    }
+
+    // scroll reveal
+    if (!reduced && 'IntersectionObserver' in window) {
+      const targets = q('[data-reveal]');
+      targets.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1)';
+      });
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e, i) => {
+          if (!e.isIntersecting) return;
+          const el = e.target;
+          setTimeout(() => { el.style.opacity = '1'; el.style.transform = 'none'; }, i * 60);
+          io.unobserve(el);
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+      targets.forEach(el => io.observe(el));
+      this._io = io;
+    }
+  }
+
+  componentWillUnmount() {
+    if (this._io) this._io.disconnect();
+    if (this._t) clearInterval(this._t);
+    if (this._vo) this._vo.disconnect();
+    if (this._spy) window.removeEventListener('scroll', this._spy);
+    if (this._fitToc) window.removeEventListener('resize', this._fitToc);
+    if (this._fitNav) window.removeEventListener('resize', this._fitNav);
+  }
+
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
