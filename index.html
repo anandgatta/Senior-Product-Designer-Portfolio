@@ -81,6 +81,11 @@
       <h1 data-hero-el="" style="margin:clamp(22px,3vw,34px) 0 0;font:500 clamp(34px,5.4vw,68px)/1.02 'Flecha',Georgia,serif;letter-spacing:-.018em;color:#f7f5f0;text-wrap:balance">Hi, I'm Anand<span style="color:#e2733f">.</span> Senior Product Designer.</h1>
 
       <p data-hero-el="" style="margin:clamp(18px,2.4vw,26px) 0 0;max-width:52ch;font:400 clamp(15px,1.3vw,18.5px)/1.6 Manrope,sans-serif;color:rgba(245,243,238,.72);text-wrap:pretty">Senior Product Designer | 13 Years Overall, 4+ Years SaaS/B2B | Design Systems, AI UX</p>
+
+      <div data-hero-el="" data-dm="" data-target="13" aria-label="13 years in craft" style="margin-top:clamp(28px,3.6vw,44px);display:flex;align-items:center;gap:clamp(18px,2.4vw,30px)">
+        <div data-dm-grid="" aria-hidden="true" style="display:grid;grid-template-columns:repeat(11,1fr);gap:clamp(5px,.7vw,8px);width:clamp(150px,17vw,210px)"></div>
+        <div style="font:400 11.5px/1.7 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,243,238,.55)">Years<br>in craft<br><span style="color:rgba(245,243,238,.35)">4+ SaaS/B2B</span></div>
+      </div>
       </div>
     </div>
   </div>
@@ -425,6 +430,26 @@ class Component extends DCLogic {
     window.addEventListener('resize', fitHero);
     this._fitHero = fitHero;
 
+    // dot-matrix counter
+    (function(){
+  var root=q('[data-dm]')[0]; if(!root) return;
+  var grid=root.querySelector('[data-dm-grid]'), target=+root.dataset.target;
+  var F={0:'01110100011001110101110011000101110',1:'00100011000010000100001000010001110',2:'01110100010000100010001000100011111',3:'11110000010000101110000010000111110',4:'00010001100101010010111110001000010',5:'11111100001111000001000010000111110',6:'00110010001000011110100011000101110',7:'11111000010001000100010000100001000',8:'01110100011000101110100011000101110',9:'01110100011000101111000010001001100'};
+  var cells=[],OFF='rgba(255,255,255,.09)',ON='#f5f3ee';
+  for(var i=0;i<77;i++){var d=document.createElement('span');d.style.cssText='aspect-ratio:1;border-radius:50%;background:'+OFF+';transition:background .35s ease,transform .35s ease,box-shadow .35s ease';grid.appendChild(d);cells.push(d);}
+  function bits(n){var t=String(n).padStart(2,'0'),b=[];for(var r=0;r<7;r++){var row='';for(var k=0;k<2;k++){row+=F[t[k]].slice(r*5,r*5+5);if(k==0)row+='0';}b.push(row);}return b;}
+  function draw(n,jitter){var b=bits(n);for(var r=0;r<7;r++)for(var c=0;c<11;c++){var on=b[r][c]==='1',el=cells[r*11+c];el.style.transitionDelay=jitter?(Math.random()*90)+'ms':'0ms';el.style.background=on?ON:OFF;el.style.transform=on?'scale(1)':'scale(.92)';el.style.boxShadow=on?'0 0 10px rgba(245,243,238,.25)':'none';}}
+  draw(0,false);
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){draw(target,false);return;}
+  var self=this;
+  var started=false;
+  function run(){if(started)return;started=true;var n=0;(function step(){draw(n,true);if(n<target){n++;self._dmT=setTimeout(step,n<target-3?85:170);}else{wave();}})();}
+  function wave(){var b=bits(target),c=0;(function sweep(){for(var r=0;r<7;r++){var on=b[r][c]==='1',el=cells[r*11+c];el.style.transitionDelay='0ms';el.style.transform='scale(1.35)';el.style.boxShadow=on?'0 0 16px rgba(245,243,238,.7)':'0 0 8px rgba(226,115,63,.55)';el.style.background=on?'#ffffff':'rgba(226,115,63,.45)';(function(el,on){setTimeout(function(){el.style.transitionDelay='0ms';el.style.transform=on?'scale(1)':'scale(.92)';el.style.boxShadow=on?'0 0 10px rgba(245,243,238,.25)':'none';el.style.background=on?ON:OFF;},260);})(el,on);}
+    c++;if(c<11){self._dmT=setTimeout(sweep,70);}else{self._dmT=setTimeout(idle,1200);}})();}
+  function idle(){var b=bits(target);var k=Math.floor(Math.random()*77),r=Math.floor(k/11),c=k%11,el=cells[k];if(b[r][c]!=='1'){el.style.transitionDelay='0ms';el.style.background='rgba(255,255,255,.28)';setTimeout(function(){el.style.background=OFF;},520);}self._dmT=setTimeout(idle,420);}
+  this._dmT=setTimeout(run,900);
+}).call(this);
+
     // hero entrance: staggered rise, photo eases in from the right
     const heroEls = q('[data-hero-el]');
     const photo = root.querySelector('[data-hero-photo]');
@@ -672,6 +697,7 @@ class Component extends DCLogic {
   componentWillUnmount() {
     if (this._fitArrows) window.removeEventListener('resize', this._fitArrows);
     if (this._t) clearInterval(this._t);
+    if (this._dmT) clearTimeout(this._dmT);
     if (this._io) this._io.disconnect();
     if (this._fitHero) window.removeEventListener('resize', this._fitHero);
     if (this._fitNav) window.removeEventListener('resize', this._fitNav);
