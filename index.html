@@ -439,6 +439,21 @@ class Component extends DCLogic {
     window.addEventListener('resize', fitHero);
     this._fitHero = fitHero;
 
+    // intro video: the template strips boolean attributes, so set them here
+    q('#intro video').forEach(v => {
+      v.controls = true;
+      v.playsInline = true;
+      v.setAttribute('controls', '');
+      v.setAttribute('playsinline', '');
+      v.style.cursor = 'pointer';
+      v.addEventListener('click', e => {
+        if (e.target !== v) return;
+        const r = v.getBoundingClientRect();
+        if (e.clientY > r.bottom - 56) return; // let the control bar handle itself
+        v.paused ? v.play() : v.pause();
+      });
+    });
+
     // dot-matrix counter
     (function(){
   var root=q('[data-dm]')[0]; if(!root) return;
