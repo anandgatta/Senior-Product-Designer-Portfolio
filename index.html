@@ -445,13 +445,30 @@ class Component extends DCLogic {
       v.playsInline = true;
       v.setAttribute('controls', '');
       v.setAttribute('playsinline', '');
-      v.style.cursor = 'pointer';
+      const wrap = v.parentElement;
+      wrap.style.position = 'relative';
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.setAttribute('aria-label', 'Play intro video');
+      btn.style.cssText = 'position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:84px;height:84px;border-radius:50%;border:0;cursor:pointer;background:#15140f;color:#f5f3ee;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(0,0,0,.3);transition:transform .25s ease,opacity .25s ease';
+      btn.innerHTML = '<svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l11-6.5a1 1 0 0 0 0-1.72l-11-6.5A1 1 0 0 0 8 5.5z"/></svg>';
+      btn.addEventListener('mouseenter', () => { btn.style.transform = 'translate(-50%,-50%) scale(1.07)'; });
+      btn.addEventListener('mouseleave', () => { btn.style.transform = 'translate(-50%,-50%)'; });
+      btn.addEventListener('click', () => { v.play(); });
+      wrap.appendChild(btn);
+      const sync = () => {
+        const hide = !v.paused;
+        btn.style.opacity = hide ? '0' : '1';
+        btn.style.pointerEvents = hide ? 'none' : 'auto';
+      };
       v.addEventListener('click', e => {
-        if (e.target !== v) return;
         const r = v.getBoundingClientRect();
-        if (e.clientY > r.bottom - 56) return; // let the control bar handle itself
+        if (e.clientY > r.bottom - 56) return; // native control bar handles its own clicks
         v.paused ? v.play() : v.pause();
       });
+      v.addEventListener('play', sync);
+      v.addEventListener('pause', sync);
+      v.addEventListener('ended', sync);
     });
 
     // dot-matrix counter
