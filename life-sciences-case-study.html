@@ -247,12 +247,12 @@ dialog.section-menu[open]{left:clamp(12px,2vw,28px);right:auto;top:50%;bottom:au
 
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
 [data-navlink]:hover{color:#f5f3ee!important}
-[data-backbtn]:hover{background:rgba(255,255,255,.12)!important;color:#f5f3ee!important}
+[data-backbtn]:hover{background:rgba(255,255,255,.24)!important;color:#ffffff!important}
 
 
 body{padding-top:0!important;margin:0!important}
-#top{position:relative;background:#120d0a;overflow:hidden;padding:clamp(104px,12vw,150px) clamp(20px,4vw,56px) clamp(54px,7vw,86px);margin:0!important}
-.cover{margin-top:clamp(56px,7vw,96px)!important;margin-bottom:clamp(40px,5vw,70px)!important}
+#top{position:relative;overflow:hidden;margin:0!important;padding:0!important}
+.cover{margin-top:clamp(40px,5.5vw,76px)!important;margin-bottom:clamp(40px,5vw,70px)!important}
 @media(min-width:1400px){.portfolio-toc-pill{display:none!important}}
 
 </style><script async src="https://www.googletagmanager.com/gtag/js?id=G-6W1VD5LBDS"></script>
@@ -299,7 +299,7 @@ body{padding-top:0!important;margin:0!important}
 
 <section id="top" style="position:relative;background:linear-gradient(115deg,#09609f,#1d8755);overflow:hidden">
   <div style="position:absolute;inset:0;background:radial-gradient(100% 70% at 85% 0%,rgba(255,255,255,.14) 0%,rgba(255,255,255,0) 65%),linear-gradient(115deg,#07528a 0%,#09609f 38%,#157e5e 72%,#1d8755 100%)"></div>
-  <div style="position:relative;max-width:980px;margin:0 auto;padding:clamp(104px,12vw,150px) clamp(20px,4vw,56px) clamp(54px,7vw,86px)">
+  <div style="position:relative;max-width:980px;margin:0 auto;padding:clamp(104px,12vw,150px) clamp(20px,4vw,56px) clamp(44px,6vw,74px)">
     <a href="Works.dc.html" data-backbtn="" aria-label="Back" style="display:inline-flex;align-items:center;gap:8px;margin-bottom:clamp(18px,2.4vw,28px);padding:9px 16px 9px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.12);color:#ffffff;font:500 13.5px/1 Manrope,sans-serif;text-decoration:none;transition:background .25s ease,color .25s ease">
       <span aria-hidden="true">←</span> Back
     </a>
@@ -382,4 +382,15 @@ if (toggle && sheet) {
   window.addEventListener('resize', fitNav);
 }
 
+const backBtn = document.querySelector('[data-backbtn]');
+if (backBtn) {
+  backBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (document.referrer && new URL(document.referrer).origin === location.origin) {
+      history.back();
+    } else {
+      location.href = 'Works.dc.html';
+    }
+  });
+}
 </script></body></html>
