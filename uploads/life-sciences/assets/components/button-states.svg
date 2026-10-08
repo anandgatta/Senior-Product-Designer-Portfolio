@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+<title id="title">Primary, secondary and text buttons</title><desc id="desc">Three aligned medium buttons, reconstructed from the supplied reference. All are 36 pixels tall with four pixel corners and centered labels.</desc>
+<rect width="640" height="480" fill="#F2F7FA"/>
+<g font-family="Manrope,Arial,sans-serif">
+<text x="48" y="66" font-size="12" font-weight="600" fill="#52616D">MEDIUM BUTTONS</text>
+<path d="M48 94H592" stroke="#D8E2EA"/>
+<g font-size="16" fill="#151515"><text x="48" y="149">Primary</text><text x="48" y="245">Secondary</text><text x="48" y="341">Text</text></g>
+<rect x="326" y="124" width="218" height="36" rx="4" fill="#1D8755"/>
+<rect x="326.5" y="220.5" width="217" height="35" rx="4" fill="#FFFFFF" stroke="#1D8755"/>
+<g text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600"><text x="435" y="142" fill="#FFFFFF">SAVE REVIEW</text><text x="435" y="238" fill="#1D8755">SAVE REVIEW</text><text x="435" y="334" fill="#1D8755">SAVE REVIEW</text></g>
+<path d="M48 190H592M48 286H592M48 382H592" stroke="#D8E2EA"/>
+<text x="48" y="422" font-size="12" fill="#52616D">36 px height · 14 px semibold · 4 px corner radius</text>
+</g></svg>
