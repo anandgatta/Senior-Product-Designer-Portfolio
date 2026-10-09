@@ -5,14 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Anand Gatta · Senior Product Designer</title>
 <meta name="description" content="Senior Product Designer with 13+ years designing digital products, SaaS platforms, design systems, and AI UX. Based in Hyderabad, India.">
-<script src="./support.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap"></noscript>
+<link rel="preload" as="image" href="uploads/hero-image.webp" fetchpriority="high">
+<script src="./support.min.js" defer></script>
 </head>
 <body>
 <x-dc>
 <helmet data-dc-atomics="">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
 <style>
   html{overflow-x:clip}
   body{margin:0;overflow-x:clip;max-width:100%;background:#f3f1ec;color:#15140f;font-family:Manrope,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
@@ -106,9 +109,7 @@
 <section id="intro" style="position:relative;background:#1c1c1b;padding:clamp(48px,7vw,96px) clamp(20px,4vw,56px)">
   <div style="max-width:1000px;margin:0 auto">
     <div style="font:400 11.5px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,243,238,.55);margin-bottom:clamp(16px,2vw,24px)">Intro / 15 sec</div>
-    <video controls playsinline preload="metadata" aria-label="Anand Gatta intro video" style="display:block;width:100%;height:auto;max-height:80vh;border-radius:16px;background:#0e0e0d;border:1px solid rgba(255,255,255,.1)">
-      <source src="uploads/intro.mp4" type="video/mp4">
-    </video>
+    <video controls playsinline preload="none" data-src="uploads/intro.mp4" poster="uploads/intro-poster.webp" aria-label="Anand Gatta intro video" style="display:block;width:100%;height:auto;max-height:80vh;border-radius:16px;background:#0e0e0d;border:1px solid rgba(255,255,255,.1)" onplay="if(!this.src){this.src=this.dataset.src;this.play()}" onpointerdown="if(!this.src){this.src=this.dataset.src}" onclick="if(!this.src){this.src=this.dataset.src;this.play()}"></video>
   </div>
 </section>
 
