@@ -28,6 +28,85 @@
   .bullet-list{margin:14px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:8px}
   .bullet-list li{font:400 14.5px/1.6 Manrope,sans-serif;color:rgba(21,20,15,.8)}
   .skill-pill{display:inline-flex;padding:7px 14px;border-radius:999px;background:#f3f1ec;color:#15140f;font:500 12.5px/1.2 Manrope,sans-serif;border:1px solid rgba(21,20,15,.08)}
+  [data-navlink] {
+    padding: 6px 10px;
+    color: rgba(245,243,238,.72);
+    transition: color .25s ease;
+  }
+  [data-navlink]:hover {
+    color: #f5f3ee;
+  }
+  [data-navtoggle] {
+    pointer-events: auto;
+    width: 44px;
+    height: 44px;
+    flex: none;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,.18);
+    background: rgba(255,255,255,.06);
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 0;
+  }
+  [data-navtoggle] [data-bar] {
+    display: block;
+    width: 17px;
+    height: 1.5px;
+    background: #f5f3ee;
+    border-radius: 2px;
+    transition: transform .3s ease;
+  }
+  [data-navsheet] {
+    pointer-events: auto;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: clamp(12px,3vw,28px);
+    right: clamp(12px,3vw,28px);
+    display: none;
+    flex-direction: column;
+    gap: 2px;
+    padding: 14px;
+    border-radius: 22px;
+    border: 1px solid rgba(255,255,255,.14);
+    background: rgba(16,16,15,.95);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 20px 50px rgba(0,0,0,.4);
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity .3s ease, transform .3s ease;
+  }
+  [data-navsheet].is-open {
+    display: flex !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  [data-sheetlink] {
+    padding: 14px 12px;
+    border-radius: 12px;
+    color: rgba(245,243,238,.8);
+    font: 500 16px/1 Manrope,sans-serif;
+  }
+  [data-sheetcta] {
+    margin-top: 8px;
+    padding: 15px 12px;
+    border-radius: 14px;
+    background: #f5f3ee;
+    color: #15140f;
+    font: 500 16px/1 Manrope,sans-serif;
+    text-align: center;
+  }
+  @media (max-width: 680px) {
+    [data-navdesktop] {
+      display: none !important;
+    }
+    [data-navtoggle] {
+      display: flex !important;
+    }
+  }
 </style>
 <link rel="icon" type="image/png" href="uploads/pasted-1788780134229-0.png">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6W1VD5LBDS"></script>
@@ -387,77 +466,42 @@
 </div>
 </x-dc>
 
-<script type="text/x-dc" data-dc-script data-props="{&quot;scrollReveal&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
-class Component extends DCLogic {
-  componentDidMount() {
-    const root = this.el || document;
-    const q = (s) => Array.from(root.querySelectorAll(s));
-
-    const navToggle = root.querySelector('[data-navtoggle]');
-    const navSheet = root.querySelector('[data-navsheet]');
-    if (navToggle && navSheet) {
-      navToggle.addEventListener('click', () => {
-        const open = navSheet.classList.toggle('is-open');
-        navToggle.setAttribute('aria-expanded', String(open));
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const navToggle = document.querySelector('[data-navtoggle]');
+  const navSheet = document.querySelector('[data-navsheet]');
+  if (navToggle && navSheet) {
+    navToggle.addEventListener('click', () => {
+      const open = navSheet.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', String(open));
+      const bars = navToggle.querySelectorAll('[data-bar]');
+      if (bars[0]) bars[0].style.transform = open ? 'translateY(3.25px) rotate(45deg)' : 'none';
+      if (bars[1]) bars[1].style.transform = open ? 'translateY(-3.25px) rotate(-45deg)' : 'none';
+    });
+    document.querySelectorAll('[data-sheetlink], [data-sheetcta]').forEach(a => {
+      a.addEventListener('click', () => {
+        navSheet.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        const bars = navToggle.querySelectorAll('[data-bar]');
+        if (bars[0]) bars[0].style.transform = 'none';
+        if (bars[1]) bars[1].style.transform = 'none';
       });
-      q('[data-sheetlink], [data-sheetcta]').forEach(a => {
-        a.addEventListener('click', () => {
-          navSheet.classList.remove('is-open');
-          navToggle.setAttribute('aria-expanded', 'false');
-        });
-      });
-    }
-
-    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (!reduced) {
-      q('[data-hero-el]').forEach((el, i) => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(24px)';
-        el.style.transition = 'opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1)';
-        setTimeout(() => { el.style.opacity = '1'; el.style.transform = 'none'; }, 100 + i * 130);
-      });
-    }
-
-    if ((this.props.scrollReveal ?? true) && !reduced && 'IntersectionObserver' in window) {
-      const targets = q('[data-reveal]');
-      targets.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1)';
-      });
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach((e, i) => {
-          if (!e.isIntersecting) return;
-          const el = e.target;
-          setTimeout(() => { el.style.opacity = '1'; el.style.transform = 'none'; }, i * 70);
-          io.unobserve(el);
-        });
-      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
-      targets.forEach(el => io.observe(el));
-      this._io = io;
-    }
-
-    const clock = root.querySelector('[data-clock]');
-    const year = root.querySelector('[data-year]');
-    if (year) year.textContent = String(new Date().getFullYear());
-    if (clock) {
-      const tick = () => {
-        clock.textContent = new Date().toLocaleTimeString('en-GB', {
-          timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second: '2-digit'
-        }) + ' IST';
-      };
-      tick();
-      this._t = setInterval(tick, 1000);
-    }
+    });
   }
 
-  componentWillUnmount() {
-    if (this._io) this._io.disconnect();
-    if (this._t) clearInterval(this._t);
+  const clock = document.querySelector('[data-clock]');
+  const year = document.querySelector('[data-year]');
+  if (year) year.textContent = String(new Date().getFullYear());
+  if (clock) {
+    const tick = () => {
+      clock.textContent = new Date().toLocaleTimeString('en-GB', {
+        timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second: '2-digit'
+      }) + ' IST';
+    };
+    tick();
+    setInterval(tick, 1000);
   }
-
-  renderVals() { return {}; }
-}
+});
 </script>
 </body>
 </html>
