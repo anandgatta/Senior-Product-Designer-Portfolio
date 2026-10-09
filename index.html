@@ -106,13 +106,6 @@
 
 </section>
 
-<section id="intro" style="position:relative;background:#1c1c1b;padding:clamp(48px,7vw,96px) clamp(20px,4vw,56px)">
-  <div style="max-width:1000px;margin:0 auto">
-    <div style="font:400 11.5px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,243,238,.55);margin-bottom:clamp(16px,2vw,24px)">Intro / 15 sec</div>
-    <video controls playsinline preload="none" data-src="uploads/intro.mp4" poster="uploads/intro-poster.webp" aria-label="Anand Gatta intro video" style="display:block;width:100%;height:auto;max-height:80vh;border-radius:16px;background:#0e0e0d;border:1px solid rgba(255,255,255,.1)" onplay="if(!this.src){this.src=this.dataset.src;this.play()}" onpointerdown="if(!this.src){this.src=this.dataset.src}" onclick="if(!this.src){this.src=this.dataset.src;this.play()}"></video>
-  </div>
-</section>
-
 <div style="max-width:1240px;margin:0 auto; padding: 0 clamp(16px,4vw,56px)">
 
   <section id="work" style="position:relative;width:100vw;margin-inline:calc(50% - 50vw);overflow:hidden;background-color:#0E0808">
@@ -437,58 +430,6 @@ class Component extends DCLogic {
     fitHero();
     window.addEventListener('resize', fitHero);
     this._fitHero = fitHero;
-
-    // intro video: loops, only a play/pause button controls it (template strips boolean attrs, so set them here)
-    q('#intro video').forEach(v => {
-      v.controls = false;
-      v.removeAttribute('controls');
-      v.loop = true;
-      v.muted = true;
-      v.playsInline = true;
-      v.setAttribute('playsinline', '');
-      const wrap = v.parentElement;
-      wrap.style.position = 'relative';
-      const PLAY = '<path d="M8 5.5v13a1 1 0 0 0 1.5.86l11-6.5a1 1 0 0 0 0-1.72l-11-6.5A1 1 0 0 0 8 5.5z"/>';
-      const PAUSE = '<rect x="6" y="5" width="4.5" height="14" rx="1"/><rect x="13.5" y="5" width="4.5" height="14" rx="1"/>';
-      const btn = document.createElement('button');
-      btn.type = 'button';
-      const sync = () => {
-        const playing = !v.paused;
-        btn.setAttribute('aria-label', playing ? 'Pause intro video' : 'Play intro video');
-        const big = !playing;
-        const size = big ? 84 : 48;
-        btn.style.cssText = 'position:absolute;border:0;cursor:pointer;background:#15140f;color:#f5f3ee;display:flex;align-items:center;justify-content:center;border-radius:50%;box-shadow:0 8px 30px rgba(0,0,0,.3);transition:opacity .25s ease;width:' + size + 'px;height:' + size + 'px;' +
-          (big ? 'left:50%;top:50%;transform:translate(-50%,-50%);' : 'left:18px;bottom:18px;opacity:.75;');
-        btn.innerHTML = '<svg width="' + (big ? 26 : 18) + '" height="' + (big ? 26 : 18) + '" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">' + (playing ? PAUSE : PLAY) + '</svg>';
-      };
-      const toggle = () => { v.paused ? v.play() : v.pause(); };
-      btn.addEventListener('click', toggle);
-      btn.addEventListener('mouseenter', () => { if (!v.paused) btn.style.opacity = '1'; });
-      btn.addEventListener('mouseleave', () => { if (!v.paused) btn.style.opacity = '.75'; });
-      v.addEventListener('click', toggle);
-      v.addEventListener('play', sync);
-      v.addEventListener('pause', sync);
-      wrap.appendChild(btn);
-      sync();
-      if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        // autoplay (muted) once visible, unless the visitor has paused it themselves
-        let userPaused = false;
-        btn.addEventListener('click', () => { userPaused = !v.paused; });
-        v.addEventListener('click', () => { userPaused = v.paused; });
-        const tryPlay = () => {
-          if (userPaused || !v.paused) return;
-          const p = v.play();
-          if (p && p.catch) p.catch(() => {});
-        };
-        v.addEventListener('canplay', tryPlay);
-        if ('IntersectionObserver' in window) {
-          const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) tryPlay(); }), { threshold: 0.4 });
-          io.observe(v);
-          this._introIO = io;
-        }
-        tryPlay();
-      }
-    });
 
     // dot-matrix counter
     (function(){
