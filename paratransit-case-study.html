@@ -1,27 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Paratransit Rider Booking App UX Case Study · Anand Gatta</title>
-<meta name="description" content="Redesigning a paratransit booking mobile app: cutting booking flow from 8 steps to 3, adding map route confirmation, and improving accessibility.">
+<meta name="description" content="An NDA-covered paratransit booking redesign: design rationale, route confirmation, trip details, and interface work by Anand Gatta.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://anandgatta.com/paratransit-case-study.html">
 <meta property="og:title" content="Paratransit Rider Booking App UX Case Study · Anand Gatta">
-<meta property="og:description" content="Redesigning a paratransit booking mobile app: cutting booking flow from 8 steps to 3, adding map route confirmation, and improving accessibility.">
+<meta property="og:description" content="An NDA-covered paratransit booking redesign: design rationale, route confirmation, trip details, and interface work by Anand Gatta.">
 <meta property="og:image" content="https://anandgatta.com/uploads/case-study-1.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Paratransit Rider Booking App UX Case Study · Anand Gatta">
-<meta name="twitter:description" content="Redesigning a paratransit booking mobile app: cutting booking flow from 8 steps to 3, adding map route confirmation, and improving accessibility.">
+<meta name="twitter:description" content="An NDA-covered paratransit booking redesign: design rationale, route confirmation, trip details, and interface work by Anand Gatta.">
 <meta name="twitter:image" content="https://anandgatta.com/uploads/case-study-1.png">
-<script src="./support.js"></script>
+<link rel="stylesheet" href="fonts.css"><style>a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #3499ff;outline-offset:5px} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation:none!important;transition:none!important}}</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6W1VD5LBDS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6W1VD5LBDS');
+</script>
+<script src="analytics.js" defer></script>
 </head>
 <body>
-<x-dc>
-<helmet data-dc-atomics>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+
 <style>
   html{overflow-x:clip}
   body{margin:0;overflow-x:clip;max-width:100%;background:#f3f1ec;color:#15140f;font-family:Manrope,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
@@ -31,23 +36,14 @@
   @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
 </style>
 <link rel="icon" type="image/png" href="uploads/pasted-1788780134229-0.png">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6W1VD5LBDS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-6W1VD5LBDS');
-</script>
-</helmet>
-
 <div data-nav="" style="position:fixed;top:14px;left:0;right:0;z-index:80;display:flex;justify-content:center;padding:0 clamp(12px,3vw,28px);pointer-events:none">
   <div style="pointer-events:auto;width:100%;max-width:980px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 10px 10px 22px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(18,18,17,.55);backdrop-filter:blur(16px) saturate(140%);box-shadow:0 12px 40px rgba(0,0,0,.28)">
-    <a href="index.html" style="font:700 17px/1 Manrope,sans-serif;letter-spacing:-.014em;color:#f5f3ee">AnandGatta</a>
+    <a href="https://anandgatta.com/index.html" style="font:700 17px/1 Manrope,sans-serif;letter-spacing:-.014em;color:#f5f3ee">AnandGatta</a>
     <nav data-navdesktop="" style="display:flex;align-items:center;gap:clamp(10px,1.6vw,24px);font:500 13.5px/1 Manrope,sans-serif">
-      <a href="Works.dc.html" data-navlink="">Work</a>
-      <a href="About.dc.html" data-navlink="">About</a>
-      <a href="resume.html" data-navlink="">Resume</a>
-      <a href="About.dc.html#contact" style="display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:999px;background:#f5f3ee;color:#15140f;font:500 13.5px/1 Manrope,sans-serif" style-hover="background:#ffffff">
+      <a href="https://anandgatta.com/Works.dc.html" data-navlink="">Work</a>
+      <a href="https://anandgatta.com/About.dc.html" data-navlink="">About</a>
+      <a href="https://anandgatta.com/resume.html" data-navlink="">Resume</a>
+      <a href="https://anandgatta.com/About.dc.html#contact" style="display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:999px;background:#f5f3ee;color:#15140f;font:500 13.5px/1 Manrope,sans-serif" style-hover="background:#ffffff">
         <span style="width:6px;height:6px;border-radius:50%;background:#e2733f;animation:blink 2.4s ease-in-out infinite"></span>Contact
       </a>
     </nav>
@@ -58,11 +54,11 @@
   </div>
 
   <div data-navsheet="">
-    <a href="Works.dc.html" data-sheetlink="">Work</a>
-    <a href="About.dc.html" data-sheetlink="">About</a>
-    <a href="resume.html" data-sheetlink="">Resume</a>
-    <a href="index.html#experience" data-sheetlink="">Experience</a>
-    <a href="About.dc.html#contact" data-sheetcta="">Contact</a>
+    <a href="https://anandgatta.com/Works.dc.html" data-sheetlink="">Work</a>
+    <a href="https://anandgatta.com/About.dc.html" data-sheetlink="">About</a>
+    <a href="https://anandgatta.com/resume.html" data-sheetlink="">Resume</a>
+    <a href="https://anandgatta.com/index.html#experience" data-sheetlink="">Experience</a>
+    <a href="https://anandgatta.com/About.dc.html#contact" data-sheetcta="">Contact</a>
   </div>
 </div>
 
@@ -80,25 +76,25 @@
       <a href="#sec-designs" data-tocitem="" data-target="sec-designs"><span data-tocdash=""></span><span data-toctext="">Old &amp; new design</span></a>
       <a href="#sec-challenge" data-tocitem="" data-target="sec-challenge"><span data-tocdash=""></span><span data-toctext="">The challenge</span></a>
       <a href="#sec-problem" data-tocitem="" data-target="sec-problem"><span data-tocdash=""></span><span data-toctext="">The problem</span></a>
-      <a href="#sec-personas" data-tocitem="" data-target="sec-personas"><span data-tocdash=""></span><span data-toctext="">Personas</span></a>
+      <a href="#sec-personas" data-tocitem="" data-target="sec-personas"><span data-tocdash=""></span><span data-toctext="">Scenarios</span></a>
     </div>
     <div data-tocgroup="">
-      <div data-tocheading="">Research</div>
+      <div data-tocheading="">Design reasoning</div>
       <a href="#sec-process" data-tocitem="" data-target="sec-process"><span data-tocdash=""></span><span data-toctext="">Methodology</span></a>
-      <a href="#sec-research" data-tocitem="" data-target="sec-research"><span data-tocdash=""></span><span data-toctext="">User research</span></a>
+      <a href="#sec-research" data-tocitem="" data-target="sec-research"><span data-tocdash=""></span><span data-toctext="">Design rationale</span></a>
       <a href="#sec-audit" data-tocitem="" data-target="sec-audit"><span data-tocdash=""></span><span data-toctext="">Heuristic audit</span></a>
       <a href="#sec-screens" data-tocitem="" data-target="sec-screens"><span data-tocdash=""></span><span data-toctext="">Screen by screen</span></a>
     </div>
     <div data-tocgroup="">
       <div data-tocheading="">Design</div>
-      <a href="#sec-ia" data-tocitem="" data-target="sec-ia"><span data-tocdash=""></span><span data-toctext="">8 steps to 3</span></a>
+      <a href="#sec-ia" data-tocitem="" data-target="sec-ia"><span data-tocdash=""></span><span data-toctext="">Task grouping</span></a>
       <a href="#sec-final" data-tocitem="" data-target="sec-final"><span data-tocdash=""></span><span data-toctext="">Final design &amp; UI</span></a>
     </div>
     <div data-tocgroup="">
       <div data-tocheading="">Outcome</div>
-      <a href="#sec-impact" data-tocitem="" data-target="sec-impact"><span data-tocdash=""></span><span data-toctext="">Expected impact</span></a>
+      <a href="#sec-impact" data-tocitem="" data-target="sec-impact"><span data-tocdash=""></span><span data-toctext="">Design changes and intended benefits</span></a>
       <a href="#sec-learnings" data-tocitem="" data-target="sec-learnings"><span data-tocdash=""></span><span data-toctext="">Key learnings</span></a>
-      <a href="About.dc.html#contact" data-tocitem="" data-target="contact"><span data-tocdash=""></span><span data-toctext="">Contact</span></a>
+      <a href="https://anandgatta.com/About.dc.html#contact" data-tocitem="" data-target="contact"><span data-tocdash=""></span><span data-toctext="">Contact</span></a>
     </div>
   </div>
 </aside>
@@ -138,7 +134,7 @@
   </div>
 </section>
 
-<div style="max-width:980px;margin:0 auto;padding:0 clamp(16px,4vw,56px)">
+<aside style="max-width:980px;margin:0 auto;padding:30px clamp(20px,4vw,56px);font:400 14px/1.7 Manrope,sans-serif;border-bottom:1px solid #15140f22"><strong style="display:block;font-size:11px;letter-spacing:.12em;margin-bottom:10px">NDA &amp; CASE STUDY SCOPE</strong>This project is covered by an NDA. Client-identifying details are omitted. This case study focuses on my design decisions, booking flows, and interface work. Quantified performance results are not presented.</aside><div style="max-width:980px;margin:0 auto;padding:0 clamp(16px,4vw,56px)">
 
   <section id="sec-designs" style="padding:clamp(40px,5.5vw,76px) 0 0">
     <div data-label="" data-reveal="">Old design &amp; new design</div>
@@ -191,40 +187,40 @@
 <section id="sec-problem" style="position:relative;width:100vw;margin-inline:calc(50% - 50vw);background:linear-gradient(180deg,#3b312a 0%,#241c17 100%);margin-top:clamp(40px,5.5vw,76px)">
   <div style="max-width:980px;margin:0 auto;padding:clamp(40px,5.5vw,76px) clamp(20px,4vw,56px)">
     <div data-reveal="" style="font:400 11.5px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,243,238,.5)">02 / The problem</div>
-    <blockquote data-reveal="" style="margin:clamp(22px,3vw,36px) 0 0;max-width:34ch;font:500 clamp(24px,3.4vw,46px)/1.18 'Flecha',Georgia,serif;letter-spacing:-.014em;color:#f7f5f0;text-wrap:pretty">“A routine trip booking that should take under 45 seconds was taking riders over three minutes, leading to an 18% drop-off rate at the final step.”</blockquote>
-    <p data-reveal="" style="margin:clamp(26px,4vw,44px) 0 0;max-width:62ch;font:400 clamp(15px,1.2vw,17.5px)/1.65 Manrope,sans-serif;color:rgba(245,243,238,.66);text-wrap:pretty">Frequent screen redraws, rigid sequencing, and poorly integrated maps combined to break confidence just as users were preparing to commit to their trips. The interface was asking for excessive cognitive investments where fluid, automatic system feedback was expected.</p>
+    <p data-reveal="" style="margin:clamp(22px,3vw,36px) 0 0;max-width:34ch;font:500 clamp(24px,3.4vw,46px)/1.18 'Flecha',Georgia,serif;letter-spacing:-.014em;color:#f7f5f0;text-wrap:pretty">Booking asked riders to move between disconnected screens before they could review the route and confirm the trip.</p>
+    <p data-reveal="" style="margin:clamp(26px,4vw,44px) 0 0;max-width:62ch;font:400 clamp(15px,1.2vw,17.5px)/1.65 Manrope,sans-serif;color:rgba(245,243,238,.66);text-wrap:pretty">The screens separated address entry, trip preferences, and confirmation. My design question was how to keep those details understandable without removing information riders need before booking.</p>
   </div>
 </section>
 
 <section id="sec-personas" style="position:relative;width:100vw;margin-inline:calc(50% - 50vw);background:#241c17">
   <div style="max-width:980px;margin:0 auto;padding:clamp(40px,5.5vw,76px) clamp(20px,4vw,56px) clamp(64px,8vw,96px);border-top:1px solid rgba(255,255,255,.08)">
     <div data-reveal="" style="font:400 11.5px/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,243,238,.5)">03 / Audience mapping</div>
-    <h2 data-reveal="" style="margin:16px 0 0;max-width:16ch;font:500 clamp(26px,3.8vw,50px)/1.06 'Flecha',Georgia,serif;letter-spacing:-.014em;color:#f7f5f0">User personas</h2>
-    <p data-reveal="" style="margin:20px 0 0;max-width:66ch;font:400 clamp(15px,1.2vw,17.5px)/1.65 Manrope,sans-serif;color:rgba(245,243,238,.66);text-wrap:pretty">Every micro-decision in this redesign was filtered through two people, a 72-year-old dialysis patient and a 45-year-old wheelchair user. Not edge cases. The primary users.</p>
+    <h2 data-reveal="" style="margin:16px 0 0;max-width:16ch;font:500 clamp(26px,3.8vw,50px)/1.06 'Flecha',Georgia,serif;letter-spacing:-.014em;color:#f7f5f0">Design scenarios</h2>
+    <p data-reveal="" style="margin:20px 0 0;max-width:66ch;font:400 clamp(15px,1.2vw,17.5px)/1.65 Manrope,sans-serif;color:rgba(245,243,238,.66);text-wrap:pretty">These illustrative scenarios make the design priorities concrete. They are assumption-based planning aids, not interview participants or validated research personas.</p>
 
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(16px,2.4vw,28px);margin-top:clamp(30px,4vw,52px)">
       <div data-persona="" data-reveal="">
         <div style="display:flex;gap:16px;align-items:center">
           <div data-avatar=""><span data-initial="">D</span></div>
           <div>
-            <div style="font:500 clamp(21px,2.2vw,28px)/1.1 'Flecha',Georgia,serif;color:#f7f5f0;letter-spacing:-.012em">Dorothy</div>
-            <div style="margin-top:7px;font:400 12.5px/1.3 'IBM Plex Mono',monospace;color:rgba(245,243,238,.5)">Age 72 · Seattle, WA · Paratransit rider</div>
+            <div style="font:500 clamp(21px,2.2vw,28px)/1.1 'Flecha',Georgia,serif;color:#f7f5f0;letter-spacing:-.012em">Older rider</div>
+            <div style="margin-top:7px;font:400 12.5px/1.3 'IBM Plex Mono',monospace;color:rgba(245,243,238,.5)">Illustrative scenario · Routine appointments</div>
           </div>
         </div>
-        <p style="margin:22px 0 0;font:500 clamp(16px,1.5vw,20px)/1.45 'Flecha',Georgia,serif;color:#e9e5dc;text-wrap:pretty">“I just want to know my ride is coming. The app confuses me so I just call, but the wait is so long.”</p>
+        <p style="margin:22px 0 0;font:500 clamp(16px,1.5vw,20px)/1.45 'Flecha',Georgia,serif;color:#e9e5dc;text-wrap:pretty">Design need: clear pickup details, understandable labels, and a visible booking confirmation.</p>
         <div data-plists="">
           <div>
-            <div data-pmini="">Frustrations</div>
+            <div data-pmini="">Potential friction to consider</div>
             <ul data-plist="">
-              <li>Confused by the 8-step booking flow</li>
+              <li>Disconnected steps can be difficult to follow</li>
               <li>Small touch targets are difficult to tap accurately</li>
               <li>Can't visually verify her route on the map</li>
               <li>Jargon labels that aren't clear</li>
-              <li>2+ hour phone wait times</li>
+              <li>Dependence on phone support when the app is unclear</li>
             </ul>
           </div>
           <div>
-            <div data-pmini="">Goals</div>
+            <div data-pmini="">Design goals</div>
             <ul data-plist="">
               <li>Book rides to weekly dialysis appointments reliably</li>
               <li>Understand exactly when the ride will arrive</li>
@@ -239,24 +235,24 @@
         <div style="display:flex;gap:16px;align-items:center">
           <div data-avatar=""><span data-initial="">M</span></div>
           <div>
-            <div style="font:500 clamp(21px,2.2vw,28px)/1.1 'Flecha',Georgia,serif;color:#f7f5f0;letter-spacing:-.012em">Marcus</div>
-            <div style="margin-top:7px;font:400 12.5px/1.3 'IBM Plex Mono',monospace;color:rgba(245,243,238,.5)">Age 45 · Seattle, WA · Wheelchair user</div>
+            <div style="font:500 clamp(21px,2.2vw,28px)/1.1 'Flecha',Georgia,serif;color:#f7f5f0;letter-spacing:-.012em">Rider using a wheelchair</div>
+            <div style="margin-top:7px;font:400 12.5px/1.3 'IBM Plex Mono',monospace;color:rgba(245,243,238,.5)">Illustrative scenario · Mobility requirements</div>
           </div>
         </div>
-        <p style="margin:22px 0 0;font:500 clamp(16px,1.5vw,20px)/1.45 'Flecha',Georgia,serif;color:#e9e5dc;text-wrap:pretty">“Why do I have to go through 8 screens just to book one ride? I do this every week.”</p>
+        <p style="margin:22px 0 0;font:500 clamp(16px,1.5vw,20px)/1.45 'Flecha',Georgia,serif;color:#e9e5dc;text-wrap:pretty">Design need: keep mobility requirements and trip details easy to review before confirmation.</p>
         <div data-plists="">
           <div>
-            <div data-pmini="">Frustrations</div>
+            <div data-pmini="">Potential friction to consider</div>
             <ul data-plist="">
-              <li>8 separate screens just to book one ride</li>
+              <li>Repeated transitions between single-purpose screens</li>
               <li>Mobility aid selection required every single time</li>
-              <li>Small X buttons difficult to tap with switch access</li>
+              <li>Small dismiss controls may be difficult to target</li>
               <li>No booking summary to review before confirming</li>
               <li>Repetitive data entry that should be saved</li>
             </ul>
           </div>
           <div>
-            <div data-pmini="">Goals</div>
+            <div data-pmini="">Design goals</div>
             <ul data-plist="">
               <li>Book accessible rides accommodating his wheelchair quickly</li>
               <li>App remembers his mobility aid requirements automatically</li>
@@ -278,138 +274,60 @@
       <div data-phase="" data-reveal="">
         <span data-num="">01</span>
         <div data-phasetitle="">Discover</div>
-        <p data-body="" style="margin:12px 0 0">User research, Hotjar heatmaps, and competitive benchmarking.</p>
+        <p data-body="" style="margin:12px 0 0">Review the existing screens and booking sequence; use secondary references for context.</p>
       </div>
       <div data-phase="" data-reveal="">
         <span data-num="">02</span>
         <div data-phasetitle="">Define</div>
-        <p data-body="" style="margin:12px 0 0">Synthesizing friction points, defining key metrics, and path scoping.</p>
+        <p data-body="" style="margin:12px 0 0">Identify interaction risks and define the route, trip-details, and confirmation groups.</p>
       </div>
       <div data-phase="" data-reveal="">
         <span data-num="">03</span>
         <div data-phasetitle="">Design</div>
-        <p data-body="" style="margin:12px 0 0">Rapid wireframing, high-density system design, and flow testing.</p>
+        <p data-body="" style="margin:12px 0 0">Explore layouts, map feedback, and reusable controls in the booking prototype.</p>
       </div>
       <div data-phase="" data-reveal="">
         <span data-num="">04</span>
         <div data-phasetitle="">Deliver</div>
-        <p data-body="" style="margin:12px 0 0">Developer handoff specs, design quality assurance, and Maze testing.</p>
+        <p data-body="" style="margin:12px 0 0">Document the interface, component behavior, and questions for usability validation.</p>
       </div>
     </div>
 
     <div style="margin-top:clamp(30px,4vw,52px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(16px,2.4vw,26px)">
       <div data-callout="" data-reveal="">
         <div data-mini="">Design objective</div>
-        <p style="margin:14px 0 0;font:400 15px/1.6 Manrope,sans-serif;color:#403c31;text-wrap:pretty">Reduce end-to-end booking time toward the 45-second baseline established in research, and address the root causes behind the 18% final-step drop-off, rather than the incremental patches applied in versions 4.3.1 to 4.3.3.</p>
+        <p style="margin:14px 0 0;font:400 15px/1.6 Manrope,sans-serif;color:#403c31;text-wrap:pretty">Make route entry, trip details, and review easier to follow. Completion time and abandonment are measures for future validation, not results claimed in this case study.</p>
       </div>
       <div data-callout="" data-reveal="">
         <div data-mini="">Team &amp; context</div>
-        <p style="margin:14px 0 0;font:400 15px/1.6 Manrope,sans-serif;color:#403c31;text-wrap:pretty">Working within a compliance-first, dispatch/billing-prioritized organization meant design rationale had to be argued explicitly rather than assumed, reflected in the heavier heuristic audit and persona-grounding work upfront.</p>
+        <p style="margin:14px 0 0;font:400 15px/1.6 Manrope,sans-serif;color:#403c31;text-wrap:pretty">The booking interface sits within a wider transport service. Changes to the rider flow need to preserve required trip information and work with dispatch, eligibility, and fare rules.</p>
       </div>
     </div>
   </div>
 </section>
 
 <div style="max-width:980px;margin:0 auto;padding:0 clamp(16px,4vw,56px)">
-  <section id="sec-research" style="padding:clamp(40px,5.5vw,76px) 0 0">
-    <div data-label="" data-reveal="">05 / User research</div>
-    <h2 data-h2="" data-reveal="" style="max-width:18ch">Research &amp; insights</h2>
+  <section id="sec-research" style="padding:clamp(40px,5.5vw,76px) 0 0"><div data-label="" data-reveal="">05 / Design rationale</div><h2 data-h2="" data-reveal="" style="max-width:18ch">What shaped the redesign</h2><p data-body="" data-reveal="" style="margin-top:20px;max-width:70ch">This public account uses the existing screens and flow diagrams to explain the decisions. It does not present secondary reviews as primary interviews.</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,245px),1fr));gap:22px;margin-top:34px"><div data-callout="" data-reveal=""><div data-mini="">01 / Route clarity</div><h3 data-h3="" style="margin-top:14px">Confirm the locations</h3><p data-body="" style="margin-top:14px">Show pickup, drop-off, and the route together so the rider can inspect the trip before proceeding.</p></div><div data-callout="" data-reveal=""><div data-mini="">02 / Information grouping</div><h3 data-h3="" style="margin-top:14px">Keep related choices together</h3><p data-body="" style="margin-top:14px">Group trip purpose and mobility requirements within trip details. The tradeoff is a denser screen, which needs a clear reading order.</p></div><div data-callout="" data-reveal=""><div data-mini="">03 / Review before commitment</div><h3 data-h3="" style="margin-top:14px">Make confirmation explicit</h3><p data-body="" style="margin-top:14px">Place route, schedule, and fare information before the booking action. Fare presentation must follow the operator’s actual service rules.</p></div></div></section>
 
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(16px,2.4vw,28px);margin-top:clamp(28px,4vw,52px)">
-      <div data-stat="" data-reveal="">
-        <div data-statnum="">72%</div>
-        <div data-stattitle="">Decision fatigue</div>
-        <p data-body="" style="margin:10px 0 0">Riders were confronted with secondary choices before confirming primary trip routes.</p>
-      </div>
-      <div data-stat="" data-reveal="">
-        <div data-statnum="">6.2%</div>
-        <div data-stattitle="">Transportation barriers</div>
-        <p data-body="" style="margin:10px 0 0">of U.S. adults reported lacking reliable transportation that prevented them from getting to medical appointments or essential activities in the past year.</p>
-      </div>
-    </div>
-
-    <p data-reveal="" style="margin:clamp(32px,4vw,56px) 0 0;max-width:30ch;font:500 clamp(20px,2.4vw,32px)/1.3 'Flecha',Georgia,serif;letter-spacing:-.012em;text-wrap:pretty">It was not just a UX problem. The app had a 2.1★ rating and users were calling a 2-hour phone queue instead.</p>
-
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(20px,3vw,48px);margin-top:clamp(24px,3vw,40px)">
-      <p data-body="" data-reveal="">Before redesigning anything, I needed to understand whether the failures were isolated screen issues or something structural. The answer came from three independent sources and all three said the same thing.</p>
-      <p data-body="" data-reveal="">I started with a simple assumption: if this is a paratransit rider booking a ride to dialysis three times a week, every extra step is a potential no-show. That context shaped every research decision.</p>
-    </div>
-
-    <div data-marketgrid="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:clamp(14px,2vw,20px);margin-top:clamp(30px,4vw,56px)">
-      <div data-cell="" data-reveal="">
-        <div data-mini="">NEMT market 2025</div>
-        <div data-bignum="">$11.8B</div>
-        <div data-note="">Growing 8.8% annually</div>
-      </div>
-      <div data-cell="" data-reveal="">
-        <div data-mini="">Missed appointments</div>
-        <div data-bignum="">3.6M</div>
-        <div data-note="">Americans per year, no transport</div>
-      </div>
-      <div data-cell="" data-reveal="">
-        <div data-mini="">Medicaid ride-days</div>
-        <div data-bignum="">60M+</div>
-        <div data-note="">Federally mandated annually</div>
-      </div>
-    </div>
-
-    <p data-body="" data-reveal="" style="margin-top:clamp(24px,3vw,40px);max-width:70ch">Paratransit isn't a niche product. It's a federally mandated service. The users are booking rides to chemotherapy, dialysis, and surgery. A confusing booking flow isn't a minor UX inconvenience, it's a public health problem.</p>
-  </section>
-
-  <section style="padding:clamp(40px,6vw,80px) 0 0">
-    <h3 data-h3="" data-reveal="">I started with App Store reviews</h3>
-    <p data-body="" data-reveal="" style="margin-top:14px;max-width:66ch">The same complaints appeared repeatedly, address search failures, map crashes, and the booking flow being too complex for elderly users. 2.1★ from 66 reviews.</p>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,245px),1fr));gap:clamp(14px,2vw,22px);margin-top:clamp(22px,3vw,34px);align-items:start">
-      <div data-review="" data-reveal="">
-        <div data-stars="">★☆☆☆☆</div>
-        <p data-quote="">"It will not recognise the address of destination... the map pulls up for a split second and goes blank. When you only have limited time to put the appointment in, this is extremely frustrating."</p>
-        <div data-source="">App Store · March 2024</div>
-      </div>
-      <div data-review="" data-reveal="">
-        <div data-stars="">★★☆☆☆</div>
-        <p data-quote="">"Poorly thought out for the most part especially for older people. They need to add a real time real person chat function."</p>
-        <div data-source="">App Store · June 2021</div>
-      </div>
-      <div data-review="" data-reveal="">
-        <div data-stars="">★☆☆☆☆</div>
-        <p data-quote="">"I can call and wait on average 2 hours to talk with someone to book it. But you honestly expect people to have that much time during their day?"</p>
-        <div data-source="">App Store · March 2024</div>
-      </div>
-    </div>
-
-    <h3 data-h3="" data-reveal="" style="margin-top:clamp(38px,5vw,72px)">Then I looked at the version history</h3>
-    <p data-body="" data-reveal="" style="margin-top:14px;max-width:66ch">VoiceOver fixes, touch target patches, map crash resolutions, all added post-launch across versions 4.3.1–4.3.3 in response to complaints.</p>
-
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(16px,2.4vw,28px);margin-top:clamp(24px,3vw,40px)">
-      <div data-callout="" data-reveal="">
-        <div data-mini="">Key insight</div>
-        <p style="margin:14px 0 0;font:500 clamp(18px,1.8vw,24px)/1.35 'Flecha',Georgia,serif;letter-spacing:-.012em;text-wrap:pretty">“The same issues were patched 3–4 times across multiple releases without solving the underlying structural problem.”</p>
-      </div>
-      <div data-callout="" data-reveal="">
-        <div data-mini="">Root cause</div>
-        <p style="margin:14px 0 0;font:500 clamp(18px,1.8vw,24px)/1.35 'Flecha',Georgia,serif;letter-spacing:-.012em;text-wrap:pretty">This wasn't a maintenance problem. It was a design philosophy problem.</p>
-      </div>
-    </div>
-  </section>
-</div>
+  </div>
 
 
 <section id="sec-audit" style="position:relative;width:100vw;margin-inline:calc(50% - 50vw);background:#eceae4;margin-top:clamp(40px,5.5vw,76px);border-top:1px solid rgba(21,20,15,.09);border-bottom:1px solid rgba(21,20,15,.09)">
   <div style="max-width:980px;margin:0 auto;padding:clamp(40px,5.5vw,76px) clamp(20px,4vw,56px)">
     <div data-label="" data-reveal="">06 / Heuristic audit</div>
-    <h2 data-h2="" data-reveal="" style="max-width:20ch">10 failures across 4 screens</h2>
-    <p data-body="" data-reveal="" style="margin-top:20px;max-width:70ch">Most violated heuristic: <strong style="font-weight:600">visibility of system status</strong>, violated 6 times across 3 screens. Users consistently couldn't tell if their booking was registering, where their ride was, or what they were about to confirm.</p>
+    <h2 data-h2="" data-reveal="" style="max-width:20ch">Interaction risks in the existing screens</h2>
+    <p data-body="" data-reveal="" style="margin-top:20px;max-width:70ch">My screen review focused on visibility of system status, recognition, and error prevention. These are design observations and priorities, not findings from a participant study.</p>
 
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(14px,2vw,22px);margin-top:clamp(28px,4vw,48px)">
       <div data-find="" data-sev="critical" data-reveal="">
         <div data-sevtag="">Critical · Finding 01</div>
-        <div data-findtitle="">Booking flow is 2× more complex than market standard</div>
-        <p data-body="" style="margin:10px 0 0">8 steps to book one ride. Single-field screens for mobility aid and trip purpose fragment the flow unnecessarily. Each extra step is a drop-off point.</p>
+        <div data-findtitle="">Single-purpose screens fragment the booking task</div>
+        <p data-body="" style="margin:10px 0 0">The flow diagram separates several single-purpose stages. Grouping related details can reduce transitions, but fewer groups do not automatically mean faster completion.</p>
       </div>
       <div data-find="" data-sev="critical" data-reveal="">
         <div data-sevtag="">Critical · Finding 02</div>
-        <div data-findtitle="">The map provides zero booking confidence</div>
-        <p data-body="" style="margin:10px 0 0">Both addresses entered, map shows only a GPS dot. No pickup pin, no drop-off pin, no route line. Direct cause of re-bookings and phone fallback.</p>
+        <div data-findtitle="">The map does not clearly confirm the selected route</div>
+        <p data-body="" style="margin:10px 0 0">Both addresses entered, map shows only a GPS dot. No pickup pin, no drop-off pin, no route line. This makes visual route verification difficult; effects on re-booking or support calls were not measured.</p>
       </div>
       <div data-find="" data-sev="critical" data-reveal="">
         <div data-sevtag="">Critical · Finding 03</div>
@@ -419,7 +337,7 @@
       <div data-find="" data-sev="major" data-reveal="">
         <div data-sevtag="">Major · Finding 04</div>
         <div data-findtitle="">Pickup window language creates anxiety on day of travel</div>
-        <p data-body="" style="margin:10px 0 0">“10:06 AM–10:38 AM” shown with no explanation. For elderly users heading to medical appointments, this ambiguity directly causes no-shows.</p>
+        <p data-body="" style="margin:10px 0 0">“10:06 AM–10:38 AM” shown with no explanation. For riders attending appointments, an unclear pickup window makes planning difficult.</p>
       </div>
       <div data-find="" data-sev="positive" data-reveal="">
         <div data-sevtag="">Positive · Finding 05</div>
@@ -433,7 +351,7 @@
 <div style="max-width:980px;margin:0 auto;padding:0 clamp(16px,4vw,56px)">
   <section id="sec-screens" style="padding:clamp(40px,5.5vw,76px) 0 0">
     <div data-label="" data-reveal="">07 / Screen by screen</div>
-    <h2 data-h2="" data-reveal="" style="max-width:22ch">10 critical &amp; major failures, annotated</h2>
+    <h2 data-h2="" data-reveal="" style="max-width:22ch">Existing screens, annotated</h2>
 
     <div data-screengrid="">
     <div data-screen="" data-reveal="">
@@ -454,9 +372,9 @@
         <h3 data-h3="">Itinerary + map screen</h3>
         <div data-annos="">
           <div data-anno=""><span data-anum="">1</span><div><div data-atag="" data-sev="critical">Critical</div><div data-atitle="">“Arrive by” is ambiguous jargon</div><p data-body="" style="margin:8px 0 0">Users don't know if this is their requested arrival time or a guaranteed window. Creates booking errors for medical appointments.</p></div></div>
-          <div data-anno=""><span data-anum="">2</span><div><div data-atag="" data-sev="critical">Critical</div><div data-atitle="">Drop-off address truncated to “Chawdr…”</div><p data-body="" style="margin:8px 0 0">User cannot verify their destination is correct. For medical appointments this directly causes booking errors and no-shows.</p></div></div>
+          <div data-anno=""><span data-anum="">2</span><div><div data-atag="" data-sev="critical">Critical</div><div data-atitle="">Drop-off address truncated to “Chawdr…”</div><p data-body="" style="margin:8px 0 0">User cannot verify their destination is correct. This makes it harder to check the trip against an appointment time.</p></div></div>
           <div data-anno=""><span data-anum="">3</span><div><div data-atag="" data-sev="critical">Critical</div><div data-atitle="">Map shows only a GPS dot, no route, no pins</div><p data-body="" style="margin:8px 0 0">Both addresses entered but no visual confirmation. User cannot verify their journey is registered correctly.</p></div></div>
-          <div data-anno=""><span data-anum="">4</span><div><div data-atag="" data-sev="major">Major</div><div data-atitle="">Date / time split into 3 tiny tap targets</div><p data-body="" style="margin:8px 0 0">“Arrive by”, “Jul 8”, “7:40 PM”, three adjacent buttons, each under 44pt. Impossible for Dorothy with reduced motor precision.</p></div></div>
+          <div data-anno=""><span data-anum="">4</span><div><div data-atag="" data-sev="major">Major</div><div data-atitle="">Date / time split into 3 tiny tap targets</div><p data-body="" style="margin:8px 0 0">“Arrive by”, “Jul 8”, “7:40 PM”, three adjacent buttons, each under 44pt. Impossible for Older rider with reduced motor precision.</p></div></div>
           <div data-anno=""><span data-anum="">5</span><div><div data-atag="" data-sev="major">Major</div><div data-atitle="">X button clears address with no undo</div><p data-body="" style="margin:8px 0 0">Tapping × instantly clears a typed address with no confirmation and no way to recover it. Catastrophic for low-literacy users.</p></div></div>
         </div>
       </div>
@@ -480,7 +398,7 @@
         <h3 data-h3="">Trip destinations</h3>
         <div data-annos="">
           <div data-anno=""><span data-anum="">1</span><div><div data-atag="" data-sev="critical">Critical</div><div data-atitle="">Ride location “not available”, no guidance</div><p data-body="" style="margin:8px 0 0">On the day of a medical appointment, the most critical screen shows “not available” with no ETA, no fallback, no explanation.</p></div></div>
-          <div data-anno=""><span data-anum="">2</span><div><div data-atag="" data-sev="critical">Critical</div><div data-atitle="">Live tracking buried as a small text link</div><p data-body="" style="margin:8px 0 0">“Map view”, the most valuable feature on travel day is a tiny underlined text link at the bottom. Dorothy may never find it.</p></div></div>
+          <div data-anno=""><span data-anum="">2</span><div><div data-atag="" data-sev="critical">Critical</div><div data-atitle="">Live tracking buried as a small text link</div><p data-body="" style="margin:8px 0 0">“Map view”, the most valuable feature on travel day is a tiny underlined text link at the bottom. Older rider may never find it.</p></div></div>
           <div data-anno=""><span data-anum="">3</span><div><div data-atag="" data-sev="major">Major</div><div data-atitle="">“10:06 AM–10:38 AM” shown with no explanation</div><p data-body="" style="margin:8px 0 0">A raw time window with no context. Users don't know if they need to be ready at 7:10 or if the driver might be late by 7:17.</p></div></div>
         </div>
       </div>
@@ -494,8 +412,8 @@
 <section id="sec-ia" style="position:relative;width:100vw;margin-inline:calc(50% - 50vw);background:#e7e2d6;border-bottom:1px solid rgba(21,20,15,.09)">
   <div style="max-width:980px;margin:0 auto;padding:clamp(40px,5.5vw,76px) clamp(20px,4vw,56px)">
     <div data-label="" data-reveal="">08 / Structural design</div>
-    <h2 data-h2="" data-reveal="" style="max-width:22ch">From 8 steps to 3, and why each one was collapsed</h2>
-    <p data-body="" data-reveal="" style="margin-top:20px;max-width:70ch">The original flow fragmented one decision, “I want to go from A to B at this time”, into eight separate screens. Each screen became a drop-off point. The redesign consolidates everything into three intentional steps.</p>
+    <h2 data-h2="" data-reveal="" style="max-width:22ch">From separate stages to three task groups</h2>
+    <p data-body="" data-reveal="" style="margin-top:20px;max-width:70ch">The original flow fragmented one decision, “I want to go from A to B at this time”, into eight separate screens. Each screen became a drop-off point. The redesign organises these screens into three task groups: route, trip details, and confirmation. These groups can still contain multiple interactions.</p>
 
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:clamp(14px,2vw,22px);margin-top:clamp(28px,4vw,48px)">
       <div data-ia="" data-reveal="">
@@ -508,7 +426,7 @@
         <span data-num="">02</span>
         <div data-was="">Was: steps 3 + 4 + 5 + 6</div>
         <div data-phasetitle="" style="margin-top:12px">Trip details, date, time, mobility aid, fare</div>
-        <p data-body="" style="margin:12px 0 0">All trip parameters on one screen in reading order. Fare visible before commitment. Mobility aid pre-filled from Marcus's profile. Plain language pickup window replaces jargon.</p>
+        <p data-body="" style="margin:12px 0 0">All trip parameters on one screen in reading order. Fare visible before commitment. Mobility aid pre-filled from Rider using a wheelchair's profile. Plain language pickup window replaces jargon.</p>
       </div>
       <div data-ia="" data-reveal="">
         <span data-num="">03</span>
@@ -547,7 +465,7 @@
       <div data-bacol="">
         <div data-batag="" data-kind="after">After</div>
         <div data-batitle="">Route line + pickup pin + drop-off pin from first entry</div>
-        <p data-body="" style="margin:10px 0 0">As soon as both addresses are entered, the map renders a route with both pins. Dorothy can see her journey to the dialysis centre before she confirms anything.</p>
+        <p data-body="" style="margin:10px 0 0">As soon as both addresses are entered, the map renders a route with both pins. Older rider can see her journey to the dialysis centre before she confirms anything.</p>
         <figure style="margin:0;max-width:300px"><img src="uploads/new-confirm-route.png" alt="After, Confirm route with route line and both pins" style="display:block;width:100%;height:auto;border-radius:14px"></figure>
       </div>
     </div>
@@ -571,13 +489,13 @@
       <div data-bacol="">
         <div data-batag="" data-kind="before">Before</div>
         <div data-batitle="">“10:06 AM – 10:38 AM”, no explanation</div>
-        <p data-body="" style="margin:10px 0 0">A raw time window with no context. For elderly users heading to medical appointments, this ambiguity directly causes no-shows, the most expensive failure mode for agencies.</p>
+        <p data-body="" style="margin:10px 0 0">A raw time window with no context. For riders attending appointments, an unclear pickup window makes planning difficult. The redesign distinguishes the scheduled trip time from the pickup window.</p>
         <figure style="margin:0;max-width:300px"><img src="uploads/old-trip-destinations.png" alt="Before, raw pickup window with no explanation" style="display:block;width:100%;height:auto;border-radius:14px"></figure>
       </div>
       <div data-bacol="">
         <div data-batag="" data-kind="after">After</div>
         <div data-batitle="">“Your driver may arrive between 11:05 AM – 11:40 AM”</div>
-        <p data-body="" style="margin:10px 0 0">Plain time range derived from pickup time and negotiation window. Dorothy reads an actual clock time, no formula, no guessing, no arithmetic required.</p>
+        <p data-body="" style="margin:10px 0 0">Plain time range derived from pickup time and negotiation window. Older rider reads an actual clock time, no formula, no guessing, no arithmetic required.</p>
         <figure style="margin:0;max-width:300px"><img src="uploads/new-confirm-details.png" alt="After, pickup time and negotiation window in plain language" style="display:block;width:100%;height:auto;border-radius:14px"></figure>
       </div>
     </div>
@@ -606,30 +524,30 @@
 
 <section id="sec-impact" style="position:relative;width:100vw;margin-inline:calc(50% - 50vw);background:#eceae4;margin-top:clamp(40px,5.5vw,76px);border-top:1px solid rgba(21,20,15,.09);border-bottom:1px solid rgba(21,20,15,.09)">
   <div style="max-width:980px;margin:0 auto;padding:clamp(40px,5.5vw,76px) clamp(20px,4vw,56px)">
-    <div data-label="" data-reveal="">10 / Performance outcomes</div>
-    <h2 data-h2="" data-reveal="" style="max-width:18ch">Expected impact</h2>
-    <p data-reveal="" style="margin:16px 0 0;max-width:66ch;font:400 13.5px/1.6 Manrope,sans-serif;color:#6b6250;text-wrap:pretty">Due to NDA, post-launch production metrics can't be shared publicly. The outcomes below reflect what the redesign was engineered to achieve, based on the original research targets and validated through moderated usability testing (Maze) prior to release.</p>
+    <div data-label="" data-reveal="">10 / Design output &amp; validation</div>
+    <h2 data-h2="" data-reveal="" style="max-width:18ch">Design changes and intended benefits</h2>
+    <p data-reveal="" style="margin:16px 0 0;max-width:66ch;font:400 13.5px/1.6 Manrope,sans-serif;color:#6b6250;text-wrap:pretty">The screens below demonstrate the design changes. Faster booking, fewer errors, and lower abandonment remain hypotheses; no measured usability or post-launch performance results are presented.</p>
 
     <div style="margin-top:clamp(28px,4vw,48px);border-top:1px solid rgba(21,20,15,.14)">
       <div data-stage="" data-reveal="">
         <div data-stagenum="">Stage 01</div>
         <div><div data-pmini2="">Legacy pain point</div><div data-stagepain="">8 booking steps</div></div>
-        <div><div data-pmini2="">Redesigned outcome</div><p data-body="" style="margin:8px 0 0">8 booking steps to 3 guided decisions, targeting the 45-second completion benchmark identified in research (vs. the original 3-minute average).</p></div>
+        <div><div data-pmini2="">Visible design change</div><p data-body="" style="margin:8px 0 0">The redesigned flow groups work into route, trip details, and confirmation. These are task groups, not a measured reduction in taps or completion time.</p></div>
       </div>
       <div data-stage="" data-reveal="">
         <div data-stagenum="">Stage 02</div>
         <div><div data-pmini2="">Legacy pain point</div><div data-stagepain="">Multiple form fields</div></div>
-        <div><div data-pmini2="">Redesigned outcome</div><p data-body="" style="margin:8px 0 0">Accessible interaction patterns, clearer visual hierarchy, and larger touch targets, designed to support riders with diverse mobility and cognitive needs and reduce the 18% final-step drop-off observed in research.</p></div>
+        <div><div data-pmini2="">Visible design change</div><p data-body="" style="margin:8px 0 0">Larger controls, clearer labels, and a review screen are intended to support a broader range of riders. Accessibility and task completion still need validation with intended users.</p></div>
       </div>
       <div data-stage="" data-reveal="">
         <div data-stagenum="">Stage 03</div>
         <div><div data-pmini2="">Legacy pain point</div><div data-stagepain="">Separate location entry</div></div>
-        <div><div data-pmini2="">Redesigned outcome</div><p data-body="" style="margin:8px 0 0">Guided search, saved locations, and map-assisted interactions, intended to cut the time and effort spent on location entry identified as a major source of drop-off.</p></div>
+        <div><div data-pmini2="">Visible design change</div><p data-body="" style="margin:8px 0 0">Saved locations and visible route feedback support location entry and review. Their effect on errors and effort has not been measured.</p></div>
       </div>
       <div data-stage="" data-reveal="">
         <div data-stagenum="">Stage 04</div>
         <div><div data-pmini2="">Legacy pain point</div><div data-stagepain="">Complex navigation</div></div>
-        <div><div data-pmini2="">Redesigned outcome</div><p data-body="" style="margin:8px 0 0">Reusable UI patterns and a modular booking flow, built to support future features such as recurring trips, companion riders, and trip modifications without reintroducing the original complexity.</p></div>
+        <div><div data-pmini2="">Visible design change</div><p data-body="" style="margin:8px 0 0">Reusable UI patterns and a modular booking flow, built to support future features such as recurring trips, companion riders, and trip modifications without reintroducing the original complexity.</p></div>
       </div>
     </div>
   </div>
@@ -665,7 +583,7 @@
       <p data-body="" data-reveal="" style="max-width:46ch">For product design, design systems, prototypes, and AI-powered design workflows.</p>
       <div style="display:flex;flex-wrap:wrap;gap:12px" data-reveal="">
         <a href="mailto:anandkmargattacg@gmail.com" style="display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;background:#15140f;color:#f5f3ee;font:500 14.5px/1 Manrope,sans-serif" style-hover="background:#2e2b21">Email me <span style="font-family:'IBM Plex Mono',monospace">→</span></a>
-        <a href="index.html#work" style="display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;border:1px solid rgba(21,20,15,.2);font:500 14.5px/1 Manrope,sans-serif" style-hover="background:rgba(21,20,15,.05)">See other work</a>
+        <a href="life-sciences-case-study.html" style="display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;border:1px solid rgba(21,20,15,.2);font:500 14.5px/1 Manrope,sans-serif" style-hover="background:rgba(21,20,15,.05)">Next: Life Sciences case study</a>
       </div>
     </div>
   </section>
@@ -675,22 +593,22 @@
   <div data-norail="" style="max-width:1240px;margin:0 auto;padding:clamp(46px,7vw,96px) clamp(20px,4vw,56px) 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:clamp(30px,4vw,56px)">
     <div style="grid-column:span 1;min-width:min(100%,360px)">
       <p style="margin:0;max-width:26ch;font:500 clamp(19px,1.9vw,26px)/1.35 'Flecha',Georgia,serif;color:#26241f;text-wrap:pretty">Designing products people can use with confidence, for 13 years and counting.</p>
-      <a href="About.dc.html#contact" style="display:inline-flex;align-items:center;gap:9px;margin-top:26px;padding:14px 22px;border-radius:999px;background:#ffffff;color:#15140f;font:500 14.5px/1 Manrope,sans-serif;box-shadow:0 2px 10px rgba(0,0,0,.07)" style-hover="background:#15140f;color:#f5f3ee">Contact <span style="font-family:'IBM Plex Mono',monospace">→</span></a>
+      <a href="https://anandgatta.com/About.dc.html#contact" style="display:inline-flex;align-items:center;gap:9px;margin-top:26px;padding:14px 22px;border-radius:999px;background:#ffffff;color:#15140f;font:500 14.5px/1 Manrope,sans-serif;box-shadow:0 2px 10px rgba(0,0,0,.07)" style-hover="background:#15140f;color:#f5f3ee">Contact <span style="font-family:'IBM Plex Mono',monospace">→</span></a>
     </div>
 
     <div>
       <div style="font:500 16px/1.2 'Flecha',Georgia,serif;color:#26241f">Explore</div>
       <div style="margin-top:22px;display:flex;flex-direction:column;gap:14px;font:400 14.5px/1.3 Manrope,sans-serif">
-        <a href="Works.dc.html" data-flink="">Selected work</a>
-        <a href="About.dc.html" data-flink="">About</a>
+        <a href="https://anandgatta.com/Works.dc.html" data-flink="">Selected work</a>
+        <a href="https://anandgatta.com/About.dc.html" data-flink="">About</a>
       </div>
     </div>
 
     <div>
       <div style="font:500 16px/1.2 'Flecha',Georgia,serif;color:#26241f">Need design?</div>
       <div style="margin-top:22px;display:flex;flex-direction:column;gap:14px;font:400 14.5px/1.3 Manrope,sans-serif">
-        <a href="resume.html" data-flink="">Résumé</a>
-        <a href="Works.dc.html" data-flink="">Case studies</a>
+        <a href="https://anandgatta.com/resume.html" data-flink="">Résumé</a>
+        <a href="https://anandgatta.com/Works.dc.html" data-flink="">Case studies</a>
       </div>
     </div>
 
@@ -713,16 +631,17 @@
     <div data-norail="" style="max-width:1240px;margin:0 auto;padding:18px clamp(20px,4vw,56px);display:flex;flex-wrap:wrap;gap:12px 26px;justify-content:space-between;align-items:center;font:400 12.5px/1 Manrope,sans-serif;color:#57534a">
       <div>Anand Kumar G ©<span data-year="">2026</span></div>
       <div style="display:flex;flex-wrap:wrap;gap:12px 26px;align-items:center">
-        <a href="About.dc.html#contact" data-flink="">Privacy</a>
-        <a href="About.dc.html#contact" data-flink="">Terms</a>
+        <a href="https://anandgatta.com/About.dc.html#contact" data-flink="">Privacy</a>
+        <a href="https://anandgatta.com/About.dc.html#contact" data-flink="">Terms</a>
         <span>Hyderabad</span>
         <span data-clock="" style="font-family:'IBM Plex Mono',monospace">--:--:--</span>
         <a href="#top" data-flink="">Back to top ↑</a>
       </div>
     </div>
   </div>
-</footer></x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;scrollReveal&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;marqueeSeconds&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:20,&quot;min&quot;:10,&quot;max&quot;:80,&quot;step&quot;:2,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+</footer>
+<script>class DCLogic { constructor(){this.el=document;} }
+
 class Component extends DCLogic {
   componentDidMount() {
     const root = this.el || document;
@@ -1207,6 +1126,7 @@ class Component extends DCLogic {
 
   renderVals() { return {}; }
 }
-</script>
+
+new Component().componentDidMount();</script>
 </body>
 </html>
